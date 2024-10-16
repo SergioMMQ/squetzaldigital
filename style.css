@@ -217,3 +217,51 @@
             background: #eee;
             border-radius: 5px;
         }
+
+        @media screen {
+            header {
+                background: linear-gradient(to right, #2dad5e, #aef8ae);
+                color: white;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Centra el contenido horizontalmente */
+                justify-content: center; /* Centra el contenido verticalmente */
+            }
+        
+            h1, h2, h3 {
+                margin: 0; /* Elimina el margen para que se vea más limpio */
+            }
+        
+            nav {
+                margin-top: 10px; /* Espaciado entre el título y el menú de navegación */
+            }
+        
+            nav a {
+                margin: 0 15px;
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        
+            nav a:hover {
+                color: #1a6d3f; /* Color verde oscuro al pasar el mouse */
+            }
+        }
+        
+        /* Estilos para pantallas más pequeñas */
+        @media screen and (max-width: 700px) {
+            header {
+                flex-direction: column; /* Mantiene la columna en pantallas pequeñas */
+            }
+        
+            nav {
+                flex-direction: column; /* Cambia la navegación a una columna */
+                align-items: center; /* Centra los enlaces en pantallas pequeñas */
+            }
+        
+            nav a {
+                margin: 10px 0; /* Espaciado vertical para enlaces en pantallas pequeñas */
+            }
+        }
+        
