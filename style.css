@@ -1,0 +1,219 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa; /* Fondo suave que evoca la naturaleza */
+        }
+
+        header {
+            background: linear-gradient(to right, #2dad5e, #aef8ae); /* Verde azulado para evocar el color del quetzal */
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        img{
+            border-radius: 100%;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #007736; /* Color verde oscuro */
+        }
+
+        #portafolio {
+            padding: 40px;
+            background-color: #f9f9f9; /* Color de fondo */
+        }
+        
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Espacio entre las tarjetas */
+            justify-content: center; /* Centrar las tarjetas */
+        }
+        
+        .portfolio-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: calc(30% - 40px); /* Ajustar el tamaño según el diseño */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+        }
+        
+        .portfolio-item h3 {
+            margin: 15px 0 10px;
+            font-size: 1.5em;
+        }
+        
+        .portfolio-item p {
+            margin: 0 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #2dad5e; /* Color del botón */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #1a6d3f; /* Color más oscuro al pasar el mouse */
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+        }
+        /*  */
+
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ffffff; /* Título en blanco para mejor contraste */
+        }
+
+        h2 {
+            color: #004d40; /* Título secundario en un verde oscuro */
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 10px;
+        }
+
+        .service, .portfolio, .recommendations {
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background: #f1f8e9; /* Fondo claro para secciones */
+        }
+
+        .service-item {
+            display: flex;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-item h3 {
+            margin: 0;
+            color: #00796b; /* Títulos de servicios en color verde azulado */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #00796b; /* Mismo color que el header */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .form-container {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        .form-container input, 
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background: #00796b; /* Botón verde azulado */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form-container button:hover {
+            background: #004d40; /* Color más oscuro al pasar el mouse */
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scrollbar-width: thin;
+        }
+
+        .carousel img {
+            width: 100px; /* Ajusta según lo necesites */
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .bar div {
+            background: #00796b; /* Color de las barras */
+            height: 20px;
+            border-radius: 5px;
+            text-align: right;
+            padding-right: 5px;
+            color: white;
+        }
+
+        .bar-container {
+            width: 100%;
+            background: #eee;
+            border-radius: 5px;
+        }
