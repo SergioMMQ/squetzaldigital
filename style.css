@@ -1,37 +1,38 @@
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e0f7fa; /* Fondo suave que evoca la naturaleza */
-        }
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6; /* Mejora la legibilidad */
+    }
+    header {
+        background: linear-gradient(to right, #2dad5e, #aef8ae); /* Verde azulado para evocar el color del quetzal */
+        color: white;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-        header {
-            background: linear-gradient(to right, #2dad5e, #aef8ae); /* Verde azulado para evocar el color del quetzal */
-            color: white;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    img{
+        border-radius: 25% 50%;
+    }
 
-        img{
-            border-radius: 100%;
-        }
+    nav {
+        margin: 20px 0;
+    }
 
-        nav {
-            margin: 20px 0;
-        }
+        
+    nav a {
+        margin: 0 15px;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-        nav a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #007736; /* Color verde oscuro */
-        }
+    nav a:hover {
+        color: #1f3bdd; /* Color verde oscuro al pasar el mouse */
+    }
 
         #portafolio {
             padding: 40px;
@@ -93,7 +94,7 @@
 
         .container {
             width: 80%;
-            margin: auto;
+            margin: 50px auto;
             overflow: hidden;
             background: white;
             padding: 20px;
@@ -102,11 +103,11 @@
         }
 
         h1 {
-            color: #ffffff; /* Título en blanco para mejor contraste */
+            color: #ffffff; 
         }
 
         h2 {
-            color: #004d40; /* Título secundario en un verde oscuro */
+            color: #004d40; 
             border-bottom: 2px solid #00796b;
             padding-bottom: 10px;
         }
@@ -115,7 +116,7 @@
             margin: 20px 0;
             padding: 10px;
             border-radius: 5px;
-            background: #f1f8e9; /* Fondo claro para secciones */
+            background: #f1f8e9; 
         }
 
         .service-item {
@@ -137,7 +138,7 @@
         footer {
             text-align: center;
             padding: 10px;
-            background: #00796b; /* Mismo color que el header */
+            background: linear-gradient(to right, #2dad5e, #aef8ae); 
             color: white;
             position: relative;
             bottom: 0;
@@ -154,7 +155,7 @@
 
         .form-container input, 
         .form-container textarea {
-            width: 100%;
+            width: 95%;
             padding: 10px;
             margin: 5px 0;
             border: 1px solid #ccc;
@@ -236,17 +237,7 @@
             nav {
                 margin-top: 10px; /* Espaciado entre el título y el menú de navegación */
             }
-        
-            nav a {
-                margin: 0 15px;
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-            }
-        
-            nav a:hover {
-                color: #1a6d3f; /* Color verde oscuro al pasar el mouse */
-            }
+
         }
         
         /* Estilos para pantallas más pequeñas */
