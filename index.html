@@ -6,8 +6,18 @@
     <title>Quetzalcode</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="favicon.png"> <!-- Ruta del favicon, si es necesario -->
+    <!-- Información adicional (SEO) -->
+    <meta name="description" content="Página oficial de QuetzalCode. Conéctate con nosotros en nuestras redes sociales.">
+    <meta name="keywords" content="QuetzalCode, redes sociales, tecnología, diseño web">
+    <meta name="author" content="Sergio Martínez Meneses">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+
 </head>
 <body>
+    <div id="inicio"></div>
     <header>
         <div>
             <img src="imagenes/quetzalcode.png" alt="Quetzalcode Logo" class="img-header">
@@ -18,6 +28,7 @@
     </header>
     <nav>
         <div>
+            <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
             <a href="#ejemplos">Ejemplos</a>
             <a href="#recomendaciones">Recomendaciones</a>
@@ -26,7 +37,8 @@
     </nav>
 
     <div class="container">
-        <section id="servicios"> 
+        <div id="servicios" style="height: 70px;"></div>
+        <section>
             <h2>Nuestros Servicios</h2>
             <div class="service">
                 <div class="container-item">
@@ -58,8 +70,8 @@
                 </div>
             </div>
         </section>
-        
-        <section id="ejemplos"> 
+        <div id="ejemplos"></div>
+        <section> 
             <h2>Ejemplos practicos</h2>
             <p>Descubre algunos de nuestros trabajos:</p>
             <div class="ejemplos">
@@ -69,25 +81,24 @@
                     <a href="https://sergiommq.github.io/faselunar/" target="_blank" class="btn-2">Ver Página</a>
                 </div>
                 <div class="ejemplos-item">
-                    <img src="imagenes/cefeypizzas.png" alt="Imagen de Barberia">
+                    <img src="imagenes/cafeypizza.png" alt="Imagen de Barberia">
                     <h3>CAFETE Y PIZZAS</h3>
                     <a href="https://sergiommq.github.io/paginawebpizza/" target="_blank" class="btn-2">Ver Página</a>
+                </div>
+                <div class="ejemplos-item">
+                    <img src="imagenes/ketzaltik.png" alt="Imagen de Documents Shared">
+                    <h3>KETSALTIK - PORTAFOLIO</h3>
+                    <a href="https://sergiommq.github.io/portafoliofacepainting/" target="_blank" class="btn-2">Ver Página</a>
                 </div>
                 <div class="ejemplos-item">
                     <img src="imagenes/barberia.png" alt="Imagen de Barberia">
                     <h3>BARBERIA</h3>
                     <a href="https://sergiommq.github.io/Barber-a-Alura-proyecto/" target="_blank" class="btn-2">Ver Página</a>
                 </div>
-                <div class="ejemplos-item">
-                    <img src="imagenes/ketsaltik.png" alt="Imagen de Documents Shared">
-                    <h3>KETSALTIK - PORTAFOLIO</h3>
-                    <a href="https://sergiommq.github.io/portafoliofacepainting/" target="_blank" class="btn-2">Ver Página</a>
-                </div>
             </div>
         </section>
-        
-
-        <section id="recomendaciones">
+        <div id="recomendaciones"></div>
+        <section>
             <h2>Recomendaciones</h2>
             <p>Lo que nuestros clientes dicen sobre nosotros:</p>
             <div class="carousel">
@@ -108,21 +119,15 @@
                 </div>
             </div>
         </section>
-
-        <section id="contacto">
-        </section>
-        
+        <div id="contacto"></div>
         <section class="social-icons">
             <h2>Síguenos en nuestras redes sociales</h2>
-            <a href="https://www.facebook.com/quatzalcode" target="_blank">
-                
-            </a>
-            <a href="https://www.instagram.com/quatzalcode" target="_blank">
-                <img src="instagram-icon.png" alt="Instagram">
+            <a href="https://www.facebook.com/profile.php?id=61572258794030" target="_blank">
+                <i class="fab fa-facebook"></i>
             </a>
             <a href="https://www.linkedin.com/company/quatzalcode" target="_blank">
-                <img src="linkedin-icon.png" alt="LinkedIn">
-            </a>
+                <i class="fab fa-linkedin"></i>
+            </a> 
         </section>
     </div>
 

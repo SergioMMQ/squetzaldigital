@@ -56,6 +56,10 @@ nav a {
 
 nav a:hover {
     color: #1e4ff0; /* Color verde oscuro al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave alrededor del enlace */
+        
+    transform: translateY(-2px); /* Efecto de movimiento al pasar el ratón */
+
 }
 
 /*  */
@@ -176,15 +180,21 @@ h2 {
     background: #D3D3D3; 
 }       
 
+/* Estilos básicos para los íconos */
 .social-icons {
-    margin-top: 10px;
-}
-
-.social-icons img {
-    width: 30px;
-    margin: 0 5px;
-    cursor: pointer;
-}
+    justify-content: center; /* Centra los íconos */
+    gap: 50%; /* Espaciado entre ellos */
+    margin-top: 20px;
+  }
+  .social-icons a {
+    text-decoration: none;
+    font-size: 60px; /* Tamaño del ícono */
+    color: #3b5998; /* Color azul de Facebook */
+    transition: color 0.3s ease; /* Transición suave */
+  }
+  .social-icons a:hover {
+    color: #6983b8; /* Color al pasar el mouse */
+  }
 
 .carousel {
     display: flex;
@@ -246,5 +256,13 @@ footer {
     nav a {
         margin: 15px 5px; /* Espaciado vertical para enlaces en pantallas pequeñas */
         font-size: 12px;
+    }
+
+    .ejemplos-item {
+        padding: 10px;
+        width: calc(30% - 2px);
+        text-align: center;
+        font-size: 10px;
+        transition: transform 0.3s;
     }
 }       
