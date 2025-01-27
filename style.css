@@ -113,19 +113,19 @@ h2 {
     padding: 15px;
 }
         
-#portafolio {
+#ejemplos {
     padding: 40px;
     background-color: #f9f9f9; /* Color de fondo */
 }
         
-.portfolio {
+.ejemplos {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* Espacio entre las tarjetas */
     justify-content: center; /* Centrar las tarjetas */
 }
         
-.portfolio-item {
+.ejemplos-item {
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -136,18 +136,18 @@ h2 {
     transition: transform 0.3s;
 }
         
-.portfolio-item img {
+.ejemplos-item img {
     width: 100%;
     height: auto;
     border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
 }
         
-.portfolio-item h3 {
+.ejemplos-item h3 {
     margin: 15px 0 10px;
     font-size: 1.5em;
 }
         
-.portfolio-item p {
+.ejemplos-item p {
     margin: 0 0 15px;
 }
         
@@ -165,11 +165,11 @@ h2 {
     background-color: #1a6d3f; /* Color más oscuro al pasar el mouse */
 }
         
-.portfolio-item:hover {
+.ejemplos-item:hover {
     transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
 }
 
-.portfolio, .recommendations {
+.ejemplos, .recommendations {
     margin: 20px 0;
     padding: 10px;
     border-radius: 5px;
