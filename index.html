@@ -17,17 +17,8 @@
 
 </head>
 <body>
-    <div id="inicio"></div>
-    <header>
-        <div>
-            <img src="imagenes/quetzalcode.png" alt="Quetzalcode Logo" class="img-header">
-        </div>
-        <div>
-            <p>Somos una empresa enfocada en ofrecer soluciones tecnológicas integrales, adaptadas a las necesidades de cada cliente, con el objetivo de impulsar la eficiencia, el crecimiento y la presencia digital de las empresas.</p>
-        </div>
-    </header>
     <nav>
-        <div>
+        <div style="display: flex;">
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
             <a href="#ejemplos">Ejemplos</a>
@@ -35,10 +26,20 @@
             <a href="#contacto">Contacto</a>
         </div>
     </nav>
+    
+    <section id="inicio">
+        <header>
+            <div>
+                <img src="imagenes/quetzalcode.png" alt="Quetzalcode Logo" class="img-header">
+            </div>
+            <div>
+                <p>Somos una empresa enfocada en ofrecer soluciones tecnológicas integrales, adaptadas a las necesidades de cada cliente, con el objetivo de impulsar la eficiencia, el crecimiento y la presencia digital de las empresas.</p>
+            </div>
+        </header>
+    </section>
 
     <div class="container">
-        <div id="servicios" style="height: 70px;"></div>
-        <section>
+        <section id="servicios">
             <h2>Nuestros Servicios</h2>
             <div class="service">
                 <div class="container-item">
@@ -70,8 +71,8 @@
                 </div>
             </div>
         </section>
-        <div id="ejemplos"></div>
-        <section> 
+        <div ></div>
+        <section id="ejemplos"> 
             <h2>Ejemplos practicos</h2>
             <p>Descubre algunos de nuestros trabajos:</p>
             <div class="ejemplos">
@@ -97,8 +98,8 @@
                 </div>
             </div>
         </section>
-        <div id="recomendaciones"></div>
-        <section>
+        <div ></div>
+        <section id="recomendaciones">
             <h2>Recomendaciones</h2>
             <p>Lo que nuestros clientes dicen sobre nosotros:</p>
             <div class="carousel">
@@ -119,20 +120,25 @@
                 </div>
             </div>
         </section>
-        <div id="contacto"></div>
-        <section class="social-icons">
+        <section id="contacto" class="social-icons">
             <h2>Síguenos en nuestras redes sociales</h2>
-            <a href="https://www.facebook.com/profile.php?id=61572258794030" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/quatzalcode" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a> 
+            <div class="circle-container">
+                <div class="circle">
+                    <a href="https://www.facebook.com/profile.php?id=61572258794030" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/quatzalcode" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a> 
+                </div>
+            </div>
         </section>
     </div>
 
     <footer>
         <p>&copy; 2024 Quetzalcode. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="scrip.js"></script>
 </body>
 </html>
