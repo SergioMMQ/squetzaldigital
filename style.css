@@ -22,15 +22,34 @@ header {
     flex-wrap: wrap;
 }
 
-header p{
+/* header p{
     width: 300px;
     font-size: large;
     text-align: justify;
+} */
+
+.img-header {
+    width: 200px;
+    height: auto;
+    animation: borderRotation 10s infinite alternate ease-in-out;
 }
 
-.img-header{
-    border-radius: 25% 50%;
-    width: 200px;
+@keyframes borderRotation {
+    0% {
+        border-radius: 25% 50%;
+    }
+    25% {
+        border-radius: 50% 25%;
+    }
+    50% {
+        border-radius: 75% 50%;
+    }
+    75% {
+        border-radius: 50% 75%;
+    }
+    100% {
+        border-radius: 25% 50%;
+    }
 }
 
 /* menu */
@@ -55,7 +74,7 @@ nav a {
     border: solid 11px transparent;
 }
 
-nav a:hover {
+/* nav a:hover {
     color: #aef8ae;
     border-radius: 10px;
     border-top: solid 11px transparent;
@@ -63,14 +82,14 @@ nav a:hover {
 	border-bottom: solid 11px #2dad5e;
 	border-left: solid 11px transparent;
     transition: all 0.5s ease;
-}
+} */
 
 nav a::after{
     content: "";
-    position: absolute; /* Absoluto para controlarlo dentro del enlace */
-    bottom: -5px; /* Coloca el círculo justo debajo del texto */
-    left: 50%; /* Centra horizontalmente */
-    transform: translateX(-50%); /* Ajusta el centrado exacto */
+    position: absolute; 
+    bottom: -5px; 
+    left: 50%; 
+    transform: translateX(-50%); 
     width: 0; /* Oculto inicialmente */
     height: 0; /* Oculto inicialmente */
     background-color: #050505; /* Color del círculo */
@@ -78,8 +97,8 @@ nav a::after{
     transition: all 1s ease; /* Suaviza la animación */
 }
 nav a:hover::after {
-    width: 10px; /* Tamaño del círculo cuando está en hover */
-    height: 10px; /* Tamaño del círculo cuando está en hover */
+    width: 10px;
+    height: 10px;
 }
 
 nav a.active {
@@ -92,6 +111,44 @@ nav a.active {
     transition: all 0.5s ease;
 }
 
+header p {
+    width: 300px;
+    font-size: large;
+    text-align: justify;
+    color: #ffffff;
+    /* -webkit-text-stroke: 1px #ffffff; */
+    /* animation: textEffect 10s infinite alternate ease-in-out; */
+}
+
+@keyframes textEffect {
+    0% {
+        transform: scale(1);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1.05);
+        text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.6);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.1);
+        text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.7);
+        opacity: 0.8;
+    }
+    75% {
+        transform: scale(1.05);
+        text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.6);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+        opacity: 1;
+    }
+}
+
+
 .container {
     width: 90%;
     margin: 50px 0;
@@ -103,15 +160,27 @@ nav a.active {
     box-shadow: 15px 1px 100px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
+h2 { 
     padding: 60px 0 0 0;
     color: #2190eb; 
     border-bottom: 2px solid #333333;
     padding-bottom: 10px;
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    font-weight: 600; /* Fuente en negrita para mayor énfasis */
+    letter-spacing: 1px; /* Espaciado entre letras para mejor legibilidad */
+    text-transform: uppercase; /* Para un toque más estilizado */
+    transition: all 0.3s ease-in-out; /* Efecto de transición suave */
+}
+
+h2:hover {
+    color: #1e6db3; /* Un color más oscuro para el texto cuando se pasa el ratón */
+    border-color: #1e6db3; /* Cambiar el color del borde también */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Agregar sombra al texto */
+    transform: translateY(-5px); /* Efecto sutil de desplazamiento hacia arriba */
 }
 
 .service{
-    margin: 7rem auto;
+    margin: 1rem auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -119,7 +188,7 @@ h2 {
 
 .service-item {
     width: 300px;
-    height: 470px;
+    height: 300px;
     display: flex;
     margin: 10px 0;
     padding: 10px;
@@ -128,12 +197,18 @@ h2 {
     background: #fff;
     flex-direction: column;
     align-items: center;
-    transition: width .5s ease-out, margin .5s ease-out;
+    transition: width .5s ease-out, margin .5s ease-out, border .3s ease-in-out;
 }
+
+.service-item:hover {
+    border: 3px solid #333; /* Se hace más grueso el borde al pasar el ratón */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Se añade un sutil resplandor */
+}
+
 
 .container-item{
     width: 330px;
-    height: 560px;
+    /* height: 560px; */
     text-align: justify;
 }
     
@@ -166,16 +241,16 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    width: calc(30% - 40px); /* Ajustar el tamaño según el diseño */
+    width: calc(40% - 5px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s;
+    /* transition: transform 0.3s; */
 }
         
 .ejemplos-item img {
     width: 100%;
     height: auto;
-    border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+    border-radius: 8px 8px 0 0; 
 }
         
 .ejemplos-item h3 {
@@ -214,19 +289,41 @@ h2 {
 
 /* Estilos básicos para los íconos */
 .social-icons {
-    height: 700px;
+    height: 800px;
     margin-top: 20px;
 }
 
-.social-icons a {
+.facebook {
     text-decoration: none;
     font-size: 60px; /* Tamaño del ícono */
-    color: #3b5998; /* Color azul de Facebook */
+    color: #3f7bfe; /* Color azul de Facebook */
     transition: color 0.3s ease; /* Transición suave */
 }
 
-.social-icons a:hover {
-    color: #6983b8; /* Color al pasar el mouse */
+.facebook:hover {
+    color: #8db1fb; /* Color al pasar el mouse */
+}
+
+.linkedin {
+    text-decoration: none;
+    font-size: 60px; /* Tamaño del ícono */
+    color: #3f7bfe; /* Color azul de Facebook */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.linkedin:hover {
+    color: #8db1fb; /* Color al pasar el mouse */
+}
+
+.whatsapp {
+    text-decoration: none;
+    font-size: 60px; /* Tamaño del ícono */
+    color: #09b506; /* Color azul de Facebook */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.whatsapp:hover {
+    color: #89b788; /* Color al pasar el mouse */
 }
 
 .circle-container{
@@ -236,17 +333,27 @@ h2 {
 }
 
 .circle{
+    /* padding: 0 0 0 5%; */
     display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        border: 1px solid #ccc;
-        border-radius: 50px;
-        justify-content: center; /* Centra los íconos */
-        gap: 50%; /* Espaciado entre ellos */
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    gap: 10%;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
+.circle p{
+    padding: 0 0 0 30px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
 .carousel {
     height: 500px;
     display: flex;
@@ -293,24 +400,21 @@ footer {
 }
 
 
-        
-/* Estilos para pantallas más pequeñas */
 @media screen and (max-width: 700px) {
     header {
-        flex-direction: column; /* Mantiene la columna en pantallas pequeñas */
+        flex-direction: column;
         height: 600px;
         text-align: justify;
     }
 
     nav a {
-        font-size: 12px;
-        border: solid 3px transparent;
+        font-size: 10px;
     }
+
 
     nav a.active {
         color: #aef8ae;
         border-radius: 10px;
-        border-top: solid 5px transparent;
         border-right: solid 5px transparent;
         border-bottom: solid 5px #2dad5e;
         border-left: solid 5px transparent;
@@ -319,9 +423,16 @@ footer {
 
     .ejemplos-item {
         padding: 10px;
-        width: calc(30% - 2px);
+        width: calc(100% - 1px);
         text-align: center;
         font-size: 10px;
         transition: transform 0.3s;
+    }
+
+    .social-icons{
+        height: 950px;
+    }
+    .circle{
+        margin: 50px 0 0 0;
     }
 }       
