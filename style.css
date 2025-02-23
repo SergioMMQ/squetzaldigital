@@ -11,16 +11,29 @@ body {
     background-color: #ffffff;
 }
 
+@keyframes movingBackground {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 100% 0;
+    }
+
+}
+
 header {
     height: 700px;
-    background: linear-gradient(to top, #4169E1, #7a99f8);
+    background: linear-gradient(to right, #021d6d, #6186f3); /* Colores con mayor contraste */
     color: #ffffff;
     padding: 40px 0 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    background-size: 200% 100%; /* Aumentar el área para más movimiento */
+    animation: movingBackground 10s linear infinite; /* Hacerlo más rápido */
 }
+
 
 /* header p{
     width: 300px;
@@ -56,6 +69,8 @@ header {
 nav{
     display: flex;
     background: rgba(0,0,0,2);
+    
+    background: linear-gradient(to right, #000000ed, #343534ed);
     text-align: center;
     position: fixed;
     width: 100%;
@@ -317,13 +332,13 @@ h2:hover {
 
 .whatsapp {
     text-decoration: none;
-    font-size: 60px; /* Tamaño del ícono */
-    color: #09b506; /* Color azul de Facebook */
-    transition: color 0.3s ease; /* Transición suave */
+    font-size: 60px; 
+    color: #09b506;
+    transition: color 0.3s ease;
 }
 
 .whatsapp:hover {
-    color: #89b788; /* Color al pasar el mouse */
+    color: #89b788; 
 }
 
 .circle-container{
@@ -392,13 +407,25 @@ h2:hover {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: linear-gradient(to right, #2dad5e, #aef8ae); 
+    background: linear-gradient(to right, #000000, #343534); 
     color: white;
     position: relative;
     bottom: 0;
     width: 100%;
 }
 
+.whatsapp-button {
+    position: fixed;
+    bottom: 50px; 
+    right: 50px; 
+}
+
+.whatsapp-button a {
+    border-radius: 50px;
+    text-decoration: none; 
+    color: #25D366; 
+    font-size: 50px; 
+}
 
 @media screen and (max-width: 700px) {
     header {
