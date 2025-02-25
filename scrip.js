@@ -26,3 +26,16 @@ document.addEventListener("scroll", () => {
         }
     });
 });
+
+
+window.addEventListener("scroll", function() {
+    let scrollTop = window.scrollY;
+    let leftWing = document.querySelector(".left-wing");
+    let rightWing = document.querySelector(".right-wing");
+
+    // Alterna la rotación de las alas para simular el aleteo
+    let angle = Math.sin(scrollTop * 0.1) * 30; // Cambia el ángulo con el scroll
+
+    leftWing.style.transform = `rotate(${angle}deg)`;
+    rightWing.style.transform = `rotate(${-angle}deg)`;
+});

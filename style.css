@@ -9,6 +9,7 @@ body {
     padding: 0;
     line-height: 1.6; /* Mejora la legibilidad */
     background-color: #ffffff;
+    height: 200vh;
 }
 
 @keyframes movingBackground {
@@ -34,13 +35,6 @@ header {
     animation: movingBackground 10s linear infinite; /* Hacerlo más rápido */
 }
 
-
-/* header p{
-    width: 300px;
-    font-size: large;
-    text-align: justify;
-} */
-
 .img-header {
     width: 200px;
     height: auto;
@@ -65,7 +59,6 @@ header {
     }
 }
 
-/* menu */
 nav{
     display: flex;
     background: rgba(0,0,0,2);
@@ -89,16 +82,6 @@ nav a {
     border: solid 11px transparent;
 }
 
-/* nav a:hover {
-    color: #aef8ae;
-    border-radius: 10px;
-    border-top: solid 11px transparent;
-	border-right: solid 11px transparent;
-	border-bottom: solid 11px #2dad5e;
-	border-left: solid 11px transparent;
-    transition: all 0.5s ease;
-} */
-
 nav a::after{
     content: "";
     position: absolute; 
@@ -111,6 +94,7 @@ nav a::after{
     border-radius: 50%; /* Mantén el círculo redondo */
     transition: all 1s ease; /* Suaviza la animación */
 }
+
 nav a:hover::after {
     width: 10px;
     height: 10px;
@@ -131,8 +115,6 @@ header p {
     font-size: large;
     text-align: justify;
     color: #ffffff;
-    /* -webkit-text-stroke: 1px #ffffff; */
-    /* animation: textEffect 10s infinite alternate ease-in-out; */
 }
 
 @keyframes textEffect {
@@ -162,7 +144,6 @@ header p {
         opacity: 1;
     }
 }
-
 
 .container {
     width: 90%;
@@ -220,10 +201,8 @@ h2:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Se añade un sutil resplandor */
 }
 
-
 .container-item{
     width: 330px;
-    /* height: 560px; */
     text-align: justify;
 }
     
@@ -259,7 +238,6 @@ h2:hover {
     width: calc(40% - 5px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    /* transition: transform 0.3s; */
 }
         
 .ejemplos-item img {
@@ -302,7 +280,6 @@ h2:hover {
     background: #D3D3D3; 
 }       
 
-/* Estilos básicos para los íconos */
 .social-icons {
     height: 800px;
     margin-top: 20px;
@@ -344,11 +321,9 @@ h2:hover {
 .circle-container{
     width: auto;
     height: 600px;
-
 }
 
 .circle{
-    /* padding: 0 0 0 5%; */
     display: flex;
     height: 100%;
     width: 100%;
@@ -377,7 +352,7 @@ h2:hover {
 }
 
 .carousel img {
-    width: 100px; /* Ajusta según lo necesites */
+    width: 100px;
     margin: 5px;
     border-radius: 5px;
 }
@@ -390,7 +365,7 @@ h2:hover {
 }
 
 .bar div {
-    background: #00796b; /* Color de las barras */
+    background: #00796b;
     height: 20px;
     border-radius: 5px;
     text-align: right;
@@ -407,7 +382,7 @@ h2:hover {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: linear-gradient(to right, #000000, #343534); 
+    background: linear-gradient(to right, #000000ed, #272727ed);
     color: white;
     position: relative;
     bottom: 0;
@@ -438,7 +413,6 @@ footer {
         font-size: 10px;
     }
 
-
     nav a.active {
         color: #aef8ae;
         border-radius: 10px;
@@ -459,6 +433,7 @@ footer {
     .social-icons{
         height: 950px;
     }
+
     .circle{
         margin: 50px 0 0 0;
     }
