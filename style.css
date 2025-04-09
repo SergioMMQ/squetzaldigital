@@ -270,12 +270,6 @@ h2:hover {
     text-align: center;
 }
 
-#recomendaciones h2 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
 .carousel {
     display: flex;
     gap: 30px;
@@ -303,14 +297,23 @@ h2:hover {
 }
 
 .recommendation-item p {
-    width: 350px;
+    width: 250px;
     font-size: 1rem;
     color: #555;
     line-height: 1.5;
 }
 
+
+#recomendaciones h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+
 @media (max-width: 768px) {
     .carousel {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -678,5 +681,12 @@ footer {
 
     .circle{
         margin: 50px 0 0 0;
+    }
+
+    
+    #recomendaciones h2 {
+        color: #333;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
     }
 }       
