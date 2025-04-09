@@ -15,27 +15,23 @@ document.addEventListener("scroll", () => {
     });
 
     // Activa el hover y mantiene la clase 'active' hasta la siguiente sección
-    let activeFound = false;
-
     navLinks.forEach((link) => {
         link.classList.remove("active");  // Elimina la clase 'active' de todos los enlaces
 
-        if (!activeFound && link.getAttribute("href") === `#${currentSection}`) {
+        if (link.getAttribute("href") === `#${currentSection}`) {
             link.classList.add("active");  // Añade 'active' solo al enlace correspondiente
-            activeFound = true;  // Asegura que solo el primer enlace de la sección visible tenga 'active'
         }
     });
 });
 
-
-window.addEventListener("scroll", function() {
-    let scrollTop = window.scrollY;
-    let leftWing = document.querySelector(".left-wing");
-    let rightWing = document.querySelector(".right-wing");
-
-    // Alterna la rotación de las alas para simular el aleteo
-    let angle = Math.sin(scrollTop * 0.1) * 30; // Cambia el ángulo con el scroll
-
-    leftWing.style.transform = `rotate(${angle}deg)`;
-    rightWing.style.transform = `rotate(${-angle}deg)`;
-});
+    document.getElementById('formEmpleado').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const numero = document.getElementById('numeroTrabajador').value.trim();
+        
+        if(numero) {
+            // Redirige a la URL del perfil del empleado
+            window.location.href = `empleados/${numero}.html`;
+        } else {
+            alert('Por favor ingresa un número de trabajador válido.');
+        }
+    });

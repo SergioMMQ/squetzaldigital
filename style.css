@@ -72,6 +72,7 @@ nav{
     z-index: 1000;
     justify-content: space-around;
     align-items: center;
+
 }
 
 nav a {
@@ -80,6 +81,8 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     border: solid 11px transparent;
+    animation: fadeIn 1.2s ease-in-out;
+
 }
 
 nav a::after{
@@ -110,12 +113,33 @@ nav a.active {
     transition: all 0.5s ease;
 }
 
+.titulo-principal {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1.2px;
+    background: linear-gradient(to right, #00ffe7, #00b3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
 header p {
     width: 300px;
     font-size: large;
     text-align: justify;
     color: #ffffff;
 }
+
+
 
 @keyframes textEffect {
     0% {
@@ -213,7 +237,90 @@ h2:hover {
 .service-item p{
     padding: 15px;
 }
-        
+
+
+.servicio-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+  }
+  
+  .servicio-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .servicio-card h3 {
+    font-size: 1.3rem;
+    color: #0077ff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .servicio-card p {
+    color: #333;
+    line-height: 1.5;
+  }
+  
+       
+/* Estilo para la sección de recomendaciones */
+#recomendaciones {
+    padding: 20px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#recomendaciones h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    gap: 30px;
+    height: 200px;
+    scrollbar-width: thin;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.recommendation-item {
+    height: 150px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: left;
+}
+
+.recommendation-item h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.recommendation-item p {
+    width: 350px;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recommendation-item {
+        width: 90%;
+    }
+}
+
+  
 #ejemplos {
     padding: 40px;
     background-color: #f9f9f9; /* Color de fondo */
@@ -281,7 +388,7 @@ h2:hover {
 }       
 
 .social-icons {
-    height: 800px;
+    /* height: 800px; */
     margin-top: 20px;
 }
 
@@ -344,18 +451,6 @@ h2:hover {
     align-items: center;
     width: 200px;
 }
-.carousel {
-    height: 500px;
-    display: flex;
-    overflow-x: auto;
-    scrollbar-width: thin;
-}
-
-.carousel img {
-    width: 100px;
-    margin: 5px;
-    border-radius: 5px;
-}
 
 .bar {
     display: flex;
@@ -402,6 +497,153 @@ footer {
     font-size: 50px; 
 }
 
+/* Estilos generales de la sección */
+#contacto {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+} */
+
+/* Título y texto intro */
+/* h2 {
+    color: #008C6C;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+} */
+
+.intro-text {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    color: #008C6C;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilos para los campos de entrada */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Estilos para las preferencias de contacto */
+.contact-preference label {
+    display: -webkit-inline-box;
+    margin-right: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Estilos para el botón de envío */
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #008C6C;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #006a4d;
+}
+
+/* Estilos para los enlaces de redes sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    font-size: 2.5rem;
+    color: #333;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+.facebook:hover {
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.linkedin:hover {
+    background-color: #0077b5;
+    border-color: #0077b5;
+}
+
+.whatsapp:hover {
+    background-color: #25d366;
+    border-color: #25d366;
+}
+
+/* Iconos de redes sociales (FontAwesome) */
+.fab {
+    color: inherit;
+    font-size: 1.5rem;
+}
+
+.whatsapp-button .fab {
+    color: inherit;
+    font-size: 4rem;
+}
+
+
 @media screen and (max-width: 700px) {
     header {
         flex-direction: column;
@@ -431,7 +673,7 @@ footer {
     }
 
     .social-icons{
-        height: 950px;
+        height: auto;
     }
 
     .circle{
