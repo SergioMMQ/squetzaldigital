@@ -275,7 +275,7 @@ h2:hover {
     gap: 30px;
     height: 200px;
     scrollbar-width: thin;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     overflow-x: auto;
 }
