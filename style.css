@@ -12,33 +12,35 @@ body {
     height: 200vh;
 }
 
-@keyframes movingBackground {
-    0% {
-        background-position: 0 0;
-    }
-    25% {
-        background-position: 100% 0;
-    }
-
-}
-
 header {
+    background-image: url(imagenes/prueba.jpg);
     height: 700px;
-    background: linear-gradient(to right, #021d6d, #6186f3); /* Colores con mayor contraste */
-    color: #ffffff;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed; /* Fija el fondo */
+    background-repeat: no-repeat;
     padding: 40px 0 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    background-size: 200% 100%; /* Aumentar el área para más movimiento */
-    animation: movingBackground 10s linear infinite; /* Hacerlo más rápido */
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(129, 127, 127, 0.5); /* Capa oscura */
 }
 
 .img-header {
+    position: relative;
     width: 200px;
     height: auto;
     animation: borderRotation 10s infinite alternate ease-in-out;
+    z-index: 100; /* Asegura que la imagen esté por encima de la capa oscura */   
 }
 
 @keyframes borderRotation {
@@ -62,12 +64,11 @@ header {
 nav{
     display: flex;
     background: rgba(0,0,0,2);
-    
     background: linear-gradient(to right, #000000ed, #343534ed);
     text-align: center;
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 70px;
     top: 0;
     z-index: 1000;
     justify-content: space-around;
@@ -114,16 +115,18 @@ nav a.active {
 }
 
 .titulo-principal {
+    position: relative;
     font-family: 'Roboto', sans-serif;
     font-size: 2.2rem;
     font-weight: 700;
     text-align: center;
     letter-spacing: 1.2px;
-    background: linear-gradient(to right, #00ffe7, #00b3ff);
+    background: linear-gradient(to right, #00ff22, #00ff00);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;    
     margin: 0 auto;
     animation: fadeIn 1.2s ease-in-out;
+    z-index: 3;
 }
 
 @keyframes fadeIn {
@@ -133,6 +136,8 @@ nav a.active {
 
 
 header p {
+    position: relative;
+    z-index: 2;
     width: 300px;
     font-size: large;
     text-align: justify;
