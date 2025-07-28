@@ -1,5 +1,4 @@
-
-    body {
+  body {
       font-family: Arial, sans-serif;
       background-color: #f3f3f3;
       margin: 0;
@@ -31,6 +30,7 @@
       justify-items: center;
     }
 
+    /* Estilos para las formas CIRCULO*/
     .circulo {
       width: 100px;
       height: 100px;
@@ -39,6 +39,7 @@
       border-radius: 50%;
     }
 
+    /* Estilos para las formas TRIANGULO */
     .triangulo {
       width: 100px;
       height: 100px;
@@ -48,6 +49,7 @@
       clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
     }
 
+    /* Estilos para las formas CUADRADO */
     .cuadrado {
       width: 100px;
       height: 100px;
@@ -62,6 +64,7 @@
       border: 2px dashed #333;
     }
     
+    /* Estilos para las formas CUADRADO con sombra */
     .cuadrado-sombra {
       width: 100px;
       height: 100px;
@@ -69,6 +72,7 @@
       background-color: #4caf50;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
     }
+    /* Estilos para las formas CUADRADO con bordes redondeados */
     .cuadrado-redondeado {
       width: 100px;
       height: 100px;
@@ -76,6 +80,7 @@
       background-color: #2196f3;
       border-radius: 20px;
     }
+    /* Estilos para las formas CUADRADO con sombra y bordes redondeados */
     .cuadrado-sombra-redondeado {
       width: 100px;
       height: 100px;
@@ -84,7 +89,7 @@
       border-radius: 20px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
     }
-
+    /* Estilos para las formas POKEBALL */
     .pokeball {
       position: relative;
       width: 100px;
