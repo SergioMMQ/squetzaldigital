@@ -132,3 +132,12 @@
       border-radius: 50%;
       transform: translate(-50%, -50%);
     }
+
+  .chihuahua {
+    width: 100px;
+    height: 100px;
+    background-color: #ff9900;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+  }
