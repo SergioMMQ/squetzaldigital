@@ -663,6 +663,10 @@ footer {
         font-size: 10px;
     }
 
+    .contact-btn-1{
+        font-size: 10px;
+    }
+
     nav a.active {
         color: #aef8ae;
         border-radius: 10px;
@@ -698,8 +702,6 @@ footer {
 
 
 .contact-btn {
-    
-    font-size: 1.5rem;
     color: #333;
     transition: color 0.3s, transform 0.3s;
     display: inline-block;
