@@ -707,8 +707,16 @@ footer {
         bottom: 30px;
         right: 30px;
     }
+    .servicio-img{
+        width: 300px;
+        height: auto;
+    }
 }       
 
+    .servicio-img{
+        max-width: 400px;
+        height: auto;
+    }
 
 .contact-btn {
     color: #333;
@@ -788,3 +796,4 @@ footer {
   color: #999;
   cursor: pointer;
 }
+
