@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nube y Almacenamiento | S Quetzal Digital</title>
+  <link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="styleservicios.css">
+</head>
+<body>
+
+  <header>
+    <h1>☁️ Nube y Almacenamiento</h1>
+    <p>Migración, nubes privadas y automatización de respaldos para tu empresa.</p>
+    <a href="#" onclick="openModal()">Solicita asesoría</a>
+  </header>
+
+  <section>
+    <h2 style="text-align: center; margin-bottom: 40px;">¿Qué ofrecemos?</h2>
+    <div class="servicios">
+      <div class="servicio">
+        <h3>📤 Migración a la nube</h3>
+        <p>Movemos tus datos y sistemas a entornos cloud seguros como AWS, Azure o Google Cloud.</p>
+      </div>
+      <div class="servicio">
+        <h3>🔐 Nubes privadas</h3>
+        <p>Infraestructura dedicada para control total, cumplimiento normativo y máxima seguridad.</p>
+      </div>
+      <div class="servicio">
+        <h3>♻️ Automatización de respaldos</h3>
+        <p>Configuramos copias de seguridad periódicas, cifradas y notificadas para no perder nunca nada.</p>
+      </div>
+      <div class="servicio">
+        <h3>📡 Integración híbrida</h3>
+        <p>Combinamos soluciones en la nube con servidores físicos para una transición controlada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 style="margin-bottom: 20px;">¿Listo para modernizar tu almacenamiento?</h2>
+    <p style="margin-bottom: 30px;">Contáctanos para diseñar tu solución personalizada en la nube.</p>
+    <a href="#" onclick="openModal()">Contáctanos</a>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-bg" id="contactModal">
+    <div class="modal">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <h2 style="text-align: center;">Envíanos un mensaje</h2>
+      <form action="https://formsubmit.co/3ddb765042ee1ded8623c8175f1318ff" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico">
+
+        <label for="phone">Teléfono:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Ingresa tu número de teléfono">
+
+        <label for="subject">Tema de consulta:</label>
+        <select id="subject" name="subject" required>
+          <option value="">Selecciona un tema</option>
+          <option value="migracion">Migración a la nube</option>
+          <option value="respaldos">Automatización de respaldos</option>
+          <option value="nube_privada">Nube privada</option>
+          <option value="otros">Otros</option>
+        </select>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje aquí"></textarea>
+
+        <label for="contact-preference">Preferencia de contacto:</label>
+        <div class="contact-preference">
+          <label><input type="radio" name="contact-preference" value="email" required> Por correo electrónico</label>
+          <label><input type="radio" name="contact-preference" value="phone"> Por teléfono</label>
+        </div>
+
+        <input type="hidden" name="_next" value="https://squetzaldigital.com/avisos/gracias.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 S Quetzal Digital. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function openModal() {
+      document.getElementById('contactModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('contactModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+  </script>
+
+</body>
+</html>

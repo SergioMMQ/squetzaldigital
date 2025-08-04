@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎨 Estilos CSS Personalizados</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #073f0b;
+    }
+
+    .contenedor-galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .tarjeta {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .tarjeta h3 {
+      margin-bottom: 10px;
+      color: #073f0b;
+    }
+
+    .tarjeta p {
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .tarjeta code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 4px;
+    }
+
+    /* Estilos personalizados */
+    .circulo {
+      width: 80px;
+      height: 80px;
+      margin: 15px auto;
+      border-radius: 50%;
+      background: radial-gradient(circle, #f00, #800);
+    }
+
+    .triangulo {
+      width: 0;
+      height: 0;
+      margin: 20px auto;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 70px solid #ff8c00;
+    }
+
+    .cuadrado {
+      width: 80px;
+      height: 80px;
+      margin: 15px auto;
+      background: repeating-linear-gradient(
+        45deg,
+        #4caf50,
+        #4caf50 10px,
+        #81c784 10px,
+        #81c784 20px
+      );
+    }
+
+    .cuadrado-sombra {
+      width: 80px;
+      height: 80px;
+      margin: 15px auto;
+      background-color: #607d8b;
+      box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+    }
+
+    .cuadrado-redondeado {
+      width: 80px;
+      height: 80px;
+      margin: 15px auto;
+      background-color: #3f51b5;
+      border-radius: 12px;
+    }
+
+    .cuadrado-sombra-redondeado {
+      width: 80px;
+      height: 80px;
+      margin: 15px auto;
+      background-color: #ff5722;
+      border-radius: 16px;
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .pokeball {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 15px auto;
+      background: white;
+      border: 4px solid black;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .pokeball .line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: black;
+      transform: translateY(-50%);
+    }
+
+    .pokeball .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      background: white;
+      border: 4px solid black;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .chihuahua {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      margin: 15px auto;
+    }
+
+    .chihuahua .cabeza {
+      width: 60px;
+      height: 60px;
+      background: #c9a66b;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+    }
+
+    .chihuahua .orejas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 30px solid #c9a66b;
+      transform: translateY(-10px);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.8rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎨 Estilos CSS Personalizados</h1>
+
+  <div class="contenedor-galeria">
+
+    <div class="tarjeta">
+      <h3>Estilo Circular</h3>
+      <div class="circulo"></div>
+      <p>Clase: <code>.circulo</code></p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Triángulo Gradiente</h3>
+      <div class="triangulo"></div>
+      <p>Clase: <code>.triangulo</code></p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Rayas Repetidas</h3>
+      <div class="cuadrado"></div>
+      <p>Clase: <code>.cuadrado</code></p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Cuadrado con Sombra</h3>
+      <div class="cuadrado-sombra"></div>
+      <p>Clase: <code>.cuadrado-sombra</code></p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Cuadrado Redondeado</h3>
+      <div class="cuadrado-redondeado"></div>
+      <p>Clase: <code>.cuadrado-redondeado</code></p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Cuadrado con Sombra y Bordes</h3>
+      <div class="cuadrado-sombra-redondeado"></div>
+      <p>Clase: <code>.cuadrado-sombra-redondeado</code></p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Pokeball</h3>
+      <div class="pokeball">
+        <div class="line"></div>
+        <div class="circle"></div>
+      </div>
+      <p>Clase: <code>.pokeball</code></p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Chihuahua</h3>
+      <div class="chihuahua">
+        <div class="orejas"></div>
+        <div class="cabeza"></div>
+      </div>
+      <p>Clase: <code>.chihuahua</code></p>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 S Quetzal Digital — Estilos CSS para Web Creativa
+  </footer>
+
+</body>
+</html>
