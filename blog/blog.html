@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | S Quetzal Digital</title>
+  <link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="styleblog.css">
+  <link rel="stylesheet" href="animacionescss/css/reset.css">
+</head>
+<body>
+
+  <header>
+    <h1>✍️ Blog de S Quetzal Digital</h1>
+    <p>Explora artículos, guías y recursos sobre marketing digital, desarrollo web y tecnología.</p>
+  </header>
+
+  <section id="entradas">
+    <div class="servicios">
+      
+        <!-- Artículo 1 -->
+        <div class="servicio">
+        <h3>🚀 ¿Por qué una empresa necesita digitalizarse?</h3>
+        <p>Conoce las principales razones por las que tu empresa debe dar el salto a la era digital y no quedarse atrás.</p>
+        <a href="digitalizacion-y-automatizacion.html">Leer más</a>
+        </div>
+
+
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>¿Quieres recibir nuestras publicaciones?</h2>
+    <p >Suscríbete y recibe artículos en tu correo.</p>
+    <a href="#" onclick="openModal()">Suscribirme</a>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-bg" id="contactModal">
+    <div class="modal">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <h2 style="text-align: center;">Suscripción al Blog</h2>
+      <form action="https://formsubmit.co/b3e8b65d1d4be69bd261638d4afc623c" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico">
+
+        <input type="hidden" name="_subject" value="Nueva suscripción al blog">
+        <input type="hidden" name="_next" value="https://squetzaldigital.com/avisos/gracias.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 S Quetzal Digital. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function openModal() {
+      document.getElementById('contactModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('contactModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+  </script>
+
+</body>
+</html>
