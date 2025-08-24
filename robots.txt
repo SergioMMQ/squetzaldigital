@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Bloquear carpetas de prueba o privadas
+Disallow: /admin/
+Disallow: /test/
+Disallow: /private/
+
+# Sitemap principal
+Sitemap: https://squetzaldigital.com/sitemap.xml
