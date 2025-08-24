@@ -3,9 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Desarrollo de Software | S Quetzal Digital</title>
+
+  <!-- Título SEO -->
+  <title>Desarrollo de Software | Apps y Soluciones a Medida | S Quetzal Digital</title>
+
+  <!-- Descripción -->
+  <meta name="description" content="Desarrollamos software a medida, aplicaciones móviles y soluciones web para empresas y emprendedores. Optimiza tus procesos con nuestras herramientas.">
+
+  <!-- Palabras clave -->
+  <meta name="keywords" content="desarrollo de software, apps móviles, aplicaciones web, software a medida, integraciones, S Quetzal Digital">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://squetzaldigital.com/servicios/desarrollo-software.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Desarrollo de Software | S Quetzal Digital">
+  <meta property="og:description" content="Creamos software a medida, apps móviles y soluciones web personalizadas para tu empresa o proyecto.">
+  <meta property="og:image" content="https://squetzaldigital.com/imagenes/logoquetzalcode.png">
+  <meta property="og:url" content="https://squetzaldigital.com/servicios/desarrollo-software.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Desarrollo de Software | S Quetzal Digital">
+  <meta name="twitter:description" content="Desarrollo de apps, software a medida y soluciones web profesionales para empresas y emprendedores.">
+  <meta name="twitter:image" content="https://squetzaldigital.com/imagenes/logoquetzalcode.png">
+
+  <!-- Favicon y CSS -->
   <link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="styleservicios.css">
+
+  <!-- JSON-LD de Servicio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Desarrollo de Software",
+    "description": "Desarrollo de aplicaciones móviles, software a medida y soluciones web personalizadas para empresas y emprendedores.",
+    "provider": {
+      "@type": "Organization",
+      "name": "S Quetzal Digital",
+      "url": "https://squetzaldigital.com",
+      "logo": "https://squetzaldigital.com/imagenes/logoquetzalcode.png"
+    }
+  }
+  </script>
+
 </head>
 <body>
 
@@ -89,19 +132,11 @@
   </footer>
 
   <script>
-    function openModal() {
-      document.getElementById('contactModal').style.display = 'flex';
-    }
-
-    function closeModal() {
-      document.getElementById('contactModal').style.display = 'none';
-    }
-
+    function openModal() { document.getElementById('contactModal').style.display = 'flex'; }
+    function closeModal() { document.getElementById('contactModal').style.display = 'none'; }
     window.onclick = function(event) {
       const modal = document.getElementById('contactModal');
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
+      if (event.target === modal) modal.style.display = 'none';
     };
   </script>
 

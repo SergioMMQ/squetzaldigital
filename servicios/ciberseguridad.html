@@ -3,9 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ciberseguridad | S Quetzal Digital</title>
+
+  <!-- Título SEO -->
+  <title>Ciberseguridad | Protege tu Negocio | S Quetzal Digital</title>
+
+  <!-- Descripción -->
+  <meta name="description" content="Protege tu negocio contra amenazas digitales. Ofrecemos auditorías, protección de redes, seguridad en software y respuesta ante incidentes.">
+
+  <!-- Palabras clave -->
+  <meta name="keywords" content="ciberseguridad, auditoría de seguridad, protección de redes, seguridad en software, respuesta ante incidentes, S Quetzal Digital">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://squetzaldigital.com/servicios/ciberseguridad.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ciberseguridad | S Quetzal Digital">
+  <meta property="og:description" content="Protege tu negocio con soluciones profesionales de ciberseguridad: auditorías, protección de redes y respuesta ante incidentes.">
+  <meta property="og:image" content="https://squetzaldigital.com/imagenes/logoquetzalcode.png">
+  <meta property="og:url" content="https://squetzaldigital.com/servicios/ciberseguridad.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ciberseguridad | S Quetzal Digital">
+  <meta name="twitter:description" content="Auditorías, protección de redes y respuesta ante incidentes para tu empresa.">
+  <meta name="twitter:image" content="https://squetzaldigital.com/imagenes/logoquetzalcode.png">
+
+  <!-- Favicon y CSS -->
   <link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="styleservicios.css">
+
+  <!-- JSON-LD de Servicio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Ciberseguridad",
+    "description": "Servicios profesionales de ciberseguridad: auditorías, protección de redes, seguridad en software y respuesta ante incidentes.",
+    "provider": {
+      "@type": "Organization",
+      "name": "S Quetzal Digital",
+      "url": "https://squetzaldigital.com",
+      "logo": "https://squetzaldigital.com/imagenes/logoquetzalcode.png"
+    }
+  }
+  </script>
+
 </head>
 <body>
 
@@ -20,15 +63,15 @@
     <div class="servicios">
       <div class="servicio">
         <h3>🛡️ Auditorías de seguridad</h3>
-        <p>Identificamos vulnerabilidades en tus sistemas mediante pruebas de penetración y análisis técnicos.</p>
+        <p>Identificamos vulnerabilidades mediante pruebas de penetración y análisis técnicos.</p>
       </div>
       <div class="servicio">
         <h3>🧱 Protección de red</h3>
-        <p>Implementamos firewalls, controles de acceso y monitoreo constante para blindar tu infraestructura.</p>
+        <p>Implementamos firewalls, controles de acceso y monitoreo constante para tu infraestructura.</p>
       </div>
       <div class="servicio">
         <h3>🔐 Seguridad en software</h3>
-        <p>Evaluamos código, ciframos datos y reforzamos tus aplicaciones contra amenazas comunes.</p>
+        <p>Evaluamos código, ciframos datos y reforzamos tus aplicaciones contra amenazas.</p>
       </div>
       <div class="servicio">
         <h3>🧬 Respuesta ante incidentes</h3>
@@ -76,7 +119,6 @@
           <label><input type="radio" name="contact-preference" value="phone"> Por teléfono</label>
         </div>
 
-        <!-- Hidden fields -->
         <input type="hidden" name="_next" value="https://squetzaldigital.com/avisos/gracias.html">
         <input type="hidden" name="_captcha" value="false">
 
@@ -90,19 +132,11 @@
   </footer>
 
   <script>
-    function openModal() {
-      document.getElementById('contactModal').style.display = 'flex';
-    }
-
-    function closeModal() {
-      document.getElementById('contactModal').style.display = 'none';
-    }
-
+    function openModal() { document.getElementById('contactModal').style.display = 'flex'; }
+    function closeModal() { document.getElementById('contactModal').style.display = 'none'; }
     window.onclick = function(event) {
       const modal = document.getElementById('contactModal');
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
+      if (event.target === modal) modal.style.display = 'none';
     };
   </script>
 

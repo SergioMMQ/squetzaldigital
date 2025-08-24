@@ -1,12 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog | S Quetzal Digital</title>
+  <meta name="description" content="Explora artículos, guías y recursos sobre marketing digital, desarrollo web, digitalización y tecnología con S Quetzal Digital.">
   <link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="styleblog.css">
   <link rel="stylesheet" href="animacionescss/css/reset.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f4f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #008c6c;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      color: #008c6c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #entradas {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .articulos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    article.servicio {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    article.servicio:hover {
+      transform: translateY(-5px);
+    }
+
+    article.servicio h3 {
+      margin-top: 0;
+      color: #008c6c;
+      font-size: 1.2rem;
+    }
+
+    article.servicio p {
+      margin: 10px 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    article.servicio a {
+      text-decoration: none;
+      color: #2b5876;
+      font-weight: bold;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 60px 20px;
+    }
+
+    .cta h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      margin-bottom: 20px;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #008c6c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    .btn-cta:hover {
+      background-color: #006f53;
+    }
+
+    /* Modal */
+    .modal-bg {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+    }
+
+    .modal h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #008c6c;
+    }
+
+    .modal label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    .modal input, .modal textarea, .modal select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .modal button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #008c6c;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .modal button:hover {
+      background-color: #006f53;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #008c6c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
@@ -15,31 +197,44 @@
     <p>Explora artículos, guías y recursos sobre marketing digital, desarrollo web y tecnología.</p>
   </header>
 
+  <nav>
+    <a href="/index.html">← Volver al Inicio</a>
+  </nav>
+
   <section id="entradas">
-    <div class="servicios">
+    <h2 style="text-align:center; margin-bottom:30px;">Últimos artículos</h2>
+    <div class="articulos">
       
-        <!-- Artículo 1 -->
-        <div class="servicio">
+      <!-- Artículo 1 -->
+      <article class="servicio">
         <h3>🚀 ¿Por qué una empresa necesita digitalizarse?</h3>
         <p>Conoce las principales razones por las que tu empresa debe dar el salto a la era digital y no quedarse atrás.</p>
         <a href="digitalizacion-y-automatizacion.html">Leer más</a>
-        </div>
+      </article>
 
+      <!-- Puedes agregar más artículos -->
+      <!--
+      <article class="servicio">
+        <h3>Título del artículo</h3>
+        <p>Resumen o descripción breve del artículo.</p>
+        <a href="ruta-del-articulo.html">Leer más</a>
+      </article>
+      -->
 
     </div>
   </section>
 
   <section class="cta">
     <h2>¿Quieres recibir nuestras publicaciones?</h2>
-    <p >Suscríbete y recibe artículos en tu correo.</p>
-    <a href="#" onclick="openModal()">Suscribirme</a>
+    <p>Suscríbete y recibe artículos en tu correo.</p>
+    <a class="btn-cta" href="#" onclick="openModal()">Suscribirme</a>
   </section>
 
-  <!-- Modal -->
-  <div class="modal-bg" id="contactModal">
+  <!-- Modal de suscripción -->
+  <div class="modal-bg" id="contactModal" role="dialog" aria-modal="true">
     <div class="modal">
-      <span class="close-btn" onclick="closeModal()">×</span>
-      <h2 style="text-align: center;">Suscripción al Blog</h2>
+      <span class="close-btn" onclick="closeModal()" aria-label="Cerrar modal">×</span>
+      <h2>Suscríbete al Blog</h2>
       <form action="https://formsubmit.co/b3e8b65d1d4be69bd261638d4afc623c" method="POST">
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
@@ -76,6 +271,5 @@
       }
     };
   </script>
-
 </body>
 </html>
