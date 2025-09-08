@@ -255,6 +255,30 @@ h2:hover {
     padding: 15px;
 }
 
+.servicio-card-1 {
+    border: 2px solid #3498db;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+  .servicio-card-1 h3 {
+    font-size: 1.3rem;
+    color: #0077ff;
+    margin-bottom: 0.5rem;
+  }
+
+/* Hover: borde animado + glow + efecto de levantamiento */
+.servicio-card-1:hover {
+  border: 2px solid #3498db; /* borde azul vibrante */
+  box-shadow: 0 8px 15px rgba(52, 152, 219, 0.4), 0 0 20px rgba(52, 152, 219, 0.3);
+  transform: translateY(-5px) scale(1.03);
+  cursor: pointer;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* gradiente dinámico */
+  color: #fff; /* cambia el texto a blanco sobre el gradiente */
+}
 
 .servicio-card {
     background: white;
