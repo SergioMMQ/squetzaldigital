@@ -1,4 +1,4 @@
-/* Reset general */
+/* ===== RESET GENERAL ===== */
 * {
   margin: 0;
   padding: 0;
@@ -7,17 +7,17 @@
 }
 
 body {
-  background-color: #f9f9f9;
+  background-color: #f9fff9;
   color: #333;
   line-height: 1.6;
 }
 
 /* ===== HEADER ===== */
 header {
-  background: linear-gradient(135deg, #2b5876, #4e4376);
-  color: white;
+  background: linear-gradient(to right, #000000ed, #343534ed);
+  color: rgb(255, 255, 255);
   text-align: center;
-  padding: 60px 20px;
+  padding: 20px 20px;
 }
 
 header h1 {
@@ -30,21 +30,67 @@ header p {
   margin-bottom: 20px;
 }
 
-header a {
-  display: inline-block;
-  background: #ff9800;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
+/* ===== NAV ===== */
+nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+nav a {
+  color: #000000;
   text-decoration: none;
-  transition: 0.3s ease;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-header a:hover {
-  background: #e68900;
+nav a:hover {
+  color: #797979;
 }
 
-/* ===== LISTADO DE ARTÍCULOS ===== */
+/* ===== ENTRADAS Y ARTÍCULOS ===== */
+#entradas {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.articulos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+article.servicio {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+article.servicio:hover {
+  transform: translateY(-5px);
+}
+
+article.servicio h3 {
+  margin-top: 0;
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+article.servicio p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+article.servicio a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* ===== LISTADO DE SERVICIOS ===== */
 .servicios {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -68,7 +114,7 @@ header a:hover {
 .servicio h3 {
   margin-bottom: 15px;
   font-size: 1.3rem;
-  color: #2b5876;
+  color: #3b3b3b;
 }
 
 .servicio p {
@@ -78,7 +124,7 @@ header a:hover {
 .servicio a {
   display: inline-block;
   padding: 8px 15px;
-  background: #2b5876;
+  background: #5a5a5a;
   color: white;
   border-radius: 6px;
   text-decoration: none;
@@ -87,31 +133,28 @@ header a:hover {
 }
 
 .servicio a:hover {
-  background: #1f3d52;
+  background: #000000;
 }
 
 /* ===== CTA ===== */
 .cta {
   text-align: center;
-  padding: 30px 20px;
-  background: #ff9800;
+  padding: 20px;
+  background: gray;
   color: white;
 }
 
-.cta h2 {
-  font-size: 2rem;
-}
 
-.cta p {
+/* .cta p {
   font-size: 1.1rem;
-}
+  margin-bottom: 20px;
+} */
 
 .cta a {
   display: inline-block;
-  /* margin-top: 20px; */
   padding: 12px 25px;
   background: white;
-  color: #ff9800;
+  color: #000000;
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
@@ -119,7 +162,8 @@ header a:hover {
 }
 
 .cta a:hover {
-  background: #f0f0f0;
+  background: #000000;
+  color: white;
 }
 
 /* ===== MODAL ===== */
@@ -146,7 +190,8 @@ header a:hover {
 
 .modal h2 {
   margin-bottom: 20px;
-  color: #2b5876;
+  text-align: center;
+  color: #007d20;
 }
 
 .modal label {
@@ -156,7 +201,8 @@ header a:hover {
 }
 
 .modal input,
-.modal textarea {
+.modal textarea,
+.modal select {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -165,7 +211,7 @@ header a:hover {
 }
 
 .modal button {
-  background: #2b5876;
+  background: #007d20;
   color: white;
   padding: 12px;
   border: none;
@@ -177,7 +223,7 @@ header a:hover {
 }
 
 .modal button:hover {
-  background: #1f3d52;
+  background: #00520a;
 }
 
 .close-btn {
@@ -191,9 +237,9 @@ header a:hover {
 
 /* ===== FOOTER ===== */
 footer {
+  background: linear-gradient(to right, #000000ed, #343534ed);
+  color: white;
   text-align: center;
   padding: 20px;
-  background: #2b5876;
-  color: white;
   font-size: 0.9rem;
 }

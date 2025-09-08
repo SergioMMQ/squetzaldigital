@@ -21,28 +21,32 @@ body {
 }
 
 header {
-    background-image: url(imagenes/prueba.jpg);
-    height: 100%;
+    position: relative;
+    height: 100vh; /* ocupa toda la altura de la ventana */
     width: 100%;
-    background-size: cover;
-    background-position: left;
-    background-attachment: fixed; /* Fija el fondo */
-    background-repeat: no-repeat;
-    padding: 40px 0 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    overflow: hidden;
 }
 
-header::after {
+header::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    background-color: rgba(129, 127, 127, 0.5); /* Capa oscura */
+    width: 100%;
+    background-image: url(imagenes/prueba.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 👈 aquí se fija la imagen */
+    background-repeat: no-repeat;
+    filter: blur(8px); /* aplica el blur */
+    transform: scale(1.1); /* evita bordes vacíos por el blur */
+    z-index: -1; /* manda el fondo detrás del contenido */
 }
+
 
 .img-header {
     position: relative;
