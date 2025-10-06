@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Servicios Web Profesionales | S Quetzal Digital</title>
 
-  <!-- Meta SEO -->
   <meta name="description" content="Servicios web profesionales: desarrollo de sitios web, eCommerce, hosting, SEO, chatbots y automatización para empresas y emprendedores.">
   <meta name="keywords" content="desarrollo web, eCommerce, SEO, hosting, integración de APIs, automatización, mantenimiento web, seguridad SSL, chatbots">
   <meta name="author" content="S Quetzal Digital">
-  <link rel="canonical" href="https://squetzaldigital.com/serviciosweb.html">
+  <link rel="canonical" href="https://squetzaldigital.com/serviciosweb.html" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Servicios Web Profesionales | S Quetzal Digital">
@@ -24,7 +24,12 @@
   <meta name="twitter:description" content="Desarrollo web profesional, eCommerce, SEO, hosting y chatbots.">
   <meta name="twitter:image" content="https://squetzaldigital.com/imagenes/logoquetzalcode.png">
 
-  <!-- JSON-LD Schema -->
+  <!-- Favicon y CSS -->
+  <link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="styleservicios.css">
+  <link rel="stylesheet" href="styleserviciosweb.css">
+
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,135 +38,125 @@
     "provider": {
       "@type": "Organization",
       "name": "S Quetzal Digital",
-      "url": "https://squetzaldigital.com"
+      "url": "https://squetzaldigital.com",
+      "logo": "https://squetzaldigital.com/imagenes/logoquetzalcode.png"
     },
     "description": "Desarrollo web, eCommerce, SEO, hosting, integración de APIs, chatbots y automatización para empresas y emprendedores.",
     "areaServed": "México",
     "url": "https://squetzaldigital.com/serviciosweb.html"
   }
   </script>
-
-  <link rel="stylesheet" href="styleserviciosweb.css" />
-  <link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon"/>
 </head>
+
 <body>
 
   <header>
     <h1>🌐 Servicios Web Profesionales</h1>
-    <nav>
-      <ul>
-        <li><a href="../">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#portafolio">Portafolio</a></li>
-        <li><a class="contact-btn-1" onclick="openModal()">Contacto</a></li>
-      </ul>
-    </nav>
+    <p>Diseño, desarrollo y soluciones digitales integrales para empresas y emprendedores.</p>
+    <a href="#" onclick="openModal()">Solicita tu cotización</a>
   </header>
-<section id="servicios" class="seccion">
-  <h2>Servicios</h2>
 
-  <!-- Servicios Web Profesionales -->
-  <div class="categoria-servicios">
-    <h3>🌐 Servicios Web Profesionales</h3>
-    <div class="servicios-grid">
-      <div class="servicio">Diseño y Desarrollo Web</div>
-      <div class="servicio">Tiendas en Línea (eCommerce)</div>
-      <div class="servicio">Hosting y Dominios</div>
-      <div class="servicio">Seguridad y Certificados SSL</div>
-      <div class="servicio">Correo Corporativo</div>
-      <div class="servicio">Mantenimiento Web</div>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul style="display: flex;">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="../blog/blog.html">Blog</a></li>
+      <li class="dropdown">
+        <a href="#">Servicios ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="analisisdedatos.html">Análisis de Datos</a></li>
+          <li><a href="automatizacion.html">Automatización</a></li>
+          <li><a href="capacitacion.html">Capacitación</a></li>
+          <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
+          <li><a href="desarrolloweb.html">Desarrollo Web</a></li>
+          <li><a href="estilos-animaciones.html">Estilos y Animaciones</a></li>
+          <li><a href="nubeyalmacenamiento.html">Nube y Almacenamiento</a></li>
+          <li><a href="servicioderedes.html">Servicio de Redes</a></li>
+          <li><a href="serviciosweb.html">Servicios Web</a></li>
+          <li><a href="soporte.html">Soporte Técnico</a></li>
+        </ul>
+      </li>
+      <li><a class="contact-btn-1" onclick="openModal()">Contacto</a></li>
+      <li><a href="../bobeda web/bobeda.html">Bobeda Web</a></li>
+    </ul>
+  </nav>
+
+  <section class="seccion">
+    <h2 style="text-align:center;">Nuestros Servicios Web</h2>
+
+    <div class="categoria-servicios">
+      <h3>🌐 Servicios Web Profesionales</h3>
+      <div class="servicios-grid">
+        <div class="servicio">Diseño y Desarrollo Web</div>
+        <div class="servicio">Tiendas en Línea (eCommerce)</div>
+        <div class="servicio">Hosting y Dominios</div>
+        <div class="servicio">Seguridad y Certificados SSL</div>
+        <div class="servicio">Correo Corporativo</div>
+        <div class="servicio">Mantenimiento Web</div>
+      </div>
     </div>
-  </div>
 
-  <!-- Soluciones Digitales Avanzadas -->
-  <div class="categoria-servicios">
-    <h3>⚙️ Soluciones Digitales Avanzadas</h3>
-    <div class="servicios-grid">
-      <div class="servicio">Integración de APIs</div>
-      <div class="servicio">Chatbots y Asistentes Virtuales</div>
-      <div class="servicio">Web Scraping y Automatización</div>
+    <div class="categoria-servicios">
+      <h3>⚙️ Soluciones Digitales Avanzadas</h3>
+      <div class="servicios-grid">
+        <div class="servicio">Integración de APIs</div>
+        <div class="servicio">Chatbots y Asistentes Virtuales</div>
+        <div class="servicio">Web Scraping y Automatización</div>
+      </div>
     </div>
-  </div>
 
-  <!-- Marketing y Posicionamiento -->
-  <div class="categoria-servicios">
-    <h3>🚀 Marketing y Posicionamiento</h3>
-    <div class="servicios-grid">
-      <div class="servicio">Marketing Digital</div>
-      <div class="servicio">SEO</div>
+    <div class="categoria-servicios">
+      <h3>🚀 Marketing y Posicionamiento</h3>
+      <div class="servicios-grid">
+        <div class="servicio">Marketing Digital</div>
+        <div class="servicio">SEO</div>
+      </div>
     </div>
-  </div>
-</section>
-
-
+  </section>
 
   <section id="portafolio" class="seccion">
     <h2>Portafolio</h2>
-      <!-- Tipos de Páginas Web -->
-  <div class="categoria-servicios">
-    <h3>¿Qué tipo de páginas web creamos?</h3>
-    <p>
-      En <strong>S Quetzal Digital</strong> diseñamos sitios modernos, optimizados y adaptados a las necesidades de tu negocio:
-    </p>
-    <div class="paginas-grid">
-      <div class="pagina">📈 <strong>Landing Pages</strong> — ideales para campañas y captación de leads.</div>
-      <div class="pagina">🏢 <strong>Sitios Corporativos</strong> — presencia profesional de empresas y marcas.</div>
-      <div class="pagina">🛒 <strong>Tiendas en Línea (E-commerce)</strong> — listas para vender 24/7.</div>
-      <div class="pagina">📰 <strong>Blogs y Portafolios</strong> — perfectos para compartir contenidos y proyectos.</div>
-      <div class="pagina">📍 <strong>Páginas de Servicios Locales</strong> — pensadas para negocios en búsquedas cercanas.</div>
-    </div>
-  </div>
-    <div class="portafolio-grid">
 
+    <div class="portafolio-grid">
       <div class="proyecto">
         <img src="https://www.faselunar.com.mx/img/spa.gif" alt="Sitio web Fase Lunar">
         <h3>Fase Lunar</h3>
         <a href="https://www.faselunar.com.mx/" target="_blank" rel="noopener">Ver sitio</a>
       </div>
-
       <div class="proyecto">
         <img src="https://www.ketsaltik.com/img/icon.jpg" alt="Sitio web Ketsaltik">
         <h3>Ketsaltik</h3>
         <a href="https://www.ketsaltik.com/" target="_blank" rel="noopener">Ver sitio</a>
       </div>
-
       <div class="proyecto">
         <img src="https://sergiommq.github.io/paginawebpizza/img/icon.jpg" alt="Pizzería Web">
         <h3>Pizzería Web</h3>
         <a href="https://sergiommq.github.io/paginawebpizza/" target="_blank" rel="noopener">Ver sitio</a>
       </div>
-
       <div class="proyecto">
         <img src="https://sergiommq.github.io/Barber-a-Alura-proyecto/imagenes/logo.png" alt="Barbería Alura">
         <h3>Barbería Alura</h3>
         <a href="https://sergiommq.github.io/Barber-a-Alura-proyecto/" target="_blank" rel="noopener">Ver sitio</a>
       </div>
-
       <div class="proyecto">
-        <img src="https://sergiommq.github.io/encriptadorjs/imagenes/Muñeco.png" alt="Encriptador">
-        <h3>Encriptador</h3>
+        <img src="https://sergiommq.github.io/encriptadorjs/imagenes/Muñeco.png" alt="Encriptador JS">
+        <h3>Encriptador JS</h3>
         <a href="https://sergiommq.github.io/encriptadorjs/" target="_blank" rel="noopener">Ver sitio</a>
       </div>
-
       <div class="proyecto">
         <img src="https://sergiommq.github.io/juegosecreto/img/ia.png" alt="Juego Secreto">
         <h3>Juego Secreto</h3>
         <a href="https://sergiommq.github.io/juegosecreto/" target="_blank" rel="noopener">Ver sitio</a>
       </div>
-
-      <!-- Agrega los demás proyectos de tu portafolio siguiendo el mismo patrón -->
     </div>
   </section>
 
-  <section id="contacto" class="hero">
-    <button class="contact-btn" onclick="openModal()">✉ Enviar mensaje</button>
-  </section>
 
   <!-- Modal de contacto -->
   <div class="modal-bg" id="contactModal">
     <div class="modal">
       <span class="close-btn" onclick="closeModal()">×</span>
-      <h2 style="text-align: center;">Envíanos un mensaje</h2>
+      <h2 style="text-align:center;">Envíanos un mensaje</h2>
       <form action="https://formsubmit.co/b3e8b65d1d4be69bd261638d4afc623c" method="POST">
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
@@ -177,14 +172,14 @@
           <option value="">Selecciona un tema</option>
           <option value="consulta">Consulta general</option>
           <option value="soporte">Soporte técnico</option>
-          <option value="productos">Información sobre productos</option>
+          <option value="productos">Información sobre servicios</option>
           <option value="otros">Otros</option>
         </select>
 
         <label for="message">Mensaje:</label>
         <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje aquí"></textarea>
 
-        <label for="contact-preference">Preferencia de contacto:</label>
+        <label>Preferencia de contacto:</label>
         <div class="contact-preference">
           <label><input type="radio" name="contact-preference" value="email" required> Por correo electrónico</label>
           <label><input type="radio" name="contact-preference" value="phone"> Por teléfono</label>
@@ -199,16 +194,15 @@
   </div>
 
   <footer>
-    <p>© 2025 S Quetzal Digital — Todos los derechos reservados.</p>
+    © 2025 S Quetzal Digital — Todos los derechos reservados.
   </footer>
 
-  <script src="serviciosjs.js"></script>
   <script>
     function openModal() { document.getElementById('contactModal').style.display = 'flex'; }
     function closeModal() { document.getElementById('contactModal').style.display = 'none'; }
     window.onclick = function(event) {
       const modal = document.getElementById('contactModal');
-      if (event.target === modal) { modal.style.display = 'none'; }
+      if (event.target === modal) modal.style.display = 'none';
     };
   </script>
 
