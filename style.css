@@ -281,6 +281,7 @@ h2:hover {
 }
 
 .servicio-card {
+    height: 100px;
     background: white;
     padding: 1.5rem;
     border-radius: 12px;
@@ -830,3 +831,80 @@ footer {
   cursor: pointer;
 }
 
+/* ======== MENÚ HAMBURGUESA ======== */
+
+  .tel{
+    display: none;
+  }
+
+.hamburger {
+  display: none; /* Oculto en escritorio */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animación cuando el menú está activo */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Versión responsive */
+@media (max-width: 768px) {
+    .contact-btn-1{
+        display: none;
+    }
+    .btn-estilos{
+        display: none;
+    }
+
+  .tel{
+    display: flex;
+  }
+
+  .nav-container {
+    display: none;
+    flex-direction: column;
+    background: linear-gradient(to right, #000000ed, #343534ed);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000;
+  }
+
+  .nav-container a {
+    /* display: block; */
+    padding: 12px 0;
+    border: none;
+    font-size: 16px;
+  }
+
+  .nav-container.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

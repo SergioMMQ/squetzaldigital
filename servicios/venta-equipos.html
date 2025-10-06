@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Título SEO -->
+  <title>Venta de Equipos | Computadoras, Laptops y Accesorios | S Quetzal Digital</title>
+
+  <!-- Descripción -->
+  <meta name="description" content="Venta de computadoras, laptops, servidores y accesorios tecnológicos con garantía y soporte profesional. Equipos nuevos, reacondicionados y personalizados.">
+
+  <!-- Palabras clave -->
+  <meta name="keywords" content="venta de equipos, computadoras, laptops, accesorios, hardware, servidores, tecnología, S Quetzal Digital">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://squetzaldigital.com/servicios/venta-equipos.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Venta de Equipos | S Quetzal Digital">
+  <meta property="og:description" content="Computadoras, laptops y accesorios tecnológicos con garantía y soporte. Venta y asesoría personalizada.">
+  <meta property="og:image" content="https://squetzaldigital.com/imagenes/logoquetzalcode.png">
+  <meta property="og:url" content="https://squetzaldigital.com/servicios/venta-equipos.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Venta de Equipos | S Quetzal Digital">
+  <meta name="twitter:description" content="Venta de computadoras, laptops y accesorios tecnológicos con soporte y garantía.">
+  <meta name="twitter:image" content="https://squetzaldigital.com/imagenes/logoquetzalcode.png">
+
+  <!-- Favicon y CSS -->
+  <link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="styleservicios.css">
+
+  <!-- JSON-LD de Servicio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Venta de Equipos",
+    "description": "Venta de computadoras, laptops, accesorios y servidores con garantía y soporte técnico.",
+    "provider": {
+      "@type": "Organization",
+      "name": "S Quetzal Digital",
+      "url": "https://squetzaldigital.com",
+      "logo": "https://squetzaldigital.com/imagenes/logoquetzalcode.png"
+    },
+    "areaServed": "México",
+    "serviceType": "Venta de Equipos de Cómputo"
+  }
+  </script>
+
+</head>
+<body>
+
+  <header>
+    <h1>💻 Venta de Equipos</h1>
+    <p>Computadoras, laptops y accesorios con garantía y soporte técnico especializado.</p>
+    <a href="#" onclick="openModal()">Solicita tu cotización</a>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul style="display: flex;">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="../blog/blog.html">Blog</a></li>
+      <li><a class="contact-btn-1" onclick="openModal()">Contacto</a></li>
+      <!-- Menú desplegable -->
+      <li class="dropdown">
+        <a href="#">Servicios ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="analisisdedatos.html">Análisis de Datos</a></li>
+          <li><a href="automatizacion.html">Automatización</a></li>
+          <li><a href="capacitacion.html">Capacitación</a></li>
+          <li><a href="ciberseguridad.html">Ciberseguridad</a></li>
+          <li><a href="desarrolloweb.html">Desarrollo Web</a></li>
+          <li><a href="estilos-animaciones.html">Estilos y Animaciones</a></li>
+          <li><a href="nubeyalmacenamiento.html">Nube y Almacenamiento</a></li>
+          <li><a href="servicioderedes.html">Servicio de Redes</a></li>
+          <li><a href="serviciosweb.html">Servicios Web</a></li>
+          <li><a href="soporte.html">Soporte Técnico</a></li>
+          <li><a href="venta-equipos.html">Venta de Equipos</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2 style="text-align: center; margin-bottom: 40px;">¿Qué ofrecemos?</h2>
+    <div class="servicios">
+      <div class="servicio">
+        <h3>🖥️ Computadoras de Escritorio</h3>
+        <p>Equipos de alto rendimiento para oficina, gaming o trabajo profesional, configurados a medida.</p>
+      </div>
+      <div class="servicio">
+        <h3>💼 Laptops</h3>
+        <p>Modelos nuevos y reacondicionados con garantía, ideales para movilidad y productividad.</p>
+      </div>
+      <div class="servicio">
+        <h3>🧩 Accesorios y Periféricos</h3>
+        <p>Monitores, teclados, ratones, fuentes, SSD, tarjetas gráficas y más para tu estación de trabajo.</p>
+      </div>
+      <div class="servicio">
+        <h3>🖧 Servidores y Componentes Empresariales</h3>
+        <p>Infraestructura confiable para redes, almacenamiento y gestión de datos empresariales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 style="margin-bottom: 20px;">Equipa tu empresa con tecnología confiable</h2>
+    <p style="margin-bottom: 30px;">Te asesoramos para elegir los equipos adecuados según tus necesidades y presupuesto.</p>
+    <a href="#" onclick="openModal()">Solicita una cotización</a>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-bg" id="contactModal">
+    <div class="modal">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <h2 style="text-align: center;">Solicita tu cotización</h2>
+      <form action="https://formsubmit.co/b3e8b65d1d4be69bd261638d4afc623c" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico">
+
+        <label for="phone">Teléfono:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Ingresa tu número de teléfono">
+
+        <label for="subject">Tipo de equipo:</label>
+        <select id="subject" name="subject" required>
+          <option value="">Selecciona una opción</option>
+          <option value="computadora">Computadora de escritorio</option>
+          <option value="laptop">Laptop</option>
+          <option value="accesorio">Accesorios / Periféricos</option>
+          <option value="servidor">Servidor o componente empresarial</option>
+          <option value="otros">Otros</option>
+        </select>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required placeholder="Describe lo que necesitas o el uso que le darás"></textarea>
+
+        <label>Preferencia de contacto:</label>
+        <div class="contact-preference">
+          <label><input type="radio" name="contact-preference" value="email" required> Por correo electrónico</label>
+          <label><input type="radio" name="contact-preference" value="phone"> Por teléfono</label>
+        </div>
+
+        <input type="hidden" name="_next" value="https://squetzaldigital.com/avisos/gracias.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">Enviar solicitud</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 S Quetzal Digital. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function openModal() { document.getElementById('contactModal').style.display = 'flex'; }
+    function closeModal() { document.getElementById('contactModal').style.display = 'none'; }
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target === modal) modal.style.display = 'none';
+    };
+  </script>
+
+</body>
+</html>

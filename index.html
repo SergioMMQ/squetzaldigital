@@ -32,14 +32,16 @@
   </script>
 
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- ✅ Mejora compatibilidad -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0055A4"> <!-- ✅ Color navegador móvil -->
 
   <!-- Title optimizado SEO -->
   <title>S Quetzal Digital | Servicios de Tecnología, Desarrollo Web y Soluciones Digitales</title>
   
   <!-- Tu CSS principal -->
   <link rel="preload" href="/style.css" as="style">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
 
   <!-- Font Awesome con carga diferida -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
@@ -54,6 +56,7 @@
   <!-- Favicons -->
   <link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon"/>
   <link rel="shortcut icon" href="/imagenes/favicon.ico"/>
+  <link rel="manifest" href="/manifest.json"> <!-- ✅ PWA soporte -->
 
   <!-- Metadatos SEO -->
   <meta name="description" content="S Quetzal Digital ofrece servicios de desarrollo de software, marketing digital, ciberseguridad, análisis de datos y soporte técnico. Transformación digital para empresas y emprendedores.">
@@ -83,26 +86,35 @@
 
 <body>
   <nav>
-    <div style="display: flex;">
+    <div class="nav-container">
       <a href="#inicio">INICIO</a>
       <a href="#servicios">SERVICIOS</a>
       <a href="#recomendaciones">RECOMENDACIONES</a>
       <a class="contact-btn-1" onclick="openModal()">CONTACTO</a>
       <a href="/blog/blog.html" class="btn-estilos">BLOG</a>
     </div>
+      <!-- Botón hamburguesa -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <a class="tel" onclick="openModal()" >CONTACTO</a>
+      <a href="/blog/blog.html" class="tel" >BLOG</a>
   </nav>
   
-  <section id="inicio" style="height: 50%;">
+  <main id="inicio" style="height: 50%;">
     <header>
       <div>
         <!-- Logo principal -->
         <img src="imagenes/logoquetzalcode.png" alt="Logo de S Quetzal Digital, servicios de tecnología y soluciones digitales" class="img-header">
       </div>
       <div>
+        <h1 class="titulo-principal">S QUETZAL DIGITAL</h1>
         <h1 class="titulo-principal">Servicios de Tecnología de la Información</h1>
       </div>
     </header>
-  </section>
+  </main>
 
 <section id="servicios">
   <h2 style="font-size: 2.5rem; color: #2c3e50; text-align: center;">
@@ -143,7 +155,7 @@
         <a href="servicios/desarrolloweb.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
           <div class="servicio-card">
             <h3>💻 Desarrollo de Software</h3>
-            <p>Apps móviles, sitios web y software a medida para empresas o emprendedores.</p>
+            <p>Apps móviles, sitios web y software a medida.</p>
           </div>
         </a>
         <a href="servicios/ciberseguridad.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
@@ -194,12 +206,12 @@
             <p>Desarrollo de estilos personalizados para sitios web.</p>
           </div>
         </a> -->
-        <a href="servicios/boveda-web.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
+        <!-- <a href="servicios/boveda-web.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
           <div class="servicio-card">
             <h3>🌐 Bóveda Web</h3>
             <p>Tu espacio digital inteligente para centralizar, organizar y proteger todos tus proyectos web.</p>
           </div>
-        </a>
+        </a> -->
         <a href="servicios/venta-equipos.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
           <div class="servicio-card">
             <h3>💻 Venta de Equipos</h3>
@@ -209,7 +221,7 @@
         <a href="servicios/consultoria.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
           <div class="servicio-card">
             <h3>🧠 Consultoría</h3>
-            <p>Asesoría en proyectos tecnológicos, análisis de requerimientos y planificación estratégica.</p>
+            <p>Asesoría en tecnología, análisis y planificación estratégica.</p>
           </div>
         </a>
         <a href="servicios/marketingdigital.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
@@ -253,13 +265,13 @@
       <h2 style="text-align: center;">Envíanos un mensaje</h2>
       <form action="https://formsubmit.co/b3e8b65d1d4be69bd261638d4afc623c" method="POST">
         <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+        <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre" autocomplete="name">
 
         <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico">
+        <input type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico" autocomplete="email">
 
         <label for="phone">Teléfono:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Ingresa tu número de teléfono">
+        <input type="tel" id="phone" name="phone" placeholder="Ingresa tu número de teléfono" autocomplete="tel">
 
         <label for="subject">Tema de consulta:</label>
         <select id="subject" name="subject" required>
@@ -271,12 +283,12 @@
         </select>
 
         <label for="message">Mensaje:</label>
-        <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje aquí"></textarea>
+        <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje aquí" ></textarea>
 
-        <label for="contact-preference">Preferencia de contacto:</label>
-        <div class="contact-preference">
-          <label><input type="radio" name="contact-preference" value="email" required> Por correo electrónico</label>
-          <label><input type="radio" name="contact-preference" value="phone"> Por teléfono</label>
+        <p id="contact-preference-label">Preferencia de contacto:</p>
+        <div class="contact-preference" role="radiogroup" aria-labelledby="contact-preference-label">
+          <label for="pref-email"><input type="radio" id="pref-email" name="contact-preference" value="email" required> Por correo electrónico</label>
+          <label for="pref-phone"><input type="radio" id="pref-phone" name="contact-preference" value="phone"> Por teléfono</label>
         </div>
 
           <!-- Hidden fields -->
@@ -304,8 +316,6 @@
     </div>
   </div>
 
-
-
 <section style="margin: 10px;">
   <h3 style="font-size: small; color: #222;">Empleados</h3>
   <div class="empleados">
@@ -328,6 +338,16 @@
 </footer>
 
 <script src="scrip.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navContainer = document.querySelector('.nav-container');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navContainer.classList.toggle('show');
+  });
+</script>
+
 </body>
 
 </html>
