@@ -1,111 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfil - Blanca Gabriela Cuaya Retana | S Quetzal Digital</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Perfil de Blanca Gabriela Cuaya Retana, gerente de Marketing y Relaciones Públicas en S Quetzal Digital, especializada en comunicación digital y atracción de clientes.">
-  <meta name="keywords" content="Blanca Gabriela Cuaya, Marketing digital, Relaciones Públicas, S Quetzal Digital, perfil profesional">
-  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Perfil - Blanca Gabriela Cuaya Retana">
-  <meta property="og:description" content="Gerente de Marketing y Relaciones Públicas en S Quetzal Digital. Creativa y apasionada por conectar con clientes y la audiencia digital.">
-  <meta property="og:image" content="../assets/gabriela.png">
-  <meta property="og:url" content="https://squetzaldigital.com/perfil/gabriela.html">
-  <meta property="og:type" content="profile">
+  <!-- 🧭 SEO -->
+  <meta name="description" content="Perfil de Blanca Gabriela Cuaya Retana, Gerente de Marketing y Relaciones Públicas en S Quetzal Digital. Líder en comunicación digital, branding y atracción de clientes." />
+  <meta name="keywords" content="Blanca Gabriela Cuaya Retana, marketing digital, relaciones públicas, comunicación, branding, S Quetzal Digital" />
+  <meta name="author" content="S Quetzal Digital" />
 
+  <!-- 🔗 Open Graph -->
+  <meta property="og:title" content="Perfil - Blanca Gabriela Cuaya Retana | S Quetzal Digital" />
+  <meta property="og:description" content="Gerente de Marketing y Relaciones Públicas en S Quetzal Digital. Experta en comunicación digital, branding y conexión con audiencias." />
+  <meta property="og:image" content="https://squetzaldigital.com/assets/gabriela.png" />
+  <meta property="og:url" content="https://squetzaldigital.com/perfil/gabriela.html" />
+  <meta property="og:type" content="profile" />
+  <meta property="profile:first_name" content="Blanca Gabriela" />
+  <meta property="profile:last_name" content="Cuaya Retana" />
+  <meta property="profile:username" content="bgcuaya" />
+
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+  <!-- 💅 Estilos -->
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f4f7;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background-color: #f4f6f9;
       margin: 0;
-      padding: 40px;
+      padding: 40px 20px;
       color: #333;
     }
+
     .card {
-      background-color: #ffffff;
-      max-width: 700px;
+      background-color: #fff;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      padding: 36px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
       text-align: center;
+      animation: fadeIn 0.8s ease;
     }
+
     .card img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+      border: 4px solid #008c6c22;
     }
+
     h1 {
       margin: 10px 0 5px;
       color: #008c6c;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
     }
+
     h2 {
       font-size: 1.1rem;
-      font-weight: normal;
+      font-weight: 500;
       color: #666;
+      margin-bottom: 20px;
     }
+
     section {
       margin: 20px 0;
       text-align: left;
     }
-    .info p, .bio p {
+
+    .bio p {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .info p {
       margin: 6px 0;
     }
+
     .info label {
-      font-weight: bold;
+      font-weight: 600;
+      color: #222;
     }
+
+    .links {
+      margin-top: 15px;
+    }
+
     .links a {
       margin-right: 15px;
       color: #008c6c;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.2s ease;
     }
+
+    .links a:hover {
+      color: #006f53;
+      text-decoration: underline;
+    }
+
     .volver {
       display: inline-block;
       margin-top: 30px;
-      text-decoration: none;
       background-color: #008c6c;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.2s ease;
     }
+
     .volver:hover {
       background-color: #006f53;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+
 <body>
-  <div class="card">
-    <img src="../assets/gabriela.png" alt="Foto profesional de Blanca Gabriela Cuaya Retana">
+  <main class="card">
+    <img src="../assets/gabriela.png" alt="Foto profesional de Blanca Gabriela Cuaya Retana" loading="lazy" />
     <h1>Blanca Gabriela Cuaya Retana</h1>
-    <h2>Gerente de Marketing y Relaciones Públicas - S Quetzal Digital</h2>
+    <h2>Gerente de Marketing y Relaciones Públicas – S Quetzal Digital</h2>
 
     <section class="bio">
       <p>
-        Responsable de liderar las estrategias de comunicación, atracción de clientes y posicionamiento digital de la marca S Quetzal Digital. Creativa, proactiva y con pasión por conectar con las personas.
+        Ejecutiva enfocada en estrategias de marketing, comunicación corporativa y posicionamiento de marca.  
+        Su liderazgo impulsa la conexión entre la tecnología y la audiencia, fortaleciendo la presencia digital y la reputación de S Quetzal Digital.  
+        Destaca por su enfoque creativo, visión estratégica y habilidad para construir relaciones sólidas con clientes y aliados.
       </p>
     </section>
 
     <section class="info">
-      <p><label>Número de trabajadora:</label> 00002</p>
-      <p><label>Correo:</label> <a href="mailto:bgabrielacr@gmail.com">bgabrielacr@gmail.com</a></p>
+      <p><label>ID de trabajadora:</label> 00002</p>
+      <p><label>Correo:</label> <a href="mailto:blanca.gabriela@squetzaldigital.com">blanca.gabriela@squetzaldigital.com</a></p>
       <p><label>Fecha de ingreso:</label> 10 de enero de 2024</p>
       <p><label>Área:</label> Marketing y Relaciones Públicas</p>
       <p><label>Ubicación:</label> Ciudad de México, México</p>
-      <p><label>Especialidades:</label> Comunicación digital, redes sociales, atracción de clientes</p>
+      <p><label>Especialidades:</label> Comunicación digital, branding, estrategia de marketing, gestión de relaciones públicas</p>
     </section>
 
     <section class="links">
-      <a href="mailto:bgabrielacr@gmail.com">✉️ Correo</a>
-      <!-- Puedes agregar LinkedIn, portafolio, etc. -->
+      <a href="mailto:blanca.gabriela@squetzaldigital.com">✉️ Correo</a>
+      <!-- <a href="https://www.linkedin.com/in/..." target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a> -->
     </section>
 
-    <a href="../" class="volver">← Volver</a>
-  </div>
+    <a href="../" class="volver">← Volver al inicio</a>
+  </main>
 </body>
 </html>
