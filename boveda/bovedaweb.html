@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="es" class="no-js" data-theme="light">
+<html lang="es" data-theme="dark">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8HPM5944PH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8HPM5944PH');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8HPM5944PH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8HPM5944PH');
+  </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bóveda de Páginas | Squetzal Digital</title>
@@ -23,13 +24,15 @@
   <meta property="og:image" content="https://squetzaldigital.com/favicon.png" />
   <link rel="icon" href="https://squetzaldigital.com/favicon.png" />
 
-  <!-- Fonts -->
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
 
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header>
     <div class="container">
@@ -37,10 +40,8 @@
         <div class="brand">
           <img src="../imagenes/quetzalcode.png" alt="logo squetzaldigital">
           <div>
-            <!-- <img src="https://squetzaldigital.com/favicon.png" alt="Squetzal Digital" onerror="this.style.display='none'"> -->
             <h1>S QUETZAL DIGITAL</h1>
             <h1 style="font-size: 18px;">Bóveda de Páginas</h1>
-            <!-- <span>Mapa curado de tu sitio con descripciones profesionales</span> -->
           </div>
         </div>
         <div class="controls">
@@ -49,24 +50,19 @@
             <option value="title">Título (A-Z)</option>
             <option value="updated">Actualizado (reciente)</option>
           </select>
-          <button id="toggleTheme" class="icon" title="Alternar tema" aria-label="Alternar tema" style="display: none;">🌓</button>
         </div>
       </div>
-      <!-- <div class="hint">
-        Consejo: usa etiquetas para filtrar y el buscador para encontrar páginas en segundos.
-      </div> -->
       <div class="tags" id="tags"></div>
       <div class="hint"><span class="counter" id="counter"></span> <span id="status"></span></div>
     </div>
   </header>
 
   <main class="container">
-    <h2 class="title">Encuentra tu pagina web</h2>
+    <h2 class="title">Encuentra tu página web</h2>
     <section id="grid" class="grid" aria-live="polite"></section>
-    <div class="footer">© <span id="year"></span> Squetzal Digital
-    </div>
+    <div class="footer">© <span id="year"></span> Squetzal Digital</div>
   </main>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

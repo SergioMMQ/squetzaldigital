@@ -1,4 +1,4 @@
-// ====== DATA: edita este bloque con tus páginas ======
+// ====== DATA ======
 const PAGES = [
   {
     title: "SQUETZAL DIGITAL | Soluciones Tecnológicas",
@@ -25,8 +25,8 @@ const PAGES = [
     updatedAt: "2025-09-10"
   }
 ];
-// ====== FIN DATA ======
 
+// ====== FUNCIONES ======
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
 
@@ -47,7 +47,6 @@ function renderTags() {
   const container = $("#tags");
   container.innerHTML = "";
 
-  // Botón "Todas"
   const allBtn = document.createElement("button");
   allBtn.className = "tag" + (state.tag === null ? " active" : "");
   allBtn.textContent = "Todas";
@@ -58,23 +57,19 @@ function renderTags() {
   };
   container.appendChild(allBtn);
 
-  // Botones de etiquetas individuales
-  [...set]
-    .sort((a, b) => a.localeCompare(b, "es"))
-    .forEach(t => {
-      const el = document.createElement("button");
-      el.className = "tag" + (state.tag === t ? " active" : "");
-      el.textContent = t;
-      el.onclick = () => {
-        state.tag = state.tag === t ? null : t;
-        updateActiveTag();
-        renderCards();
-      };
-      container.appendChild(el);
-    });
+  [...set].sort((a, b) => a.localeCompare(b, "es")).forEach(t => {
+    const el = document.createElement("button");
+    el.className = "tag" + (state.tag === t ? " active" : "");
+    el.textContent = t;
+    el.onclick = () => {
+      state.tag = state.tag === t ? null : t;
+      updateActiveTag();
+      renderCards();
+    };
+    container.appendChild(el);
+  });
 }
 
-// Actualiza visualmente la etiqueta activa
 function updateActiveTag() {
   $$("#tags .tag").forEach(btn => {
     const label = btn.textContent.trim();
@@ -103,8 +98,7 @@ function getFiltered() {
         normalize(p.description).includes(qn))
   );
   if (state.sort === "title") items.sort((a, b) => a.title.localeCompare(b.title, "es"));
-  if (state.sort === "updated")
-    items.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
+  if (state.sort === "updated") items.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
   return items;
 }
 
@@ -120,9 +114,9 @@ function renderCards() {
     card.innerHTML = `
       <h3>${p.title}</h3>
       <div class="meta">
-        <span class="badge" title="Última actualización"><span class="dot"></span> ${formatDate(
-          p.updatedAt
-        )}</span>
+        <span class="badge" title="Última actualización">
+          <span class="dot"></span> ${formatDate(p.updatedAt)}
+        </span>
         <span class="pill">${new URL(p.url).hostname}</span>
       </div>
       <p class="desc">${p.description}</p>
@@ -158,57 +152,41 @@ function toast(msg) {
   const t = document.createElement("div");
   t.textContent = msg;
   t.setAttribute("role", "status");
-  t.style.cssText = `position:fixed; left:50%; bottom:24px; transform:translateX(-50%); background:#0b1326; color:var(--text); padding:10px 14px; border:1px solid var(--border); border-radius:999px; box-shadow:0 10px 24px rgba(14,165,233,.12); z-index:50`;
+  t.style.cssText = `
+    position:fixed; left:50%; bottom:24px; transform:translateX(-50%);
+    background:#0b1326; color:var(--text);
+    padding:10px 14px; border:1px solid var(--border);
+    border-radius:999px; box-shadow:0 10px 24px rgba(14,165,233,.12);
+    z-index:50`;
   document.body.appendChild(t);
   setTimeout(() => t.remove(), 1800);
-}
-
-function render() {
-  renderCards();
 }
 
 // ====== EVENTOS UI ======
 $("#q").addEventListener("input", e => {
   state.q = e.target.value;
-  render();
+  renderCards();
 });
 $("#sort").addEventListener("change", e => {
   state.sort = e.target.value;
-  render();
+  renderCards();
 });
 
-// ====== TEMA CLARO/OSCURO ======
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-function applyTheme() {
-  const theme = localStorage.getItem("theme") || (prefersDark.matches ? "dark" : "light");
-  document.documentElement.dataset.theme = theme;
-  if (theme === "light") {
-    document.documentElement.style.setProperty("--bg", "#f7fafc");
-    document.documentElement.style.setProperty("--card", "#ffffff");
-    document.documentElement.style.setProperty("--text", "#0f172a");
-    document.documentElement.style.setProperty("--muted", "#475569");
-    document.documentElement.style.setProperty("--border", "#e2e8f0");
-    document.documentElement.style.setProperty("--ring", "rgba(14,165,233,.25)");
-  } else {
-    document.documentElement.style.setProperty("--bg", "#0b1220");
-    document.documentElement.style.setProperty("--card", "#0f172a");
-    document.documentElement.style.setProperty("--text", "#e2e8f0");
-    document.documentElement.style.setProperty("--muted", "#94a3b8");
-    document.documentElement.style.setProperty("--border", "#1f2937");
-    document.documentElement.style.setProperty("--ring", "rgba(34,211,238,.25)");
-  }
+// ====== TEMA OSCURO FIJO ======
+function applyDarkTheme() {
+  document.documentElement.dataset.theme = "dark";
+  document.documentElement.style.setProperty("--bg", "#0b1220");
+  document.documentElement.style.setProperty("--card", "#0f172a");
+  document.documentElement.style.setProperty("--text", "#e2e8f0");
+  document.documentElement.style.setProperty("--muted", "#94a3b8");
+  document.documentElement.style.setProperty("--border", "#1f2937");
+  document.documentElement.style.setProperty("--ring", "rgba(34,211,238,.25)");
 }
-applyTheme();
-
-$("#toggleTheme").addEventListener("click", () => {
-  const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", next);
-  applyTheme();
-});
+applyDarkTheme();
 
 // ====== INIT ======
 (function init() {
   renderTags();
-  render();
+  renderCards();
   $("#year").textContent = new Date().getFullYear();
 })();
