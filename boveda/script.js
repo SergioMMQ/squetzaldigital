@@ -27,7 +27,7 @@ const PAGES = [
   {
     title: "STUDIO AVA | Maquillaje Profesional y Experiencias de Belleza",
     url: "http://studioava.squetzaldigital.com/",
-    tags: ["maquillaje profesional", "belleza", "cosmetología", "autocuidado", "estilo"],
+    tags: ["maquillaje profesional", "belleza", "autocuidado", "estilo"],
     description:
       "Studio AVA ofrece servicios de maquillaje profesional, asesorías personalizadas y experiencias de belleza únicas que realzan la identidad y confianza de cada persona.",
     updatedAt: "2025-11-12"
