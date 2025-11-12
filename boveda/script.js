@@ -23,6 +23,14 @@ const PAGES = [
     description:
       "Fase Lunar — spa inspirado en los ciclos de la luna: tratamientos faciales, corporales, capilares, manicure, micropigmentación y cosmética natural para renovar tu energía y bienestar.",
     updatedAt: "2025-09-10"
+  },
+  {
+    title: "STUDIO AVA | Maquillaje Profesional y Experiencias de Belleza",
+    url: "http://studioava.squetzaldigital.com/",
+    tags: ["maquillaje profesional", "belleza", "cosmetología", "autocuidado", "estilo"],
+    description:
+      "Studio AVA ofrece servicios de maquillaje profesional, asesorías personalizadas y experiencias de belleza únicas que realzan la identidad y confianza de cada persona.",
+    updatedAt: "2025-11-12"
   }
 ];
 
