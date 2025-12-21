@@ -1,6 +1,10 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
+    h3 {
+      color: #008C6C;
+      margin: 10px;
+      padding: 10px;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #f8f9fa;
