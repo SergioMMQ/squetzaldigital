@@ -81,7 +81,6 @@
 
   <!-- Accesibilidad y SEO -->
   <meta name="robots" content="index, follow">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -90,21 +89,20 @@
       <a href="#inicio">INICIO</a>
       <a href="#servicios">SERVICIOS</a>
       <a href="#recomendaciones">RECOMENDACIONES</a>
-      <a class="contact-btn-1" onclick="openModal()">CONTACTO</a>
       <a href="/blog/blog.html" class="btn-estilos">BLOG</a>
-      <a href="/pagina-web-gratis.html" class="btn-primary">PAGINA WEB GRATIS <b style="color:rgb(90, 13, 232);">DEMO</b></a>
+      <a onclick="openModal()" style="cursor:pointer;">CONTACTO</a>
     </div>
     <div>
     </div>
-      <a class="tel" onclick="openModal()" >CONTACTO</a>
-      <a href="/blog/blog.html" class="tel" >BLOG</a>
-      <!-- Botón hamburguesa -->
+      <a class="tel" href="#inicio">INICIO</a>
+      <a class="tel" href="#servicios">SERVICIOS</a>
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
       <span></span>
     </div>
   </nav>
+
   
   <main id="inicio" style="height: 50%;">
     <header>
@@ -120,7 +118,7 @@
   </main>
 
 <section>
-  <h2 style="font-size: 2rem; color: #2c3e50; text-align: center;">
+  <h2>
     Servicios de Desarrollo y Soluciones Digitales
   </h2>
   <div style="padding: 60px 20px; background-color: #f7f9fc; color: #333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
@@ -150,7 +148,7 @@
       </h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto;">
         <a href="servicios/serviciosweb.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card-1">
+          <div class="servicio-card">
             <h3>🌐 Servicios Web</h3>
             <p>Hosting, dominios, integración de APIs y desarrollo de sistemas online.</p>
           </div>
@@ -203,18 +201,6 @@
             <p>Cursos de ofimática, desarrollo, redes, ciberseguridad y más.</p>
           </div>
         </a>
-        <!-- <a href="servicios/estilos-animaciones.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>📱 Estilos CSS</h3>
-            <p>Desarrollo de estilos personalizados para sitios web.</p>
-          </div>
-        </a> -->
-        <!-- <a href="servicios/boveda-web.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>🌐 Bóveda Web</h3>
-            <p>Tu espacio digital inteligente para centralizar, organizar y proteger todos tus proyectos web.</p>
-          </div>
-        </a> -->
         <a href="servicios/venta-equipos.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
           <div class="servicio-card">
             <h3>💻 Venta de Equipos</h3>
@@ -239,12 +225,6 @@
             <p>Artículos, novedades y recursos sobre tecnología, marketing y desarrollo web.</p>
           </div>
         </a>
-        <!-- <a href="https://qr.squetzaldigital.com/" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>🔳 QR Creador</h3>
-            <p>Genera códigos QR para enlaces, textos o Wi-Fi y descárgalos en PNG.</p>
-          </div>
-        </a> -->
       </div>
     </div>
   </div>
@@ -357,6 +337,17 @@
   });
 </script>
 
+<div class="promo-sticky">
+  <div class="promo-sticky-container">
+    <span class="promo-sticky-text">
+      Prueba tu página web <strong>GRATIS</strong>
+    </span>
+
+    <a href="pagina-web-gratis.html" class="promo-sticky-btn">
+      Pedir demo
+    </a>
+  </div>
+</div>
 </body>
 
 </html>
