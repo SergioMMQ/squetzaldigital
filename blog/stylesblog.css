@@ -5,13 +5,13 @@
 
 :root{
   /* Brand */
-  --c-primary: #2b5876;
-  --c-accent:  #4e4376;
+  --c-primary: #328234;
+  --c-accent:  #5b62a0 ;
 
   /* Neutrals */
   --c-bg:      #fafafa;
   --c-surface: #ffffff;
-  --c-text:    #1f2937;   /* gris oscuro legible */
+  --c-text:    #000000;   /* gris oscuro legible */
   --c-muted:   #6b7280;   /* texto secundario */
   --c-border:  #e5e7eb;   /* bordes suaves */
 
