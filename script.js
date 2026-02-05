@@ -1,24 +1,25 @@
 // ===== ScrollSpy (resalta el enlace activo según la sección visible) =====
 document.addEventListener("scroll", () => {
-  // ✅ Incluimos también <main> y <header> además de <section> y <div[id]>
   const sections = document.querySelectorAll("section[id], header[id], main[id], div[id]");
   const navLinks = document.querySelectorAll("nav a");
+
+  if (!sections.length || !navLinks.length) return;
 
   let currentSection = "";
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 120; // margen de compensación por el nav fijo
+    const sectionTop = section.offsetTop - 120;
     const sectionHeight = section.offsetHeight;
 
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      currentSection = section.getAttribute("id");
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute("id") || "";
     }
   });
 
-  // Activa solo el enlace de la sección visible
   navLinks.forEach((link) => {
     link.classList.remove("active");
-    if (link.getAttribute("href") === `#${currentSection}`) {
+    const href = link.getAttribute("href") || "";
+    if (currentSection && href === `#${currentSection}`) {
       link.classList.add("active");
     }
   });
@@ -26,41 +27,58 @@ document.addEventListener("scroll", () => {
 
 
 // ===== Scroll suave al hacer clic en enlaces del menú =====
-document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (!href) return;
+
+    // Solo aplica a anclas internas tipo #seccion
+    if (!href.startsWith("#")) return;
+
     e.preventDefault();
-    const targetId = this.getAttribute("href").substring(1);
+    const targetId = href.substring(1);
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
       window.scrollTo({
-        top: targetElement.offsetTop - 80, // ajusta según el tamaño del nav
-        behavior: "smooth"
+        top: targetElement.offsetTop - 80,
+        behavior: "smooth",
       });
     }
   });
 });
 
+
 // ===== Modal de contacto =====
 function openModal() {
-  document.getElementById('contactModal').style.display = 'flex';
+  const modal = document.getElementById("contactModal");
+  if (!modal) return;
+  modal.style.display = "flex";
 }
 
 function closeModal() {
-  document.getElementById('contactModal').style.display = 'none';
+  const modal = document.getElementById("contactModal");
+  if (!modal) return;
+  modal.style.display = "none";
 }
 
 // Cerrar modal si se hace clic fuera de él
-window.onclick = function(event) {
-  const modal = document.getElementById('contactModal');
+window.addEventListener("click", (event) => {
+  const modal = document.getElementById("contactModal");
+  if (!modal) return;
+
+  // Si el click fue en el fondo (modal-bg), cierra
   if (event.target === modal) {
     closeModal();
   }
-};
+});
 
-// Cerrar con tecla ESC
+// Cerrar con tecla ESC (solo si existe el modal)
 window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeModal();
-  }
+  if (e.key !== "Escape") return;
+
+  const modal = document.getElementById("contactModal");
+  if (!modal) return;
+
+  closeModal();
 });
