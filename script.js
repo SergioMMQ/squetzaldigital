@@ -41,20 +41,6 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
   });
 });
 
-
-// ===== Formulario de empleados =====
-document.getElementById('formEmpleado').addEventListener('submit', function(event) {
-  event.preventDefault();
-  const numero = document.getElementById('numeroTrabajador').value.trim();
-  
-  if (numero) {
-    window.location.href = `empleados/${numero}.html`;
-  } else {
-    alert('Por favor ingresa un número de trabajador válido.');
-  }
-});
-
-
 // ===== Modal de contacto =====
 function openModal() {
   document.getElementById('contactModal').style.display = 'flex';
