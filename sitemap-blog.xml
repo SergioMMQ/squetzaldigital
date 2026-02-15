@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- BLOG PRINCIPAL -->
+  <url>
+    <loc>https://squetzaldigital.com/blog/blog.html</loc>
+    <lastmod>2026-02-14</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ARTÍCULOS DEL SITEMAP NUEVO (xml-sitemaps.com) -->
+  <url>
+    <loc>https://squetzaldigital.com/blog/1-digitalizacion-y-automatizacion-el-camino-al-crecimiento-empresarial.html</loc>
+    <lastmod>2026-02-14</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://squetzaldigital.com/blog/2-como-elegir-el-software-ideal-para-tu-empresa.html</loc>
+    <lastmod>2026-02-14</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://squetzaldigital.com/blog/3-cuantos-clientes-estas-perdiendo-por-no-aceptar-pagos-digitales.html</loc>
+    <lastmod>2026-02-14</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://squetzaldigital.com/blog/4-que-procesos-conviene-digitalizar-primero-en-una-empresa.html</loc>
+    <lastmod>2026-02-14</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://squetzaldigital.com/blog/5-tipos-de-sistemas-de-informacion-en-las-empresas.html</loc>
+    <lastmod>2026-02-14</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://squetzaldigital.com/blog/6-google-maps-visibilidad-negocios-locales.html</loc>
+    <lastmod>2026-02-14</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>

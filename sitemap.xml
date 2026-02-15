@@ -1,41 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-              http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Página principal -->
-  <url>
-    <loc>https://squetzaldigital.com/</loc>
-    <lastmod>2025-08-23T02:21:21+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
+  <sitemap>
+    <loc>https://squetzaldigital.com/sitemap-servicios.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
 
-  <!-- Blog -->
-  <url>
-    <loc>https://squetzaldigital.com/blog/blog.html</loc>
-    <lastmod>2025-08-23T02:21:21+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://squetzaldigital.com/blog/digitalizacion-y-automatizacion.html</loc>
-    <lastmod>2025-08-23T02:21:21+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
+  <sitemap>
+    <loc>https://squetzaldigital.com/sitemap-blog.xml</loc>
+    <lastmod>2026-02-14</lastmod>
+  </sitemap>
 
-  <!-- Servicios -->
-  <url><loc>https://squetzaldigital.com/servicios/desarrolloweb.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/serviciosweb.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/ciberseguridad.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/nubeyalmacenamiento.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/soporte.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/servicioderedes.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/analisisdedatos.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/automatizacion.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/capacitacion.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/estilos-animaciones.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/venta-equipos.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/consultoria.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-  <url><loc>https://squetzaldigital.com/servicios/marketingdigital.html</loc><lastmod>2025-08-23T02:21:21+00:00</lastmod><priority>0.80</priority></url>
-
-</urlset>
+</sitemapindex>
