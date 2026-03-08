@@ -22,6 +22,11 @@
     "name": "S Quetzal Digital",
     "url": "https://squetzaldigital.com",
     "logo": "https://squetzaldigital.com/imagenes/logoquetzalcode.png",
+    "sameAs": [
+      "https://blog.squetzaldigital.com",
+      "https://www.facebook.com/profile.php?id=61579236382484",
+      "https://www.linkedin.com/company/squetzaldigital/"
+    ],
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -31,6 +36,24 @@
         "availableLanguage": ["es","en"]
       }
     ]
+  }
+  </script>
+
+  <!-- Blog Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog de S Quetzal Digital",
+    "url": "https://blog.squetzaldigital.com",
+    "description": "Artículos sobre digitalización empresarial, desarrollo de software, ciberseguridad y marketing digital para PYMES.",
+    "inLanguage": "es",
+    "publisher": {
+      "@type": "Organization",
+      "name": "S Quetzal Digital",
+      "url": "https://squetzaldigital.com",
+      "logo": "https://squetzaldigital.com/imagenes/logoquetzalcode.png"
+    }
   }
   </script>
 
@@ -93,6 +116,7 @@
       <a href="#inicio">INICIO</a>
       <a href="#servicios">SERVICIOS</a>
       <a href="#recomendaciones">RECOMENDACIONES</a>
+      <a href="https://blog.squetzaldigital.com" target="_blank" rel="noopener" class="btn-estilos">BLOG</a>
       <a onclick="openModal()" style="cursor:pointer;">CONTACTO</a>
     </div>
     <div>
@@ -219,10 +243,35 @@
             <p>SEO, SEM, redes sociales y estrategias de contenido para potenciar tu marca.</p>
           </div>
         </a>
+        <a href="https://blog.squetzaldigital.com" target="_blank" rel="noopener" class="btn-estilos" style="text-decoration: none; color: inherit;">
+          <div class="servicio-card">
+            <h3>✍️ Blog de Tecnología</h3>
+            <p>Artículos sobre digitalización, software empresarial, ciberseguridad y transformación digital.</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
 </section>
+
+  <!-- Sección Blog -->
+  <section id="blog" aria-label="Blog de tecnología empresarial">
+    <div style="padding: 60px 24px; background: linear-gradient(135deg, #0a0a0a, #1a2a3a); color: #fff; text-align: center;">
+      <p style="font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; color: #00ff22; margin-bottom: 12px; font-weight: 600;">Recursos gratuitos</p>
+      <h2 style="font-size: 2rem; margin-bottom: 16px; font-weight: 700;">Blog de Tecnología y Negocios Digitales</h2>
+      <p style="font-size: 1.05rem; max-width: 640px; margin: 0 auto 32px; color: #ccc; line-height: 1.7;">
+        Artículos prácticos sobre digitalización empresarial, desarrollo de software, ciberseguridad
+        y estrategias de marketing digital para PYMES y emprendedores.
+      </p>
+      <a href="https://blog.squetzaldigital.com"
+         target="_blank"
+         rel="noopener"
+         aria-label="Visitar el blog de S Quetzal Digital sobre tecnología y negocios digitales"
+         style="display: inline-block; background: #0077ff; color: #fff; font-weight: 700; padding: 14px 36px; border-radius: 6px; text-decoration: none; font-size: 1rem; transition: background 0.2s;">
+        Leer el Blog
+      </a>
+    </div>
+  </section>
 
   <section id="recomendaciones">
     <h2>Recomendaciones</h2>
@@ -308,6 +357,12 @@
 
 <footer>
   <p>&copy; 2024 S Quetzal Digital. Todos los derechos reservados.</p>
+  <p style="margin-top:8px; font-size:0.85rem;">
+    <a href="https://blog.squetzaldigital.com" target="_blank" rel="noopener" style="color:#aaa; margin: 0 10px;">Blog</a>
+    <a href="/sobre-nosotros.html" style="color:#aaa; margin: 0 10px;">Acerca de</a>
+    <a href="/politica-de-privacidad.html" style="color:#aaa; margin: 0 10px;">Privacidad</a>
+    <a href="/terminos-y-condiciones.html" style="color:#aaa; margin: 0 10px;">Términos</a>
+  </p>
 </footer>
 
 <script src="script.js"></script>
