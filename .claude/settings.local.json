@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"c:/Users/Administrador/Desktop/Proyectos S/squetzaldigital/blog/blogsqd.html\" \"c:/Users/Administrador/Desktop/Proyectos S/squetzaldigital/blog/index.html\")",
+      "Bash(rm \"c:/Users/Administrador/Desktop/Proyectos S/squetzaldigital/blog/blogsqd.html\")"
+    ]
+  }
+}
