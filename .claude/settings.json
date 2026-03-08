@@ -1,8 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(sed -i 's|/blog/blogsqd.html|/blog/|g' \"c:/Users/Administrador/Desktop/Proyectos S/squetzaldigital/index.html\")",
-      "Bash(sed -i 's|squetzaldigital.com/blog/blogsqd.html|squetzaldigital.com/blog/|g' \"c:/Users/Administrador/Desktop/Proyectos S/squetzaldigital/index.html\")"
+      "Bash(sed -i 's|/blog/blog.htmlblogsqd.html|/blog/blog.html|g' \"c:/Users/Administrador/Desktop/Proyectos S/squetzaldigital/index.html\")",
+      "Bash(sed -i 's|squetzaldigital.com/blog/blog.htmlblogsqd.html|squetzaldigital.com/blog/blog.html|g' \"c:/Users/Administrador/Desktop/Proyectos S/squetzaldigital/index.html\")"
     ]
   }
 }
