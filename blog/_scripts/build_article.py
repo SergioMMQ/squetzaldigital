@@ -132,7 +132,7 @@ def build_html(fm: dict, body_html: str, slug: str) -> str:
   </header>
 
   <nav>
-    <a href="../">⬅️ Volver al Blog</a>
+    <a href="/blog/blog.html">⬅️ Volver al Blog</a>
   </nav>
 
   <main>
