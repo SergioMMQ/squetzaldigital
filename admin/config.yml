@@ -4,8 +4,9 @@
 # ──────────────────────────────────────────────────────────────
 
 backend:
-  name: git-gateway        # Usa Netlify Identity (ver pasos de setup abajo)
+  name: git-gateway
   branch: main
+  base_url: https://squetzaldigitaal.netlify.app
 
 # Modo editorial: los artículos pasan por "Borrador → En revisión → Listo"
 # Útil si quieres revisar antes de publicar
