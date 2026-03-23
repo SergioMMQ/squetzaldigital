@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+
+  <script>
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8HPM5944PH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8HPM5944PH');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bóveda de Páginas | Squetzal Digital</title>
+  <meta name="description" content="Bóveda web con enlaces y descripciones profesionales de cada página del sitio de Squetzal Digital." />
+  <meta name="theme-color" content="#0ea5e9" />
+
+  <!-- SEO/Open Graph -->
+  <meta property="og:title" content="Bóveda de Páginas | Squetzal Digital" />
+  <meta property="og:description" content="Explora rápidamente todas las páginas del sitio con descripciones claras y profesionales." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://squetzaldigital.com/" />
+  <meta property="og:image" content="https://squetzaldigital.com/favicon.png" />
+  <link rel="icon" href="../imagenes/favicon-16x16.png" type="image/x-icon" />
+
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <div class="brand">
+          <img src="../imagenes/android-chrome-512x512.png" alt="logo squetzaldigital">
+          <div>
+            <h1>S QUETZAL DIGITAL</h1>
+            <h1 style="font-size: 18px;">Bóveda de Páginas</h1>
+          </div>
+        </div>
+        <div class="controls">
+          <input id="q" type="search" placeholder="Buscar por título, URL o etiqueta…" aria-label="Buscar" />
+          <select id="sort" aria-label="Ordenar">
+            <option value="title">Título (A-Z)</option>
+            <option value="updated">Actualizado (reciente)</option>
+          </select>
+        </div>
+      </div>
+      <div class="tags" id="tags"></div>
+      <div class="hint"><span class="counter" id="counter"></span> <span id="status"></span></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="title">Encuentra tu página web</h2>
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <div class="footer">© <span id="year"></span> S Quetzal Digital</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

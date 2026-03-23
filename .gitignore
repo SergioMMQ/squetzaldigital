@@ -1,0 +1,50 @@
+# ─── Claude Code ───────────────────────────────────────────
+# Configuración local del asistente de IA (permisos de bash, rutas absolutas del equipo)
+.claude/
+
+# ─── Editor ─────────────────────────────────────────────────
+# Preferencias locales de VS Code (no son parte del proyecto)
+.vscode/
+
+# ─── Variables de entorno y secretos ────────────────────────
+# (No existen ahora, pero si se agregan backend/scripts deben excluirse)
+.env
+.env.*
+*.env
+!.env.example
+
+# ─── Dependencias (si se agrega Node.js / npm en el futuro) ──
+node_modules/
+.npm/
+
+# ─── Artefactos de construcción ──────────────────────────────
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# ─── Logs ───────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# ─── Sistema operativo ──────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ─── Claves y certificados ──────────────────────────────────
+# (Buenas prácticas para cuando se agregue HTTPS o autenticación)
+*.pem
+*.key
+*.cert
+*.p12
+*.pfx
+
+# ─── Archivos temporales ────────────────────────────────────
+*.tmp
+*.temp
+*.bak
+*.swp
+*~

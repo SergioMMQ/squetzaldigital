@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Bloqueos de seguridad / pruebas
+Disallow: /admin/
+Disallow: /test/
+Disallow: /private/
+Disallow: /boveda/
+Disallow: /empleados/
+
+# Evitar rastreo innecesario (opcional)
+Disallow: /*?*
+
+# Sitemap principal (índice)
+Sitemap: https://squetzaldigital.com/sitemap.xml

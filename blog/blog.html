@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8HPM5944PH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8HPM5944PH');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5096102110661659" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://squetzaldigital.com/blog/blog.html"/>
+  <title>Blog de Tecnología para Empresas en México | S Quetzal Digital</title>
+  <meta name="description" content="Artículos y guías sobre digitalización, software, marketing digital y tecnología para negocios en México. Aprende a crecer con S Quetzal Digital.">
+
+  <!-- Open Graph (Redes Sociales) -->
+  <meta property="og:title" content="Blog de Tecnología para Empresas en México | S Quetzal Digital">
+  <meta property="og:description" content="Artículos y guías sobre digitalización, software, marketing digital y tecnología para negocios en México.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://squetzaldigital.com/blog/blog.html">
+  <meta property="og:site_name" content="S Quetzal Digital">
+
+  <!-- Schema.org (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Blog - S Quetzal Digital",
+    "description": "Blog con artículos sobre digitalización, marketing digital y tecnología empresarial",
+    "url": "https://squetzaldigital.com/blog/blog.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "S Quetzal Digital"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="style-blog-lista.css">
+</head>
+<body>
+
+  <header>
+    <a href="/"><img src="/imagenes/logoquetzalcode.png" alt="S Quetzal Digital" class="logo-header" width="2000" height="2000" decoding="async" fetchpriority="high"></a>
+    <h1>✍️ BLOG</h1>
+    <p>Artículos, guías y recursos sobre digitalización, marketing y tecnología</p>
+  </header>
+
+  <nav>
+    <a href="/">← Volver al Inicio</a>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="/">Inicio</a> / <span>Blog</span>
+  </div>
+
+  <div class="blog-container">
+    <main>
+      <!-- Buscador -->
+      <div class="search-section">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Buscar artículos...">
+          <button onclick="searchArticles()">🔍 Buscar</button>
+        </div>
+        <div class="search-results-count" id="searchCount" style="display: none;"></div>
+      </div>
+
+      <!-- Artículos Destacados -->
+      <div class="featured-section" id="featuredSection">
+        <h3>📌 Destacado</h3>
+        <div class="featured-article">
+          <span class="featured-badge">DESTACADO</span>
+          <h3>Digitalización y Automatización: el camino al crecimiento empresarial</h3>
+          <div class="article-meta">
+            <span>📅 7 de marzo, 2026</span>
+            <span>👤 S Quetzal Digital</span>
+            <span>⏱️ 6 min de lectura</span>
+            <span>👁️ 245 vistas</span>
+          </div>
+          <p>Descubre cómo la digitalización y la automatización impulsan el crecimiento empresarial, mejoran procesos y fortalecen la toma de decisiones.</p>
+          <div class="article-actions">
+            <a href="articulos/digitalizacion-y-automatizacion-el-camino-al-crecimiento-empresarial.html" class="read-more">Leer más →</a>
+            <div class="share-buttons">
+              <a href="https://twitter.com/intent/tweet?url=https://squetzaldigital.com/blog/blog.html&text=Digitalización%20y%20Automatización:%20el%20camino%20al%20crecimiento%20empresarial" target="_blank" class="share-btn twitter" title="Compartir en Twitter">𝕏</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://squetzaldigital.com/blog/blog.html" target="_blank" class="share-btn facebook" title="Compartir en Facebook">f</a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://squetzaldigital.com/blog/blog.html" target="_blank" class="share-btn linkedin" title="Compartir en LinkedIn">in</a>
+              <a href="https://wa.me/?text=Mira%20este%20artículo:%20Digitalización%20y%20Automatización%20https://squetzaldigital.com/blog/blog.html" target="_blank" class="share-btn whatsapp" title="Compartir en WhatsApp">W</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtros por Categorías -->
+      <div class="filters-section" id="filtersSection">
+        <h3>🏷️ Filtrar por categoría</h3>
+        <div class="category-filters">
+          <button class="category-btn active" onclick="filterCategory('Todos')">Todos</button>
+          <button class="category-btn" onclick="filterCategory('Digitalización')">Digitalización</button>
+          <button class="category-btn" onclick="filterCategory('Software')">Software</button>
+          <button class="category-btn" onclick="filterCategory('E-commerce')">E-commerce</button>
+          <button class="category-btn" onclick="filterCategory('Procesos')">Procesos</button>
+          <button class="category-btn" onclick="filterCategory('Sistemas')">Sistemas</button>
+          <button class="category-btn" onclick="filterCategory('Marketing')">Marketing</button>
+        </div>
+      </div>
+
+      <!-- Artículos -->
+      <section id="entradas">
+        <h2>Todos los artículos</h2>
+        <div class="articulos">
+
+          <!-- Artículo 1 -->
+          <article class="servicio" data-category="Digitalización">
+            <h3>Digitalización y Automatización: el camino al crecimiento empresarial</h3>
+            <div class="article-meta">
+              <span>📅 7 de marzo, 2026</span>
+              <span>👤 S Quetzal Digital</span>
+              <span>⏱️ 6 min de lectura</span>
+              <span>👁️ 245 vistas</span>
+              <span class="article-category">Digitalización</span>
+            </div>
+            <p>Descubre cómo la digitalización y la automatización impulsan el crecimiento empresarial, mejoran procesos y fortalecen la toma de decisiones.</p>
+            <div class="article-actions">
+              <a href="articulos/digitalizacion-y-automatizacion-el-camino-al-crecimiento-empresarial.html" class="read-more">Leer más →</a>
+              <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?url=https://squetzaldigital.com/blog/articulos/digitalizacion-y-automatizacion-el-camino-al-crecimiento-empresarial.html&text=Digitalización%20y%20Automatización" target="_blank" class="share-btn twitter" title="Compartir en Twitter">𝕏</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://squetzaldigital.com/blog/articulos/digitalizacion-y-automatizacion-el-camino-al-crecimiento-empresarial.html" target="_blank" class="share-btn facebook" title="Compartir en Facebook">f</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://squetzaldigital.com/blog/articulos/digitalizacion-y-automatizacion-el-camino-al-crecimiento-empresarial.html" target="_blank" class="share-btn linkedin" title="Compartir en LinkedIn">in</a>
+                <a href="https://wa.me/?text=Mira%20este%20artículo:%20Digitalización%20y%20Automatización%20https://squetzaldigital.com/blog/articulos/digitalizacion-y-automatizacion-el-camino-al-crecimiento-empresarial.html" target="_blank" class="share-btn whatsapp" title="Compartir en WhatsApp">W</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 2 -->
+          <article class="servicio" data-category="Software">
+            <h3>Cómo elegir el software ideal para tu empresa</h3>
+            <div class="article-meta">
+              <span>📅 5 de marzo, 2026</span>
+              <span>👤 S Quetzal Digital</span>
+              <span>⏱️ 5 min de lectura</span>
+              <span>👁️ 189 vistas</span>
+              <span class="article-category">Software</span>
+            </div>
+            <p>Una guía práctica para elegir el software correcto según tus procesos, tu equipo y tu presupuesto.</p>
+            <div class="article-actions">
+              <a href="articulos/como-elegir-el-software-ideal-para-tu-empresa.html" class="read-more">Leer más →</a>
+              <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?url=https://squetzaldigital.com/blog/articulos/como-elegir-el-software-ideal-para-tu-empresa.html&text=Cómo%20elegir%20el%20software%20ideal" target="_blank" class="share-btn twitter" title="Compartir en Twitter">𝕏</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://squetzaldigital.com/blog/articulos/como-elegir-el-software-ideal-para-tu-empresa.html" target="_blank" class="share-btn facebook" title="Compartir en Facebook">f</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://squetzaldigital.com/blog/articulos/como-elegir-el-software-ideal-para-tu-empresa.html" target="_blank" class="share-btn linkedin" title="Compartir en LinkedIn">in</a>
+                <a href="https://wa.me/?text=Mira%20este%20artículo:%20Cómo%20elegir%20el%20software%20ideal%20https://squetzaldigital.com/blog/articulos/como-elegir-el-software-ideal-para-tu-empresa.html" target="_blank" class="share-btn whatsapp" title="Compartir en WhatsApp">W</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 3 -->
+          <article class="servicio" data-category="E-commerce">
+            <h3>¿Cuántos clientes estás perdiendo por no aceptar pagos digitales?</h3>
+            <div class="article-meta">
+              <span>📅 28 de febrero, 2026</span>
+              <span>👤 S Quetzal Digital</span>
+              <span>⏱️ 4 min de lectura</span>
+              <span>👁️ 312 vistas</span>
+              <span class="article-category">E-commerce</span>
+            </div>
+            <p>El cobro con tarjeta como primer paso real hacia la digitalización y el crecimiento de un negocio.</p>
+            <div class="article-actions">
+              <a href="articulos/cuantos-clientes-estas-perdiendo-por-no-aceptar-pagos-digitales.html" class="read-more">Leer más →</a>
+              <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?url=https://squetzaldigital.com/blog/articulos/cuantos-clientes-estas-perdiendo-por-no-aceptar-pagos-digitales.html&text=Pagos%20digitales%20en%20tu%20negocio" target="_blank" class="share-btn twitter" title="Compartir en Twitter">𝕏</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://squetzaldigital.com/blog/articulos/cuantos-clientes-estas-perdiendo-por-no-aceptar-pagos-digitales.html" target="_blank" class="share-btn facebook" title="Compartir en Facebook">f</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://squetzaldigital.com/blog/articulos/cuantos-clientes-estas-perdiendo-por-no-aceptar-pagos-digitales.html" target="_blank" class="share-btn linkedin" title="Compartir en LinkedIn">in</a>
+                <a href="https://wa.me/?text=Mira%20este%20artículo:%20Pagos%20digitales%20https://squetzaldigital.com/blog/articulos/cuantos-clientes-estas-perdiendo-por-no-aceptar-pagos-digitales.html" target="_blank" class="share-btn whatsapp" title="Compartir en WhatsApp">W</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 4 -->
+          <article class="servicio" data-category="Procesos">
+            <h3>Qué procesos conviene digitalizar primero en una empresa</h3>
+            <div class="article-meta">
+              <span>📅 21 de febrero, 2026</span>
+              <span>👤 S Quetzal Digital</span>
+              <span>⏱️ 7 min de lectura</span>
+              <span>👁️ 156 vistas</span>
+              <span class="article-category">Procesos</span>
+            </div>
+            <p>Identifica qué procesos generan mayor impacto cuando se digitalizan y cómo priorizarlos correctamente.</p>
+            <div class="article-actions">
+              <a href="articulos/que-procesos-conviene-digitalizar-primero-en-una-empresa.html" class="read-more">Leer más →</a>
+              <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?url=https://squetzaldigital.com/blog/articulos/que-procesos-conviene-digitalizar-primero-en-una-empresa.html&text=Procesos%20a%20digitalizar" target="_blank" class="share-btn twitter" title="Compartir en Twitter">𝕏</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://squetzaldigital.com/blog/articulos/que-procesos-conviene-digitalizar-primero-en-una-empresa.html" target="_blank" class="share-btn facebook" title="Compartir en Facebook">f</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://squetzaldigital.com/blog/articulos/que-procesos-conviene-digitalizar-primero-en-una-empresa.html" target="_blank" class="share-btn linkedin" title="Compartir en LinkedIn">in</a>
+                <a href="https://wa.me/?text=Mira%20este%20artículo:%20Procesos%20a%20digitalizar%20https://squetzaldigital.com/blog/articulos/que-procesos-conviene-digitalizar-primero-en-una-empresa.html" target="_blank" class="share-btn whatsapp" title="Compartir en WhatsApp">W</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 5 -->
+          <article class="servicio" data-category="Sistemas">
+            <h3>Tipos de sistemas de información en las empresas</h3>
+            <div class="article-meta">
+              <span>📅 14 de febrero, 2026</span>
+              <span>👤 S Quetzal Digital</span>
+              <span>⏱️ 8 min de lectura</span>
+              <span>👁️ 203 vistas</span>
+              <span class="article-category">Sistemas</span>
+            </div>
+            <p>Conoce los principales sistemas de información y cómo se aplican en las distintas áreas de una empresa.</p>
+            <div class="article-actions">
+              <a href="articulos/tipos-de-sistemas-de-informacion-en-las-empresas.html" class="read-more">Leer más →</a>
+              <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?url=https://squetzaldigital.com/blog/articulos/tipos-de-sistemas-de-informacion-en-las-empresas.html&text=Sistemas%20de%20información" target="_blank" class="share-btn twitter" title="Compartir en Twitter">𝕏</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://squetzaldigital.com/blog/articulos/tipos-de-sistemas-de-informacion-en-las-empresas.html" target="_blank" class="share-btn facebook" title="Compartir en Facebook">f</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://squetzaldigital.com/blog/articulos/tipos-de-sistemas-de-informacion-en-las-empresas.html" target="_blank" class="share-btn linkedin" title="Compartir en LinkedIn">in</a>
+                <a href="https://wa.me/?text=Mira%20este%20artículo:%20Sistemas%20de%20información%20https://squetzaldigital.com/blog/articulos/tipos-de-sistemas-de-informacion-en-las-empresas.html" target="_blank" class="share-btn whatsapp" title="Compartir en WhatsApp">W</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 6 -->
+          <article class="servicio" data-category="Marketing">
+            <h3>Qué es Google Maps y por qué es clave para la visibilidad de los negocios locales</h3>
+            <div class="article-meta">
+              <span>📅 7 de febrero, 2026</span>
+              <span>👤 S Quetzal Digital</span>
+              <span>⏱️ 5 min de lectura</span>
+              <span>👁️ 428 vistas</span>
+              <span class="article-category">Marketing</span>
+            </div>
+            <p>Descubre cómo Google Maps ayuda a los negocios locales a aparecer en búsquedas cercanas, generar confianza y mejorar su visibilidad digital.</p>
+            <div class="article-actions">
+              <a href="articulos/google-maps-visibilidad-negocios-locales.html" class="read-more">Leer más →</a>
+              <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?url=https://squetzaldigital.com/blog/articulos/google-maps-visibilidad-negocios-locales.html&text=Google%20Maps%20para%20negocios%20locales" target="_blank" class="share-btn twitter" title="Compartir en Twitter">𝕏</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://squetzaldigital.com/blog/articulos/google-maps-visibilidad-negocios-locales.html" target="_blank" class="share-btn facebook" title="Compartir en Facebook">f</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://squetzaldigital.com/blog/articulos/google-maps-visibilidad-negocios-locales.html" target="_blank" class="share-btn linkedin" title="Compartir en LinkedIn">in</a>
+                <a href="https://wa.me/?text=Mira%20este%20artículo:%20Google%20Maps%20para%20negocios%20locales%20https://squetzaldigital.com/blog/articulos/google-maps-visibilidad-negocios-locales.html" target="_blank" class="share-btn whatsapp" title="Compartir en WhatsApp">W</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Widget de Categorías -->
+      <div class="sidebar-widget">
+        <h4>📁 Categorías</h4>
+        <ul class="category-list">
+          <li><a href="#" onclick="filterCategory('Digitalización')">Digitalización <span class="category-count">2</span></a></li>
+          <li><a href="#" onclick="filterCategory('Software')">Software <span class="category-count">1</span></a></li>
+          <li><a href="#" onclick="filterCategory('E-commerce')">E-commerce <span class="category-count">1</span></a></li>
+          <li><a href="#" onclick="filterCategory('Procesos')">Procesos <span class="category-count">1</span></a></li>
+          <li><a href="#" onclick="filterCategory('Sistemas')">Sistemas <span class="category-count">1</span></a></li>
+          <li><a href="#" onclick="filterCategory('Marketing')">Marketing <span class="category-count">1</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Widget de Artículos Recientes -->
+      <div class="sidebar-widget">
+        <h4>📰 Artículos Recientes</h4>
+        <ul class="recent-articles-list">
+          <li>
+            <a href="articulos/digitalizacion-y-automatizacion-el-camino-al-crecimiento-empresarial.html">Digitalización y Automatización</a>
+            <small>7 mar, 2026</small>
+          </li>
+          <li>
+            <a href="articulos/como-elegir-el-software-ideal-para-tu-empresa.html">Cómo elegir el software ideal</a>
+            <small>5 mar, 2026</small>
+          </li>
+          <li>
+            <a href="articulos/cuantos-clientes-estas-perdiendo-por-no-aceptar-pagos-digitales.html">Pagos digitales</a>
+            <small>28 feb, 2026</small>
+          </li>
+          <li>
+            <a href="articulos/que-procesos-conviene-digitalizar-primero-en-una-empresa.html">Procesos a digitalizar</a>
+            <small>21 feb, 2026</small>
+          </li>
+          <li>
+            <a href="articulos/tipos-de-sistemas-de-informacion-en-las-empresas.html">Sistemas de información</a>
+            <small>14 feb, 2026</small>
+          </li>
+          <li>
+            <a href="articulos/google-maps-visibilidad-negocios-locales.html">Google Maps para negocios</a>
+            <small>7 feb, 2026</small>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    © 2026 S Quetzal Digital. Todos los derechos reservados.
+    | <a href="/sobre-nosotros.html" style="color:#aaa;">Acerca de</a>
+    | <a href="/politica-de-privacidad.html" style="color:#aaa;">Privacidad</a>
+    | <a href="/terminos-y-condiciones.html" style="color:#aaa;">Términos</a>
+  </footer>
+
+  <script>
+    // Buscador de artículos
+    function searchArticles() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const articles = document.querySelectorAll('.articulos article');
+      let resultsCount = 0;
+
+      articles.forEach(article => {
+        const title = article.querySelector('h3').textContent.toLowerCase();
+        const text = article.textContent.toLowerCase();
+        const isMatch = title.includes(query) || text.includes(query);
+
+        article.style.display = isMatch ? 'block' : 'none';
+        if (isMatch) resultsCount++;
+      });
+
+      const countElement = document.getElementById('searchCount');
+      if (query.trim() === '') {
+        countElement.style.display = 'none';
+      } else {
+        countElement.style.display = 'block';
+        countElement.textContent = `Se encontraron ${resultsCount} artículo${resultsCount !== 1 ? 's' : ''}`;
+      }
+    }
+
+    // Filtro por categorías
+    function filterCategory(category) {
+      const articles = document.querySelectorAll('.articulos article');
+      const buttons = document.querySelectorAll('.category-btn');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.textContent.includes(category)) {
+          btn.classList.add('active');
+        }
+      });
+
+      articles.forEach(article => {
+        if (category === 'Todos') {
+          article.style.display = 'block';
+        } else {
+          const articleCategory = article.getAttribute('data-category');
+          article.style.display = articleCategory === category ? 'block' : 'none';
+        }
+      });
+
+      document.getElementById('searchInput').value = '';
+      document.getElementById('searchCount').style.display = 'none';
+    }
+
+    // Buscar con Enter
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) {
+        searchInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            searchArticles();
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

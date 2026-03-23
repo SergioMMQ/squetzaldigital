@@ -1,0 +1,55 @@
+name: Publicar artículos del blog
+
+# Se activa cuando Decap CMS guarda un nuevo artículo markdown
+on:
+  push:
+    paths:
+      - 'blog/_posts/**.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # Necesario para hacer commit de los archivos generados
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # Necesitamos el commit anterior para detectar cambios
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install markdown pyyaml
+
+      - name: Detectar archivos markdown nuevos o modificados
+        id: changed
+        run: |
+          FILES=$(git diff --name-only HEAD~1 HEAD -- 'blog/_posts/*.md' 2>/dev/null || \
+                  git show --name-only --format="" HEAD -- 'blog/_posts/*.md' 2>/dev/null)
+          echo "Archivos detectados: $FILES"
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Construir artículos HTML
+        run: |
+          while IFS= read -r file; do
+            if [ -n "$file" ] && [ -f "$file" ]; then
+              echo "▶ Construyendo: $file"
+              python blog/_scripts/build_article.py "$file"
+            fi
+          done <<< "${{ steps.changed.outputs.files }}"
+
+      - name: Publicar archivos generados
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions"
+          git add blog/articulos/*.html sitemap-blog.xml blog/blog.html
+          git diff --staged --quiet && echo "Sin cambios" || \
+            git commit -m "Auto: artículo publicado desde CMS [skip ci]"
+          git push

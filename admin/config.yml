@@ -1,0 +1,110 @@
+# ──────────────────────────────────────────────────────────────
+# Decap CMS — S Quetzal Digital
+# Documentación: https://decapcms.org/docs/
+# ──────────────────────────────────────────────────────────────
+
+backend:
+  name: git-gateway        # Usa Netlify Identity (ver pasos de setup abajo)
+  branch: main
+
+# Modo editorial: los artículos pasan por "Borrador → En revisión → Listo"
+# Útil si quieres revisar antes de publicar
+publish_mode: editorial_workflow
+
+# Carpeta donde se guardan las imágenes subidas desde el CMS
+media_folder: "blog/imagenes"
+public_folder: "/blog/imagenes"
+
+collections:
+  - name: "blog"
+    label: "📝 Artículos del Blog"
+    folder: "blog/_posts"
+    create: true
+    slug: "{{slug}}"           # Nombre del archivo = slug del título
+    summary: "{{title}} — {{date}}"
+
+    fields:
+      # ── SEO ─────────────────────────────────────────────────
+      - label: "Título"
+        name: "title"
+        widget: "string"
+        hint: "Título principal del artículo (también se usa para el SEO)"
+
+      - label: "Descripción SEO"
+        name: "description"
+        widget: "string"
+        hint: "Máximo 160 caracteres. Aparece en Google y redes sociales."
+
+      - label: "Palabras clave"
+        name: "keywords"
+        widget: "string"
+        hint: "Separadas por coma. Ej: digitalización, software, méxico"
+
+      # ── Metadata ─────────────────────────────────────────────
+      - label: "Fecha de publicación"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+        default: ""
+
+      - label: "Categoría"
+        name: "category"
+        widget: "select"
+        options:
+          - "Digitalización"
+          - "Software"
+          - "E-commerce"
+          - "Procesos"
+          - "Sistemas"
+          - "Marketing"
+
+      - label: "Tiempo de lectura"
+        name: "readTime"
+        widget: "string"
+        default: "5 min"
+        hint: "Ej: 5 min, 8 min"
+
+      - label: "Slug (URL del artículo)"
+        name: "slug"
+        widget: "string"
+        hint: "Solo minúsculas y guiones. Ej: como-usar-google-ads. Se genera automáticamente del título si lo dejas vacío."
+        required: false
+
+      # ── Imagen principal ──────────────────────────────────────
+      - label: "Imagen principal"
+        name: "heroImage"
+        widget: "image"
+        default: "/assets/desarrollodesoftware.png"
+        hint: "Imagen que aparece en la parte superior del artículo"
+
+      - label: "Alt de imagen principal"
+        name: "heroAlt"
+        widget: "string"
+        hint: "Descripción accesible de la imagen (importante para SEO)"
+
+      # ── Contenido ─────────────────────────────────────────────
+      - label: "Contenido del artículo"
+        name: "body"
+        widget: "markdown"
+        hint: "Escribe el artículo en formato Markdown. Usa ## para subtítulos, **negrita**, etc."
+
+      # ── CTA (Llamada a la acción) ─────────────────────────────
+      - label: "Llamada a la acción (CTA)"
+        name: "cta"
+        widget: "object"
+        required: false
+        collapsed: true
+        fields:
+          - label: "Título del CTA"
+            name: "title"
+            widget: "string"
+            required: false
+            default: "¿Quieres implementar esto en tu empresa?"
+
+          - label: "Descripción del CTA"
+            name: "description"
+            widget: "string"
+            required: false
+            default: "En S Quetzal Digital te ayudamos a digitalizar tu negocio desde el primer día."
