@@ -4,11 +4,36 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CMS | S Quetzal Digital</title>
-  <!-- Netlify Identity Widget (maneja la autenticación con GitHub) -->
+  <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    // Apuntar al sitio de Netlify correcto aunque el CMS esté en GitHub Pages
+    window.netlifyIdentity && window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  </script>
 </head>
 <body>
   <!-- Decap CMS -->
+  <script>
+    window.netlifyIdentity = window.netlifyIdentity || {};
+    var CMS_MANUAL_INIT = true;
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: "git-gateway",
+          branch: "main",
+          base_url: "https://squetzaldigitaal.netlify.app"
+        }
+      }
+    });
+  </script>
 </body>
 </html>
