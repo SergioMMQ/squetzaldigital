@@ -1,3 +1,12 @@
+// ===== Nav scroll effect =====
+(function () {
+  const nav = document.getElementById("main-nav");
+  if (!nav) return;
+  const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 30);
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
+
 // ===== ScrollSpy (resalta el enlace activo según la sección visible) =====
 document.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section[id], header[id], main[id], div[id]");
@@ -49,33 +58,78 @@ document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
 });
 
 
+// ===== Carrusel auto-scroll (solo activo cuando hay scroll horizontal) =====
+function initCarrusel(gridSel, cardSel, dotSel) {
+  const grid = document.querySelector(gridSel);
+  if (!grid) return;
+
+  const cards = Array.from(grid.querySelectorAll(cardSel));
+  const dots  = dotSel ? Array.from(document.querySelectorAll(dotSel)) : [];
+  let current = 0;
+  let timer;
+
+  function isScrollable() {
+    return grid.scrollWidth > grid.offsetWidth + 4;
+  }
+
+  function goTo(idx) {
+    if (!isScrollable()) return;
+    current = (idx + cards.length) % cards.length;
+    const card = cards[current];
+    const left = card.offsetLeft - (grid.offsetWidth - card.offsetWidth) / 2;
+    grid.scrollTo({ left, behavior: "smooth" });
+    dots.forEach((d, i) => d.classList.toggle("promo-dot--active", i === current));
+  }
+
+  function startAuto() { timer = setInterval(() => goTo(current + 1), 3000); }
+  function stopAuto()  { clearInterval(timer); }
+
+  // Pausa al tocar, reanuda 4 s después
+  grid.addEventListener("pointerdown", () => {
+    stopAuto();
+    clearTimeout(grid._resumeTimer);
+    grid._resumeTimer = setTimeout(startAuto, 4000);
+  });
+
+  // Actualiza índice al hacer scroll manual
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting && e.intersectionRatio >= 0.5) {
+        current = cards.indexOf(e.target);
+        dots.forEach((d, i) => d.classList.toggle("promo-dot--active", i === current));
+      }
+    });
+  }, { root: grid, threshold: 0.5 });
+
+  cards.forEach((c) => observer.observe(c));
+  startAuto();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initCarrusel(".promociones-grid",     ".promo-card",      ".promo-dot");
+  initCarrusel(".recomendaciones-grid", ".testimonio-card", null);
+
+  // Anti-bot: bloquea envíos realizados en menos de 3 segundos
+  const form = document.getElementById("contactForm");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      const tsField = document.getElementById("_form_loaded");
+      if (!tsField || !tsField.value) return;
+      const elapsed = Date.now() - parseInt(tsField.value, 10);
+      if (elapsed < 3000) e.preventDefault();
+    });
+  }
+});
+
 // ===== Modal de contacto =====
 function openModal() {
   const modal = document.getElementById("contactModal");
   if (!modal) return;
   modal.style.display = "flex";
 
-  // Anti-bot: registra el momento en que se abrió el formulario
   const tsField = document.getElementById("_form_loaded");
   if (tsField) tsField.value = Date.now();
 }
-
-// Anti-bot: bloquea envíos realizados en menos de 3 segundos (comportamiento de bot)
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contactForm");
-  if (!form) return;
-
-  form.addEventListener("submit", (e) => {
-    const tsField = document.getElementById("_form_loaded");
-    if (!tsField || !tsField.value) return;
-
-    const elapsed = Date.now() - parseInt(tsField.value, 10);
-    if (elapsed < 3000) {
-      e.preventDefault();
-      // Silencioso: no alerta al usuario, solo bloquea el bot
-    }
-  });
-});
 
 function closeModal() {
   const modal = document.getElementById("contactModal");

@@ -23,7 +23,6 @@
     "url": "https://squetzaldigital.com",
     "logo": "https://squetzaldigital.com/imagenes/logoquetzalcode.png",
     "sameAs": [
-      "https://squetzaldigital.com/blog/blog.html",
       "https://www.facebook.com/profile.php?id=61579236382484",
       "https://www.linkedin.com/company/squetzaldigital/"
     ],
@@ -36,6 +35,29 @@
         "availableLanguage": ["es","en"]
       }
     ]
+  }
+  </script>
+
+  <!-- QR SQD — herramienta propia -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "QR SQD",
+    "url": "https://qr.squetzaldigital.com",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Generador de códigos QR dinámicos y estáticos. Edita el destino de tu QR sin reimprimir. Plan gratuito disponible.",
+    "offers": [
+      { "@type": "Offer", "price": "0", "priceCurrency": "MXN", "name": "Plan Gratis — 3 QR dinámicos" },
+      { "@type": "Offer", "price": "79", "priceCurrency": "MXN", "name": "Plan Starter — 10 QR dinámicos" },
+      { "@type": "Offer", "price": "199", "priceCurrency": "MXN", "name": "Plan Pro — QR ilimitados" }
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "S Quetzal Digital",
+      "url": "https://squetzaldigital.com"
+    }
   }
   </script>
 
@@ -110,16 +132,18 @@
 </head>
 
 <body>
-  <nav>
-    <img src="imagenes/logoquetzalcode.png" alt="Logo de S Quetzal Digital, servicios de tecnología y soluciones digitales" class="img-header" width="2000" height="2000" decoding="async" fetchpriority="high">
+  <nav id="main-nav">
+    <a href="#inicio" class="nav-brand">
+      <img src="imagenes/logoquetzalcode.png" alt="Logo S Quetzal Digital" class="img-header" width="2000" height="2000" decoding="async" fetchpriority="high">
+      <span class="nav-brand-name">S Quetzal Digital</span>
+    </a>
     <div class="nav-container">
-      <a href="#inicio">INICIO</a>
-      <a href="#servicios">SERVICIOS</a>
-      <a href="#recomendaciones">RECOMENDACIONES</a>
-      <a href="/blog/blog.html" class="btn-estilos">BLOG</a>
-      <a onclick="openModal()" style="cursor:pointer;">CONTACTO</a>
-    </div>
-    <div>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#recomendaciones">Testimonios</a>
+      <a href="#blog">Blog</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#contacto">Contacto</a>
     </div>
     <div class="hamburger" id="hamburger">
       <span></span>
@@ -129,160 +153,314 @@
   </nav>
 
   
-  <main id="inicio" style="height: 45%;">
+  <main id="inicio">
     <header>
-      <div>
-        <h1 class="titulo-secundario">Páginas web, sistemas y soporte TI</h1>
-        <div class="titulo-principal">S Quetzal Digital</div>
-        <h2 class="titulo-secundario">Te ayudamos a digitalizar tu negocio de forma práctica</h2>
+      <div class="hero-content">
+        <p class="hero-eyebrow">S Quetzal Digital · PYMES en México</p>
+        <h1 class="titulo-principal">Digitaliza tu negocio sin complicaciones</h1>
+        <p class="hero-sub">Páginas web, sistemas a la medida y soporte TI.<br>Tecnología que funciona para tu empresa desde el primer día.</p>
+        <div class="hero-actions">
+          <a href="#servicios" class="hero-btn-primary">Ver servicios</a>
+          <a href="pagina-web-gratis.html" class="hero-btn-secondary">Demo gratis →</a>
+        </div>
+        <a href="https://wa.me/525575055014?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener" class="hero-whatsapp">
+          <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+        </a>
       </div>
     </header>
   </main>
 
-<section>
-  <h2>
-    Servicios de Desarrollo y Soluciones Digitales
-  </h2>
-  <div style="padding: 60px 20px; background-color: #f7f9fc; color: #333; font-family: 'Roboto', sans-serif;">
-    <div style="margin: 0 auto; display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
-      <div style="flex: 0 0 auto;">
-        <!-- Imagen sección servicios -->
-        <img src="imagenes/codigo.jpg" alt="Código de programación representando desarrollo de software en S Quetzal Digital" class="servicio-img" width="4288" height="2848" loading="lazy" decoding="async">
-      </div>
-      <div style="flex: 1 1 0; min-width: 280px;">
-        <p style="font-size: 1.125rem; line-height: 1.7; margin-bottom: 25px;">
-          Bienvenido a <strong>S Quetzal Digital</strong>, tu aliado estratégico en desarrollo de software, transformación digital y soluciones tecnológicas a la medida. Nuestro equipo de expertos se dedica a impulsar la innovación y optimizar tus procesos con tecnología de vanguardia.
-        </p>
-        <p style="font-size: 1.125rem; line-height: 1.7;">
-          Brindamos asesoría técnica integral, desarrollo personalizado y acompañamiento continuo para asegurar que tus proyectos digitales alcancen los más altos estándares de calidad, eficiencia y escalabilidad. Ya sea que necesites aplicaciones web o móviles, automatización de procesos, integración de sistemas o mejorar tu presencia digital, creamos soluciones adaptadas a tus metas y necesidades.
-        </p>
-        <p style="font-size: 1.125rem; line-height: 1.7; margin-top: 25px;">
-          Descubre cómo una transformación digital bien ejecutada puede potenciar tu negocio y llevarlo al siguiente nivel.
-        </p>
-      </div>
+<section id="servicios" aria-label="Servicios de S Quetzal Digital">
+  <div class="section-header">
+    <p class="section-eyebrow">Lo que hacemos</p>
+    <h2 class="section-title">Soluciones digitales para tu negocio</h2>
+    <p class="section-sub">Desarrollo, infraestructura, seguridad y estrategia — todo en un solo lugar.</p>
+  </div>
+
+  <div class="servicios-intro">
+    <img src="imagenes/codigo.jpg" alt="Código de programación representando desarrollo de software en S Quetzal Digital" class="servicio-img servicios-intro-img">
+    <div class="servicios-intro-text">
+      <p>En <strong>S Quetzal Digital</strong> ayudamos a pequeñas y medianas empresas a crecer con tecnología real y sin complicaciones. Desde una página web hasta sistemas completos a la medida, hacemos que la tecnología trabaje para tu negocio.</p>
+      <p>Nos encargamos de todo: desarrollo, infraestructura, seguridad, soporte y capacitación. Tú te concentras en tu negocio, nosotros en que la tecnología funcione.</p>
+      <p>Trabajamos contigo desde el primer día — entendemos tu operación, te proponemos la solución correcta y te acompañamos a lo largo del camino.</p>
     </div>
   </div>
 
-  <div class="container" id="servicios">
-    <div style="padding: 2rem 2rem; background-color: #f4f4f4;">
-      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #222;">
-        Nuestros Servicios
-      </h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto;">
-        <a href="servicios/serviciosweb.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>🌐 Servicios Web</h3>
-            <p>Hosting, dominios, integración de APIs y desarrollo de sistemas online.</p>
-          </div>
-        </a>
-        <a href="servicios/desarrollodesoftware.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>💻 Desarrollo de Software</h3>
-            <p>Apps móviles, sitios web y software a medida.</p>
-          </div>
-        </a>
-        <a href="servicios/ciberseguridad.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>🔐 Ciberseguridad</h3>
-            <p>Auditorías, protección de redes, análisis de vulnerabilidades y más.</p>
-          </div>
-        </a>
-        <a href="servicios/nubeyalmacenamiento.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>☁️ Nube y Almacenamiento</h3>
-            <p>Migración, nubes privadas y automatización de respaldos.</p>
-          </div>
-        </a>
-        <a href="servicios/soporte.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>🛠️ Soporte Técnico</h3>
-            <p>Mantenimiento de equipos, diagnóstico, instalación de software y soporte remoto.</p>
-          </div>
-        </a>
-        <a href="servicios/servicioderedes.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>📡 Redes</h3>
-            <p>Instalación, configuración y optimización de redes LAN y WiFi.</p>
-          </div>
-        </a>
-        <a href="servicios/analisisdedatos.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>📊 Análisis de Datos</h3>
-            <p>Dashboards, limpieza de datos y automatización de reportes.</p>
-          </div>
-        </a>
-        <a href="servicios/automatizacion.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>🤖 Automatización</h3>
-            <p>Bots, RPA, integración con herramientas como Zapier o Make.</p>
-          </div>
-        </a>
-        <a href="servicios/capacitacion.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>🎓 Capacitación</h3>
-            <p>Cursos de ofimática, desarrollo, redes, ciberseguridad y más.</p>
-          </div>
-        </a>
-        <a href="servicios/venta-equipos.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>💻 Venta de Equipos</h3>
-            <p>Computadoras, laptops y accesorios con garantía y soporte.</p>
-          </div>
-        </a>
-        <a href="servicios/consultoria.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>🧠 Consultoría</h3>
-            <p>Asesoría en tecnología, análisis y planificación estratégica.</p>
-          </div>
-        </a>
-        <a href="servicios/marketingdigital.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>📈 Marketing Digital</h3>
-            <p>SEO, SEM, redes sociales y estrategias de contenido para potenciar tu marca.</p>
-          </div>
-        </a>
-        <a href="/blog/blog.html" class="btn-estilos" style="text-decoration: none; color: inherit;">
-          <div class="servicio-card">
-            <h3>✍️ Blog de Tecnología</h3>
-            <p>Artículos sobre digitalización, software empresarial, ciberseguridad y transformación digital.</p>
-          </div>
-        </a>
-      </div>
-    </div>
+  <div class="servicios-grid">
+    <a href="servicios/serviciosweb.html" class="servicio-card">
+      <span class="servicio-icon">🌐</span>
+      <h3>Servicios Web</h3>
+      <p>Hosting, dominios, integración de APIs y desarrollo de sistemas online.</p>
+    </a>
+    <a href="servicios/desarrollodesoftware.html" class="servicio-card">
+      <span class="servicio-icon">💻</span>
+      <h3>Desarrollo de Software</h3>
+      <p>Apps móviles, sitios web y software a medida.</p>
+    </a>
+    <a href="servicios/automatizacion.html" class="servicio-card">
+      <span class="servicio-icon">🤖</span>
+      <h3>Automatización</h3>
+      <p>Bots, RPA e integración con herramientas como Zapier o Make.</p>
+    </a>
+    <a href="servicios/ciberseguridad.html" class="servicio-card">
+      <span class="servicio-icon">🔐</span>
+      <h3>Ciberseguridad</h3>
+      <p>Auditorías, protección de redes y análisis de vulnerabilidades.</p>
+    </a>
+    <a href="servicios/nubeyalmacenamiento.html" class="servicio-card">
+      <span class="servicio-icon">☁️</span>
+      <h3>Nube y Almacenamiento</h3>
+      <p>Migración, nubes privadas y automatización de respaldos.</p>
+    </a>
+    <a href="servicios/servicioderedes.html" class="servicio-card">
+      <span class="servicio-icon">📡</span>
+      <h3>Redes</h3>
+      <p>Instalación, configuración y optimización de redes LAN y WiFi.</p>
+    </a>
+    <a href="servicios/analisisdedatos.html" class="servicio-card">
+      <span class="servicio-icon">📊</span>
+      <h3>Análisis de Datos</h3>
+      <p>Dashboards, limpieza de datos y automatización de reportes.</p>
+    </a>
+    <a href="servicios/marketingdigital.html" class="servicio-card">
+      <span class="servicio-icon">📈</span>
+      <h3>Marketing Digital</h3>
+      <p>SEO, SEM, redes sociales y estrategias de contenido.</p>
+    </a>
+    <a href="servicios/consultoria.html" class="servicio-card">
+      <span class="servicio-icon">🧠</span>
+      <h3>Consultoría</h3>
+      <p>Asesoría en tecnología, análisis y planificación estratégica.</p>
+    </a>
+    <a href="servicios/soporte.html" class="servicio-card">
+      <span class="servicio-icon">🛠️</span>
+      <h3>Soporte Técnico</h3>
+      <p>Mantenimiento, diagnóstico, instalación de software y soporte remoto.</p>
+    </a>
+    <a href="servicios/capacitacion.html" class="servicio-card">
+      <span class="servicio-icon">🎓</span>
+      <h3>Capacitación</h3>
+      <p>Cursos de ofimática, desarrollo, redes, ciberseguridad y más.</p>
+    </a>
+    <a href="servicios/venta-equipos.html" class="servicio-card">
+      <span class="servicio-icon">🖥️</span>
+      <h3>Venta de Equipos</h3>
+      <p>Computadoras, laptops y accesorios con garantía y soporte.</p>
+    </a>
   </div>
 </section>
 
-  <!-- Sección Blog -->
-  <section id="blog" aria-label="Blog de tecnología empresarial">
-    <div style="padding: 60px 24px; background: linear-gradient(135deg, #0a0a0a, #1a2a3a); color: #fff; text-align: center;">
-      <p style="font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; color: #00ff22; margin-bottom: 12px; font-weight: 600;">Recursos gratuitos</p>
-      <h2 style="font-size: 2rem; margin-bottom: 16px; font-weight: 700;color: white;">Blog de Tecnología y Negocios Digitales</h2>
-      <p style="font-size: 1.05rem; max-width: 640px; margin: 0 auto 32px; color: #ccc; line-height: 1.7;">
-        Artículos prácticos sobre digitalización empresarial, desarrollo de software, ciberseguridad
-        y estrategias de marketing digital para PYMES y emprendedores.
-      </p>
-      <a href="/blog/blog.html"
-         aria-label="Visitar el blog de S Quetzal Digital sobre tecnología y negocios digitales"
-         style="display: inline-block; background: #0077ff; color: #fff; font-weight: 700; padding: 14px 36px; border-radius: 6px; text-decoration: none; font-size: 1rem; transition: background 0.2s;">
-        Leer el Blog
-      </a>
+  <section id="recomendaciones" aria-label="Testimonios de clientes">
+    <div class="recomendaciones-wrapper">
+      <div class="section-header">
+        <p class="section-eyebrow">Testimonios</p>
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <p class="section-sub">Empresas reales que digitalizaron su negocio con nosotros.</p>
+      </div>
+
+      <div class="recomendaciones-grid">
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-quote">"El equipo de S Quetzal Digital superó nuestras expectativas. Nuestro sitio web quedó exactamente como lo imaginamos y el proceso fue muy claro desde el inicio."</p>
+          <div class="testimonio-author">
+            <div class="testimonio-avatar" style="background: linear-gradient(135deg, #0077ff, #2190eb);">G</div>
+            <div>
+              <strong class="testimonio-name">Gabriela M.</strong>
+              <span class="testimonio-role">Propietaria · E-commerce</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-quote">"Gracias a su asesoría en Odoo, hemos optimizado nuestros procesos internos y nuestra productividad aumentó notablemente. Una inversión que valió la pena."</p>
+          <div class="testimonio-author">
+            <div class="testimonio-avatar" style="background: linear-gradient(135deg, #2dad5e, #1a5c35);">F</div>
+            <div>
+              <strong class="testimonio-name">Fabián R.</strong>
+              <span class="testimonio-role">Director · Empresa de logística</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-quote">"Su atención al cliente es excepcional. Siempre disponibles para resolver cualquier duda, con respuestas rápidas y soluciones concretas. Los recomiendo sin dudar."</p>
+          <div class="testimonio-author">
+            <div class="testimonio-avatar" style="background: linear-gradient(135deg, #0d0d0d, #333);">D</div>
+            <div>
+              <strong class="testimonio-name">Daniel S.</strong>
+              <span class="testimonio-role">Gerente · Negocio de servicios</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <section id="recomendaciones">
-    <h2>Recomendaciones</h2>
-    <div class="carousel">
-      <div class="recommendation-item">
-        <h3>Gabriela</h3>
-        <p>"El equipo de S Quetzal Digital superó nuestras expectativas en el desarrollo de nuestro sitio web."</p>
+  <!-- Sección Blog -->
+  <section id="blog" aria-label="Blog de tecnología empresarial">
+    <div class="blog-wrapper">
+      <div class="section-header">
+        <p class="section-eyebrow">Blog</p>
+        <h2 class="section-title">Últimos artículos</h2>
+        <p class="section-sub">Guías y consejos prácticos para digitalizar y hacer crecer tu negocio.</p>
       </div>
-      <div class="recommendation-item">
-        <h3>Fabian</h3>
-        <p>"Gracias a su asesoría en Odoo, hemos optimizado nuestros procesos y aumentado nuestra productividad."</p>
+
+      <div class="blog-grid">
+
+        <a href="/blog/articulos/cuantos-clientes-estas-perdiendo-por-no-aceptar-pagos-digitales.html" class="blog-card">
+          <span class="blog-card-tag">💳 Pagos digitales</span>
+          <h3>¿Cuántos clientes estás perdiendo por no aceptar pagos digitales?</h3>
+          <p>Descubre cuántos clientes pierdes por no aceptar pagos con tarjeta en México y cómo implementarlo rápido.</p>
+          <span class="blog-card-link">Leer artículo →</span>
+        </a>
+
+        <a href="/blog/articulos/como-elegir-el-software-ideal-para-tu-empresa.html" class="blog-card">
+          <span class="blog-card-tag">💻 Software</span>
+          <h3>Cómo elegir el software ideal para tu empresa</h3>
+          <p>Guía práctica para evaluar, comparar y elegir el sistema correcto según tus necesidades y presupuesto.</p>
+          <span class="blog-card-link">Leer artículo →</span>
+        </a>
+
+        <a href="/blog/articulos/digitalizacion-y-automatizacion-el-camino-al-crecimiento-empresarial.html" class="blog-card">
+          <span class="blog-card-tag">🤖 Automatización</span>
+          <h3>Digitalización y automatización: el camino al crecimiento</h3>
+          <p>Cómo mejorar procesos, reducir costos y tomar mejores decisiones con tecnología en tu empresa.</p>
+          <span class="blog-card-link">Leer artículo →</span>
+        </a>
+
       </div>
-      <div class="recommendation-item">
-        <h3>Daniel</h3>
-        <p>"Su atención al cliente es excepcional, siempre disponibles para resolver cualquier duda."</p>
+
+      <div class="blog-cta">
+        <a href="/blog/blog.html" class="blog-cta-btn">Ver todos los artículos →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección QR SQD -->
+  <section id="qr-sqd" aria-label="QR SQD — Generador de códigos QR dinámicos">
+    <div class="qr-sqd-wrapper">
+      <div class="section-header">
+        <p class="section-eyebrow">Herramienta propia</p>
+        <h2 class="section-title">Códigos QR dinámicos para tu negocio</h2>
+        <p class="section-sub">Edita el destino de tu QR sin reimprimir. Perfecto para menús, tarjetas y campañas.</p>
+      </div>
+
+      <div class="qr-planes-grid">
+
+        <div class="qr-plan-card">
+          <span class="qr-plan-icon">🆓</span>
+          <h3 class="qr-plan-name">Gratis</h3>
+          <p class="qr-plan-price">$0 <span>MXN / mes</span></p>
+          <ul class="qr-plan-features">
+            <li>3 QR dinámicos</li>
+            <li>WhatsApp, URL, WiFi y más</li>
+            <li>Editable sin reimprimir</li>
+            <li>Sin tarjeta de crédito</li>
+          </ul>
+          <a href="https://qr.squetzaldigital.com" target="_blank" rel="noopener" class="qr-plan-cta qr-plan-cta--free">Empezar gratis →</a>
+        </div>
+
+        <div class="qr-plan-card qr-plan-card--featured">
+          <span class="qr-plan-badge">Más popular</span>
+          <span class="qr-plan-icon">⚡</span>
+          <h3 class="qr-plan-name">Starter</h3>
+          <p class="qr-plan-price">$79 <span>MXN / mes</span></p>
+          <ul class="qr-plan-features">
+            <li>10 QR dinámicos</li>
+            <li>Todos los tipos de QR</li>
+            <li>Estadísticas de escaneos</li>
+            <li>Soporte prioritario</li>
+          </ul>
+          <a href="https://qr.squetzaldigital.com/pricing" target="_blank" rel="noopener" class="qr-plan-cta qr-plan-cta--featured">Ver planes →</a>
+        </div>
+
+        <div class="qr-plan-card">
+          <span class="qr-plan-icon">🚀</span>
+          <h3 class="qr-plan-name">Pro</h3>
+          <p class="qr-plan-price">$199 <span>MXN / mes</span></p>
+          <ul class="qr-plan-features">
+            <li>QR ilimitados</li>
+            <li>Logo personalizado en el QR</li>
+            <li>Análisis avanzado</li>
+            <li>API de integración</li>
+          </ul>
+          <a href="https://qr.squetzaldigital.com/pricing" target="_blank" rel="noopener" class="qr-plan-cta qr-plan-cta--pro">Ver plan Pro →</a>
+        </div>
+
+      </div>
+
+      <div class="qr-section-footer">
+        <a href="https://qr.squetzaldigital.com" target="_blank" rel="noopener" class="blog-cta-btn" style="background:#059669;">Crear mi QR gratis →</a>
+        <p class="qr-section-note">Sin tarjeta de crédito · Plan gratis para siempre</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Recursos -->
+  <section id="recursos" aria-label="Recursos y herramientas gratuitas de S Quetzal Digital">
+    <div class="promociones-wrapper">
+      <div class="section-header">
+        <p class="section-eyebrow">Recursos gratuitos</p>
+        <h2 class="section-title">Herramientas para tu negocio</h2>
+        <p class="section-sub">Blog, página web de prueba y códigos QR — sin costo, sin tarjeta.</p>
+      </div>
+
+      <div class="promociones-grid">
+
+        <!-- Blog -->
+        <div class="promo-card promo-card--blog">
+          <span class="promo-card-icon">✍️</span>
+          <span class="promo-card-badge">Gratis</span>
+          <h3 class="promo-card-title">Blog de Tecnología y Negocios</h3>
+          <p class="promo-card-sub">Artículos prácticos sobre digitalización, software y marketing para PYMES mexicanas.</p>
+          <ul class="promo-card-bullets">
+            <li>Digitalización empresarial</li>
+            <li>Desarrollo de software</li>
+            <li>Ciberseguridad</li>
+            <li>Marketing digital</li>
+          </ul>
+          <a href="/blog/blog.html" class="promo-card-cta">Leer artículos →</a>
+        </div>
+
+        <!-- Landing page gratis -->
+        <div class="promo-card promo-card--web">
+          <span class="promo-card-icon">🌐</span>
+          <span class="promo-card-badge">¡Sin costo!</span>
+          <h3 class="promo-card-title">Prueba tu Página Web Gratis</h3>
+          <p class="promo-card-sub">Tu primera landing page sin pagar nada. Sin tarjeta, sin compromisos.</p>
+          <ul class="promo-card-bullets">
+            <li>Sin tarjeta de crédito</li>
+            <li>Diseño profesional</li>
+            <li>Lista en días</li>
+            <li>Soporte incluido</li>
+          </ul>
+          <a href="/pagina-web-gratis.html" class="promo-card-cta">Pedir demo gratis →</a>
+        </div>
+
+        <!-- QR Dinámicos -->
+        <div class="promo-card promo-card--qr">
+          <span class="promo-card-icon">📱</span>
+          <span class="promo-card-badge">¡Nuevo!</span>
+          <h3 class="promo-card-title">Códigos QR Dinámicos Gratis</h3>
+          <p class="promo-card-sub">Edita el destino de tu QR sin reimprimir. Ideal para menús, tarjetas y más.</p>
+          <ul class="promo-card-bullets">
+            <li>3 QR gratis para siempre</li>
+            <li>WhatsApp, URL, WiFi y más</li>
+            <li>Editable sin reimprimir</li>
+            <li>Sin tarjeta de crédito</li>
+          </ul>
+          <a href="https://qr.squetzaldigital.com" target="_blank" rel="noopener" class="promo-card-cta">Crear mi QR gratis →</a>
+        </div>
+
+      </div>
+      <div class="promo-dots" id="promoDots">
+        <span class="promo-dot promo-dot--active"></span>
+        <span class="promo-dot"></span>
+        <span class="promo-dot"></span>
       </div>
     </div>
   </section>
@@ -336,22 +514,98 @@
       </form>
     </div>
   </div>
-    <!-- Enlaces de redes sociales -->
-  <div class="social-links">
-    <a href="https://www.facebook.com/profile.php?id=61579236382484" target="_blank" class="social-link facebook">
-      <i class="fab fa-facebook"></i>
-    </a>
-    <a href="https://www.linkedin.com/company/squetzaldigital/" target="_blank" class="social-link linkedin">
-      <i class="fab fa-linkedin"></i>
-    </a> 
-      <a href="https://wa.me/525575055014?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios.%20Gracias." target="_blank" class="social-link whatsapp">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <button class="contact-btn" onclick="openModal()">
-        <i class="fas fa-envelope"></i>
-      </button>
+<!-- Sección Contacto -->
+<section id="contacto" aria-label="Contacto S Quetzal Digital">
+  <div class="contacto-wrapper">
+
+    <div class="contacto-info">
+      <p class="section-eyebrow contacto-eyebrow">Contacto</p>
+      <h2 class="contacto-titulo">Hablemos</h2>
+      <p class="contacto-sub">Cuéntanos qué necesitas. Respondemos en menos de 24 horas y te ayudamos a encontrar la solución correcta para tu negocio.</p>
+
+      <div class="contacto-datos">
+        <div class="contacto-dato">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/525575055014" target="_blank" rel="noopener">+52 55 7505 5014</a>
+        </div>
+        <div class="contacto-dato">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:contacto@squetzaldigital.com">contacto@squetzaldigital.com</a>
+        </div>
+      </div>
+
+      <div class="contacto-socials">
+        <a href="https://www.facebook.com/profile.php?id=61579236382484" target="_blank" rel="noopener" class="contacto-social" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/squetzaldigital/" target="_blank" rel="noopener" class="contacto-social" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://wa.me/525575055014?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener" class="contacto-social contacto-social--wa" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
     </div>
+
+    <div class="contacto-form-wrap">
+      <form action="https://formsubmit.co/b3e8b65d1d4be69bd261638d4afc623c" method="POST" class="contacto-form" id="contactFormSection">
+        <input type="text" name="_honey" style="display:none;" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_next" value="https://squetzaldigital.com/avisos/gracias.html">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_subject" value="Nuevo mensaje — S Quetzal Digital">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="contacto-row">
+          <div class="contacto-field">
+            <label for="c-name">Nombre</label>
+            <input type="text" id="c-name" name="name" required placeholder="Tu nombre" autocomplete="name" minlength="2" maxlength="80">
+          </div>
+          <div class="contacto-field">
+            <label for="c-email">Correo</label>
+            <input type="email" id="c-email" name="email" required placeholder="tu@correo.com" autocomplete="email" maxlength="100">
+          </div>
+        </div>
+
+        <div class="contacto-row">
+          <div class="contacto-field">
+            <label for="c-phone">Teléfono</label>
+            <input type="tel" id="c-phone" name="phone" placeholder="55 1234 5678" autocomplete="tel" pattern="[\d\s\+\-\(\)]{7,20}" maxlength="20">
+          </div>
+          <div class="contacto-field">
+            <label for="c-subject">Tema</label>
+            <select id="c-subject" name="subject" required>
+              <option value="">Selecciona un tema</option>
+              <option value="consulta">Consulta general</option>
+              <option value="soporte">Soporte técnico</option>
+              <option value="productos">Información sobre productos</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="contacto-field">
+          <label for="c-message">Mensaje</label>
+          <textarea id="c-message" name="message" rows="4" required placeholder="Cuéntanos en qué podemos ayudarte..." minlength="10" maxlength="1000"></textarea>
+        </div>
+
+        <div class="contacto-field">
+          <label as="legend">Preferencia de contacto</label>
+          <div class="contacto-preference" role="radiogroup">
+            <label class="contacto-radio">
+              <input type="radio" name="contact-preference" value="email" required> Por correo electrónico
+            </label>
+            <label class="contacto-radio">
+              <input type="radio" name="contact-preference" value="phone"> Por teléfono
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="contacto-submit">Enviar mensaje</button>
+      </form>
+    </div>
+
   </div>
+</section>
 
 <!-- Botón flotante de WhatsApp -->
 <div class="whatsapp-button">
@@ -361,13 +615,48 @@
 </div>
 
 <footer>
-  <p>&copy; 2024 S Quetzal Digital. Todos los derechos reservados.</p>
-  <p style="margin-top:8px; font-size:0.85rem;">
-    <a href="/blog/blog.html" style="color:#aaa; margin: 0 10px;">Blog</a>
-    <a href="/sobre-nosotros.html" style="color:#aaa; margin: 0 10px;">Acerca de</a>
-    <a href="/politica-de-privacidad.html" style="color:#aaa; margin: 0 10px;">Privacidad</a>
-    <a href="/terminos-y-condiciones.html" style="color:#aaa; margin: 0 10px;">Términos</a>
-  </p>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <img src="imagenes/logoquetzalcode.png" alt="S Quetzal Digital" class="footer-logo">
+      <span class="footer-brand-name">S Quetzal Digital</span>
+      <p class="footer-tagline">Soluciones digitales para PYMES en México.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/profile.php?id=61579236382484" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/company/squetzaldigital/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/525575055014" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <a href="servicios/serviciosweb.html">Servicios Web</a>
+      <a href="servicios/desarrollodesoftware.html">Desarrollo de Software</a>
+      <a href="servicios/ciberseguridad.html">Ciberseguridad</a>
+      <a href="servicios/marketingdigital.html">Marketing Digital</a>
+      <a href="servicios/soporte.html">Soporte Técnico</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <a href="/sobre-nosotros.html">Acerca de</a>
+      <a href="/blog/blog.html">Blog</a>
+      <a href="https://qr.squetzaldigital.com" target="_blank" rel="noopener">QR Dinámicos</a>
+      <a href="/pagina-web-gratis.html">Página Web Gratis</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="mailto:contacto@squetzaldigital.com"><i class="fas fa-envelope"></i> contacto@squetzaldigital.com</a>
+      <a href="https://wa.me/525575055014" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +52 55 7505 5014</a>
+      <a href="/politica-de-privacidad.html">Privacidad</a>
+      <a href="/terminos-y-condiciones.html">Términos y condiciones</a>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 S Quetzal Digital. Todos los derechos reservados.</p>
+  </div>
 </footer>
 
 <script src="script.js"></script>
@@ -381,17 +670,6 @@
   });
 </script>
 
-<div class="promo-sticky">
-  <div class="promo-sticky-container">
-    <span class="promo-sticky-text">
-      Prueba tu página web <strong>GRATIS</strong>
-    </span>
-
-    <a href="pagina-web-gratis.html" class="promo-sticky-btn">
-      Pedir demo
-    </a>
-  </div>
-</div>
 </body>
 
 </html>

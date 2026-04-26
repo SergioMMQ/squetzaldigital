@@ -1,124 +1,400 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="canonical" href="https://squetzaldigital.com/sobre-nosotros.html"/>
-  <meta name="robots" content="index, follow">
-  <meta name="description" content="Conoce a S Quetzal Digital, empresa mexicana de tecnología para PYMES. Software, web y digitalización con un equipo comprometido. Descubre nuestra misión.">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8HPM5944PH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8HPM5944PH');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"S Quetzal Digital","url":"https://squetzaldigital.com","logo":"https://squetzaldigital.com/imagenes/logoquetzalcode.png","description":"Empresa mexicana de tecnología especializada en soluciones digitales para PYMES.","areaServed":"México","foundingDate":"2020","founder":{"@type":"Person","name":"Sergio Martínez Meneses"}}</script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Quiénes Somos | Empresa de Tecnología para PYMES en México | S Quetzal Digital</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  <meta name="description" content="Conoce a S Quetzal Digital, empresa mexicana de tecnología para PYMES. Software, web, ciberseguridad y digitalización con atención personalizada.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://squetzaldigital.com/sobre-nosotros.html">
+  <meta name="theme-color" content="#2dad5e">
+  <meta property="og:title" content="Quiénes Somos | S Quetzal Digital">
+  <meta property="og:description" content="Empresa mexicana de tecnología para PYMES. Soluciones digitales con atención personalizada.">
+  <meta property="og:image" content="https://squetzaldigital.com/imagenes/logoquetzalcode.png">
+  <meta property="og:url" content="https://squetzaldigital.com/sobre-nosotros.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+
   <style>
-    .about-page {
-      max-width: 860px;
-      margin: 60px auto;
-      padding: 0 24px 80px;
-      color: #333;
-      line-height: 1.8;
+    :root {
+      --c-accent:      #2dad5e;
+      --c-accent-dark: #1a6d3f;
+      --c-text:        #333;
+      --c-text-2:      #555;
+      --c-muted:       #666;
+      --bg-soft:       #f4f4f4;
+      --shadow-1:      0 4px 20px rgba(0,0,0,0.08);
     }
-    .about-page h1 { font-size: 2rem; margin-bottom: 24px; color: #0077ff; }
-    .about-page h2 { font-size: 1.3rem; margin: 36px 0 10px; color: #222; }
-    .about-page p { margin-bottom: 14px; font-size: 1.05rem; }
-    .about-page a { color: #0077ff; }
-    .about-values {
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; color: var(--c-text); line-height: 1.6; background: #fff; }
+
+    /* ── NAV ── */
+    .sn-nav {
+      position: fixed; top: 0; left: 0; right: 0; height: 64px;
+      background: linear-gradient(to right, #000000ed, #343534ed);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 28px; z-index: 100;
+    }
+    .sn-nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; font-weight: 700; font-size: 0.9rem; }
+    .sn-nav-brand img { width: 36px; height: auto; }
+    .sn-nav-links { display: flex; align-items: center; gap: 6px; }
+    .sn-nav-links a { font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.75); text-decoration: none; padding: 6px 12px; border-radius: 8px; transition: color 0.2s, background 0.2s; }
+    .sn-nav-links a:hover { color: #fff; background: rgba(255,255,255,0.07); }
+    .sn-nav-cta { background: var(--c-accent) !important; color: #fff !important; border-radius: 20px !important; }
+    .sn-nav-cta:hover { background: var(--c-accent-dark) !important; }
+
+    /* ── HERO ── */
+    .sn-hero {
+      position: relative; min-height: 60vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 100px 24px 64px; overflow: hidden;
+    }
+    .sn-hero::before {
+      content: ""; position: absolute; inset: 0;
+      background-image: url(imagenes/prueba.jpg);
+      background-size: cover; background-position: center;
+      filter: blur(6px); transform: scale(1.08);
+    }
+    .sn-hero::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.82) 100%);
+    }
+    .sn-hero-content { position: relative; z-index: 1; max-width: 700px; }
+    .sn-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--c-accent); margin-bottom: 18px; }
+    .sn-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 20px; }
+    .sn-hero h1 span { color: var(--c-accent); }
+    .sn-hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 560px; margin: 0 auto 36px; line-height: 1.75; }
+    .btn-primary { background: var(--c-accent); color: #fff; font-weight: 700; font-size: 1rem; padding: 14px 34px; border-radius: 50px; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; white-space: nowrap; }
+    .btn-primary:hover { background: var(--c-accent-dark); transform: scale(1.03); }
+    .btn-ghost { background: rgba(255,255,255,0.1); color: #fff; font-weight: 700; font-size: 1rem; padding: 14px 34px; border-radius: 50px; border: 1.5px solid rgba(255,255,255,0.35); text-decoration: none; display: inline-block; backdrop-filter: blur(4px); transition: background 0.2s; white-space: nowrap; }
+    .btn-ghost:hover { background: rgba(255,255,255,0.18); }
+    .sn-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+    /* ── SECCIONES ── */
+    .sn-section { padding: 88px 24px 80px; }
+    .sn-section-inner { max-width: 1100px; margin: 0 auto; }
+    .sn-soft { background: var(--bg-soft); }
+    .sn-eyebrow-sm { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--c-accent); margin-bottom: 12px; }
+    .sn-section-title { font-size: 2rem; font-weight: 800; color: #111; margin-bottom: 14px; }
+    .sn-section-sub { font-size: 1rem; color: var(--c-muted); line-height: 1.7; }
+    .sn-section-header { text-align: center; max-width: 640px; margin: 0 auto 52px; }
+
+    /* ── QUIÉNES SOMOS ── */
+    .sn-intro-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .sn-intro-text p { font-size: 1.05rem; color: var(--c-text-2); line-height: 1.85; margin-bottom: 18px; }
+    .sn-intro-text p:last-child { margin-bottom: 0; }
+    .sn-intro-text strong { color: #111; font-weight: 700; }
+    .sn-intro-badge {
+      background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+      border-radius: 20px;
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .sn-badge-item { display: flex; align-items: flex-start; gap: 16px; }
+    .sn-badge-icon { font-size: 1.6rem; width: 48px; height: 48px; background: rgba(45,173,94,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .sn-badge-item h3 { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .sn-badge-item p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+    /* ── MISIÓN Y VISIÓN ── */
+    .sn-mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .sn-mv-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: var(--shadow-1);
+      border-top: 4px solid var(--c-accent);
+    }
+    .sn-mv-card h3 { font-size: 1.1rem; font-weight: 800; color: #111; margin-bottom: 14px; }
+    .sn-mv-card p { font-size: 0.97rem; color: var(--c-text-2); line-height: 1.8; }
+
+    /* ── VALORES ── */
+    .sn-values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 20px;
-      margin-top: 16px;
     }
-    .about-value-card {
-      background: #f4f4f4;
-      border-radius: 10px;
-      padding: 20px;
+    .sn-value-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow-1);
+      border: 1.5px solid transparent;
+      display: flex; flex-direction: column; gap: 10px;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
     }
-    .about-value-card h3 { font-size: 1rem; margin-bottom: 6px; color: #0077ff; }
-    .about-value-card p { font-size: 0.95rem; margin: 0; }
+    .sn-value-card:hover { transform: translateY(-5px); border-color: var(--c-accent); box-shadow: 0 8px 28px rgba(45,173,94,0.15); }
+    .sn-value-icon { font-size: 1.8rem; width: 52px; height: 52px; background: rgba(45,173,94,0.08); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+    .sn-value-card h3 { font-size: 1rem; font-weight: 700; color: #111; }
+    .sn-value-card p { font-size: 0.875rem; color: var(--c-text-2); line-height: 1.65; }
+
+    /* ── SERVICIOS ── */
+    .sn-services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .sn-service-link {
+      display: flex; align-items: center; gap: 12px;
+      background: #fff; border-radius: 12px; padding: 18px 20px;
+      box-shadow: var(--shadow-1); text-decoration: none;
+      border: 1.5px solid transparent;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .sn-service-link:hover { transform: translateY(-3px); border-color: var(--c-accent); }
+    .sn-service-link span:first-child { font-size: 1.4rem; }
+    .sn-service-link span:last-child { font-size: 0.92rem; font-weight: 700; color: #111; }
+
+    /* ── STATS ── */
+    .sn-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px; }
+    .sn-stat { text-align: center; padding: 32px 20px; background: #fff; border-radius: 16px; box-shadow: var(--shadow-1); }
+    .sn-stat-num { font-size: 2.4rem; font-weight: 800; color: var(--c-accent); line-height: 1; margin-bottom: 8px; }
+    .sn-stat h3 { font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 6px; }
+    .sn-stat p { font-size: 0.875rem; color: var(--c-text-2); line-height: 1.6; }
+
+    /* ── CTA ── */
+    .sn-cta {
+      background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+      padding: 88px 24px 80px;
+      text-align: center;
+    }
+    .sn-cta-inner { max-width: 620px; margin: 0 auto; }
+    .sn-cta .sn-eyebrow-sm { color: #6ee7b7; }
+    .sn-cta h2 { font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 16px; }
+    .sn-cta p { font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.75; margin-bottom: 36px; }
+    .sn-cta-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .btn-wa { background: #25d366; color: #fff; font-weight: 700; font-size: 1rem; padding: 14px 34px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s, transform 0.15s; white-space: nowrap; }
+    .btn-wa:hover { background: #1da851; transform: scale(1.03); }
+
+    /* ── FOOTER ── */
+    .sn-footer { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.06); text-align: center; padding: 32px 24px; }
+    .sn-footer p { font-size: 0.82rem; color: rgba(255,255,255,0.3); }
+    .sn-footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 8px; transition: color 0.2s; }
+    .sn-footer a:hover { color: #fff; }
+    .sn-footer-links { margin-top: 8px; }
+
+    /* ── WHATSAPP ── */
+    .whatsapp-button { position: fixed; bottom: 50px; right: 50px; z-index: 99; }
+    .whatsapp-button a { color: #25d366; font-size: 4rem; text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .sn-hero h1 { font-size: 2rem; }
+      .sn-section { padding: 64px 20px 56px; }
+      .sn-intro-grid { grid-template-columns: 1fr; gap: 36px; }
+      .sn-mv-grid { grid-template-columns: 1fr; }
+      .sn-values-grid { grid-template-columns: 1fr; }
+      .sn-services-grid { grid-template-columns: 1fr 1fr; }
+      .sn-nav-links { display: none; }
+      .sn-cta { padding: 64px 20px 56px; }
+    }
+    @media (max-width: 480px) {
+      .sn-services-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="/" style="display:flex;align-items:center;text-decoration:none;">
-      <img src="/imagenes/logoquetzalcode.png" alt="S Quetzal Digital" style="height:48px;" width="2000" height="2000" decoding="async" fetchpriority="high">
-    </a>
+
+  <nav class="sn-nav">
+    <a href="/" class="sn-nav-brand"><img src="/imagenes/logoquetzalcode.png" alt="S Quetzal Digital"><span>S Quetzal Digital</span></a>
+    <div class="sn-nav-links">
+      <a href="/">Inicio</a>
+      <a href="/#servicios">Servicios</a>
+      <a href="/#contacto" class="sn-nav-cta">Contactar</a>
+    </div>
   </nav>
 
-  <div class="about-page">
-    <h1>Acerca de S Quetzal Digital</h1>
-
-    <p>
-      <strong>S Quetzal Digital</strong> es una empresa mexicana especializada en soluciones tecnológicas
-      para pequeñas y medianas empresas. Nuestro propósito es hacer que la tecnología sea accesible,
-      práctica y rentable para negocios de todos los tamaños.
-    </p>
-    <p>
-      Fundada por <strong>SERGIO MARTINEZ MENESES</strong>, nacimos con la convicción de que la
-      transformación digital no debe ser exclusiva de las grandes corporaciones. Con experiencia en
-      desarrollo de software, infraestructura TI, ciberseguridad y marketing digital, ofrecemos
-      un acompañamiento integral desde la planeación hasta la implementación.
-    </p>
-
-    <h2>Nuestra misión</h2>
-    <p>
-      Impulsar el crecimiento de empresas y emprendedores mediante soluciones digitales a la medida,
-      brindando tecnología de calidad con atención personalizada y precios competitivos.
-    </p>
-
-    <h2>Nuestra visión</h2>
-    <p>
-      Ser el socio tecnológico de referencia para las PYMES en México y Latinoamérica,
-      reconocidos por nuestra confiabilidad, innovación y compromiso con los resultados de nuestros clientes.
-    </p>
-
-    <h2>Nuestros valores</h2>
-    <div class="about-values">
-      <div class="about-value-card">
-        <h3>Compromiso</h3>
-        <p>Nos involucramos en cada proyecto como si fuera nuestro propio negocio.</p>
-      </div>
-      <div class="about-value-card">
-        <h3>Transparencia</h3>
-        <p>Comunicación clara y honesta en cada etapa del trabajo.</p>
-      </div>
-      <div class="about-value-card">
-        <h3>Innovación</h3>
-        <p>Buscamos siempre las mejores herramientas y métodos para cada desafío.</p>
-      </div>
-      <div class="about-value-card">
-        <h3>Accesibilidad</h3>
-        <p>Soluciones de calidad al alcance de empresas de todos los tamaños.</p>
+  <!-- HERO -->
+  <section class="sn-hero">
+    <div class="sn-hero-content">
+      <p class="sn-eyebrow">Sobre nosotros · S Quetzal Digital</p>
+      <h1>Tecnología accesible<br><span>para cada negocio</span></h1>
+      <p class="sn-hero-sub">Somos una empresa mexicana que acompaña a PYMES en su transformación digital. Sin tecnicismos, sin letra chica, con resultados reales.</p>
+      <div class="sn-hero-actions">
+        <a href="/#servicios" class="btn-primary">Ver nuestros servicios</a>
+        <a href="/#contacto" class="btn-ghost">Hablar con nosotros</a>
       </div>
     </div>
+  </section>
 
-    <h2>¿Qué hacemos?</h2>
-    <p>
-      Ofrecemos servicios de <a href="/servicios/desarrollodesoftware.html">desarrollo de software</a>,
-      <a href="/servicios/serviciosweb.html">diseño web</a>,
-      <a href="/servicios/ciberseguridad.html">ciberseguridad</a>,
-      <a href="/servicios/soporte.html">soporte técnico</a>,
-      <a href="/servicios/marketingdigital.html">marketing digital</a>,
-      <a href="/servicios/analisisdedatos.html">análisis de datos</a>,
-      <a href="/servicios/automatizacion.html">automatización</a> y más.
-      Cada solución se adapta a las necesidades y presupuesto de cada cliente.
-    </p>
+  <!-- QUIÉNES SOMOS -->
+  <section class="sn-section">
+    <div class="sn-section-inner">
+      <div class="sn-intro-grid">
+        <div class="sn-intro-text">
+          <p class="sn-eyebrow-sm">Nuestra historia</p>
+          <h2 class="sn-section-title">¿Quiénes somos?</h2>
+          <p><strong>S Quetzal Digital</strong> es una empresa mexicana especializada en soluciones tecnológicas para pequeñas y medianas empresas. Nacimos con una convicción clara: la transformación digital no debe ser exclusiva de las grandes corporaciones.</p>
+          <p>Fundada por <strong>Sergio Martínez Meneses</strong>, combinamos experiencia en desarrollo de software, infraestructura TI, ciberseguridad y marketing digital para ofrecer un acompañamiento completo a cada cliente.</p>
+          <p>No somos un proveedor más. Somos el socio tecnológico que tu empresa necesita para crecer sin perder tiempo ni dinero en soluciones que no funcionan.</p>
+        </div>
+        <div class="sn-intro-badge">
+          <div class="sn-badge-item">
+            <div class="sn-badge-icon">🇲🇽</div>
+            <div>
+              <h3>100% Mexicanos</h3>
+              <p>Empresa mexicana que entiende el contexto, las necesidades y los retos del mercado local.</p>
+            </div>
+          </div>
+          <div class="sn-badge-item">
+            <div class="sn-badge-icon">🤝</div>
+            <div>
+              <h3>Atención personalizada</h3>
+              <p>Hablas directamente con quien resuelve tu problema. Sin call centers ni tickets perdidos.</p>
+            </div>
+          </div>
+          <div class="sn-badge-item">
+            <div class="sn-badge-icon">⚡</div>
+            <div>
+              <h3>Respuesta en menos de 24 h</h3>
+              <p>Atendemos cada consulta el mismo día hábil. Tu tiempo es tan valioso como el nuestro.</p>
+            </div>
+          </div>
+          <div class="sn-badge-item">
+            <div class="sn-badge-icon">💰</div>
+            <div>
+              <h3>Precios competitivos</h3>
+              <p>Tecnología de calidad sin cobros excesivos. Transparencia total desde la primera cotización.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2>Contáctanos</h2>
-    <p>
-      ¿Tienes un proyecto en mente? Escríbenos a
+  <!-- STATS -->
+  <section class="sn-section sn-soft">
+    <div class="sn-section-inner">
+      <div class="sn-section-header">
+        <p class="sn-eyebrow-sm">En números</p>
+        <h2 class="sn-section-title">Lo que nos respalda</h2>
+        <p class="sn-section-sub">Años de experiencia y decenas de proyectos entregados que hablan por nosotros.</p>
+      </div>
+      <div class="sn-stats">
+        <div class="sn-stat"><div class="sn-stat-num">+5</div><h3>Años de experiencia</h3><p>Resolviendo retos tecnológicos para empresas en México.</p></div>
+        <div class="sn-stat"><div class="sn-stat-num">+50</div><h3>Proyectos entregados</h3><p>Desde sitios web hasta sistemas empresariales complejos.</p></div>
+        <div class="sn-stat"><div class="sn-stat-num">10+</div><h3>Servicios disponibles</h3><p>Soluciones tecnológicas integrales en un solo lugar.</p></div>
+        <div class="sn-stat"><div class="sn-stat-num">24 h</div><h3>Tiempo de respuesta</h3><p>Atención rápida y directa sin intermediarios.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISIÓN Y VISIÓN -->
+  <section class="sn-section">
+    <div class="sn-section-inner">
+      <div class="sn-section-header">
+        <p class="sn-eyebrow-sm">Lo que nos mueve</p>
+        <h2 class="sn-section-title">Misión y visión</h2>
+      </div>
+      <div class="sn-mv-grid">
+        <div class="sn-mv-card">
+          <h3>🎯 Nuestra misión</h3>
+          <p>Impulsar el crecimiento de empresas y emprendedores mediante soluciones digitales a la medida, brindando tecnología de calidad con atención personalizada y precios competitivos para que cualquier negocio pueda competir en la era digital.</p>
+        </div>
+        <div class="sn-mv-card">
+          <h3>🚀 Nuestra visión</h3>
+          <p>Ser el socio tecnológico de referencia para las PYMES en México y Latinoamérica, reconocidos por nuestra confiabilidad, innovación y compromiso genuino con los resultados de cada cliente que confía en nosotros.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="sn-section sn-soft">
+    <div class="sn-section-inner">
+      <div class="sn-section-header">
+        <p class="sn-eyebrow-sm">Cómo trabajamos</p>
+        <h2 class="sn-section-title">Nuestros valores</h2>
+        <p class="sn-section-sub">Principios que guían cada proyecto, cada llamada y cada línea de código que escribimos.</p>
+      </div>
+      <div class="sn-values-grid">
+        <div class="sn-value-card">
+          <div class="sn-value-icon">🤝</div>
+          <h3>Compromiso</h3>
+          <p>Nos involucramos en cada proyecto como si fuera nuestro propio negocio. Tu éxito es nuestra meta.</p>
+        </div>
+        <div class="sn-value-card">
+          <div class="sn-value-icon">🔍</div>
+          <h3>Transparencia</h3>
+          <p>Comunicación clara y honesta en cada etapa. Sin sorpresas en la factura ni promesas vacías.</p>
+        </div>
+        <div class="sn-value-card">
+          <div class="sn-value-icon">💡</div>
+          <h3>Innovación</h3>
+          <p>Buscamos siempre las mejores herramientas y métodos para cada desafío, no la solución más fácil.</p>
+        </div>
+        <div class="sn-value-card">
+          <div class="sn-value-icon">🌱</div>
+          <h3>Accesibilidad</h3>
+          <p>Soluciones de calidad al alcance de empresas de todos los tamaños y presupuestos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="sn-section">
+    <div class="sn-section-inner">
+      <div class="sn-section-header">
+        <p class="sn-eyebrow-sm">Nuestro portafolio</p>
+        <h2 class="sn-section-title">¿Qué hacemos?</h2>
+        <p class="sn-section-sub">Soluciones tecnológicas integrales para que tu empresa crezca sin depender de múltiples proveedores.</p>
+      </div>
+      <div class="sn-services-grid">
+        <a href="/servicios/serviciosweb.html" class="sn-service-link"><span>🌐</span><span>Servicios Web</span></a>
+        <a href="/servicios/desarrollodesoftware.html" class="sn-service-link"><span>💻</span><span>Desarrollo de Software</span></a>
+        <a href="/servicios/marketingdigital.html" class="sn-service-link"><span>📢</span><span>Marketing Digital</span></a>
+        <a href="/servicios/ciberseguridad.html" class="sn-service-link"><span>🛡️</span><span>Ciberseguridad</span></a>
+        <a href="/servicios/soporte.html" class="sn-service-link"><span>🔧</span><span>Soporte Técnico</span></a>
+        <a href="/servicios/automatizacion.html" class="sn-service-link"><span>🤖</span><span>Automatización</span></a>
+        <a href="/servicios/analisisdedatos.html" class="sn-service-link"><span>📊</span><span>Análisis de Datos</span></a>
+        <a href="/servicios/nubeyalmacenamiento.html" class="sn-service-link"><span>☁️</span><span>Nube y Almacenamiento</span></a>
+        <a href="/servicios/servicioderedes.html" class="sn-service-link"><span>📡</span><span>Servicio de Redes</span></a>
+        <a href="/servicios/capacitacion.html" class="sn-service-link"><span>🎓</span><span>Capacitación</span></a>
+        <a href="/servicios/consultoria.html" class="sn-service-link"><span>🗺️</span><span>Consultoría</span></a>
+        <a href="/servicios/venta-equipos.html" class="sn-service-link"><span>🖥️</span><span>Venta de Equipos</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="sn-cta">
+    <div class="sn-cta-inner">
+      <p class="sn-eyebrow-sm">¿Listo para empezar?</p>
+      <h2>Hablemos de tu proyecto</h2>
+      <p>Cuéntanos qué necesitas y en menos de 24 horas te respondemos con una propuesta clara y sin compromisos.</p>
+      <div class="sn-cta-actions">
+        <a href="https://wa.me/525575055014?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20S%20Quetzal%20Digital." target="_blank" rel="noopener" class="btn-wa"><i class="fab fa-whatsapp"></i> Escribir por WhatsApp</a>
+        <a href="mailto:contacto@squetzaldigital.com" class="btn-ghost">contacto@squetzaldigital.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sn-footer">
+    <p>© 2026 S Quetzal Digital. Todos los derechos reservados.</p>
+    <div class="sn-footer-links">
+      <a href="/">Inicio</a>
+      <a href="/#servicios">Servicios</a>
       <a href="mailto:contacto@squetzaldigital.com">contacto@squetzaldigital.com</a>
-      o visita nuestra <a href="/">página principal</a> para conocer todos nuestros servicios.
-    </p>
+      <a href="/politica-de-privacidad.html">Privacidad</a>
+      <a href="/terminos-y-condiciones.html">Términos</a>
+    </div>
+  </footer>
+
+  <div class="whatsapp-button">
+    <a href="https://wa.me/525575055014?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20S%20Quetzal%20Digital." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
   </div>
 
-  <footer>
-    <p>&copy; 2024 S Quetzal Digital. Todos los derechos reservados.</p>
-    <p style="margin-top:8px; font-size:0.85rem;">
-      <a href="/politica-de-privacidad.html" style="color:#aaa; margin: 0 10px;">Privacidad</a>
-      <a href="/terminos-y-condiciones.html" style="color:#aaa; margin: 0 10px;">Términos</a>
-      <a href="/sobre-nosotros.html" style="color:#aaa; margin: 0 10px;">Acerca de</a>
-    </p>
-  </footer>
 </body>
 </html>
